@@ -1,22 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Heading from "../components/Sections/00Heading/00Heading"
+import CompanyInfo from "../components/Sections/01CompanyInfo/01CompanyInfo"
+import RecentNews from "../components/Sections/02RecentNews/02RecentNews"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+const IndexPage = ({ data }) => (
+  <>
+    <Heading data={data} />
+    <CompanyInfo />
+    <RecentNews />
+  </>
 )
+
+export const query = graphql`
+  {
+    file(name: { eq: "tlo02" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, maxHeight: 1200, quality: 90) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
