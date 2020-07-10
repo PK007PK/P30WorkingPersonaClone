@@ -13,7 +13,6 @@ const NewsPage = ({ data }) => (
       <TilesWrapper>
         {data.allMdx.nodes.map(item => (
           <>
-            {console.log(data.allMdx.nodes)}
             <NewsTile
               date={item.frontmatter.date}
               title={item.frontmatter.title}
@@ -37,7 +36,7 @@ export const query = graphql`
         }
       }
     }
-    allMdx(limit: 5) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         frontmatter {
           slug

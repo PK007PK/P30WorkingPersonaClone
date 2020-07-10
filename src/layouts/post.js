@@ -3,7 +3,7 @@ import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
 
-import Wrapper from "../utilities/SectionLayout/SectionLayout"
+import { StyledSectionLayout } from "./post.style"
 
 export const query = graphql`
   query querySingleArticle($slug: String!) {
@@ -12,6 +12,7 @@ export const query = graphql`
         title
         slug
         author
+        date
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 800) {
@@ -27,13 +28,15 @@ export const query = graphql`
 
 const PostLayout = ({ data }) => {
   return (
-    <Wrapper>
-      <h1>{data.mdx.frontmatter.title}</h1>
-      <p>{data.mdx.frontmatter.author}</p>
-      <span>{data.mdx.frontmatter.date}</span>
+    <StyledSectionLayout>
       <Image fluid={data.mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+      <h1>{data.mdx.frontmatter.title}</h1>
+      <div className="wrapper">
+        <p className="author">Autor: {data.mdx.frontmatter.author}</p>
+        <span className="date">Data: {data.mdx.frontmatter.date}</span>
+      </div>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </Wrapper>
+    </StyledSectionLayout>
   )
 }
 

@@ -4,7 +4,10 @@ export const theme = {
   },
   color: {
     lightBlue: "#E6F3FD",
+    deepBlue: "#193658",
     white: "#FFFFFF",
+    milkWhite: "rgb(214, 220, 216)",
+    carrot: "#c94d33",
   },
   media: {
     xsAbove: `@media (min-width: 576px)`,

@@ -5,7 +5,7 @@ import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 const CompanyInfo = () => (
   <>
     <SectionLayout padding={"100px"}>
-      <h2>Informacje o firmie</h2>
+      <h2>Witamy serdecznie</h2>
       <p>
         Przedsiębiorstwo Wielobranżowe GPI s.c. Sławomir Kowalski, Marcin Nowak.
         W swojej działalności łączymy 30 letnią tradycję firmy rodzinnej z

@@ -1,15 +1,16 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
-import Carousel from "react-elastic-carousel"
+import { Link } from "gatsby"
 
 import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 import NewsTile from "../../NewsTile/NewsTile"
 import TilesWrapper from "../../../utilities/TilesWrapper/TilesWrapper"
 
+import { StyledWrapper, StyledLink } from "./02RecentNews.style"
+
 const query = graphql`
   {
-    allMdx(limit: 3) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 3) {
       nodes {
         frontmatter {
           slug
@@ -41,11 +42,11 @@ const RecentNews = () => {
         <TilesWrapper>
           {data.allMdx.nodes.map(item => (
             <>
-              {console.log(data.allMdx.nodes)}
               <NewsTile
                 date={item.frontmatter.date}
                 title={item.frontmatter.title}
                 text={item.excerpt}
+                slug={item.frontmatter.slug}
                 background={
                   item.frontmatter.featuredImage.childImageSharp.fluid
                 }
@@ -53,6 +54,9 @@ const RecentNews = () => {
             </>
           ))}
         </TilesWrapper>
+        <StyledWrapper>
+          <StyledLink to="/news">Zobacz wszystkie</StyledLink>
+        </StyledWrapper>
       </SectionLayout>
     </>
   )

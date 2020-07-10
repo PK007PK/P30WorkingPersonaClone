@@ -4,7 +4,7 @@ import styled from "styled-components"
 import BootstrapContainer from "../BootstrapContainer/BootstrapContainer"
 
 const StyledSection = styled.section`
-  padding: 50px 0;
+  padding: 100px 0;
   padding-top: ${({ padding }) => padding};
 `
 

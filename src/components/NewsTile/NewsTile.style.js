@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../assets/styles/theme"
+// import { theme } from "../../assets/styles/theme"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 

@@ -1,5 +1,8 @@
 import React from "react"
-import { StyledButton } from "./Button.style"
+import styled from "styled-components"
+import Link from "gatsby"
+
+const StyledButton = styled(Link)``
 
 const Button = ({ children, className }) => (
   <>
