@@ -1,6 +1,5 @@
 import styled from "styled-components"
-// import theme from "styled-components"
-import Image from "gatsby-image"
+
 import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 
 export const StyledSectionLayout = styled(SectionLayout)`

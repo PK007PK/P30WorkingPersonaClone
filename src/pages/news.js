@@ -12,15 +12,14 @@ const NewsPage = ({ data }) => (
       <h2>Aktualności</h2>
       <TilesWrapper>
         {data.allMdx.nodes.map(item => (
-          <>
-            <NewsTile
-              date={item.frontmatter.date}
-              title={item.frontmatter.title}
-              text={item.excerpt}
-              slug={item.frontmatter.slug}
-              background={item.frontmatter.featuredImage.childImageSharp.fluid}
-            />
-          </>
+          <NewsTile
+            date={item.frontmatter.date}
+            title={item.frontmatter.title}
+            text={item.excerpt}
+            slug={item.frontmatter.slug}
+            key={item.frontmatter.slug}
+            background={item.frontmatter.featuredImage.childImageSharp.fluid}
+          />
         ))}
       </TilesWrapper>
     </SectionLayout>

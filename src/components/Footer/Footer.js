@@ -1,5 +1,6 @@
 import React from "react"
 import { StyledSectionLayout, StyledWrapper } from "./Footer.style"
+
 const Footer = () => (
   <StyledSectionLayout>
     <StyledWrapper>

@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 
 import {
   StyledSectionLayout,
@@ -9,20 +8,9 @@ import {
   Service,
 } from "./03Services.style"
 
-const StyledIMG = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(214, 220, 216);
-  z-index: -1;
-`
-
 const Services = () => (
   <StyledSectionLayout>
     <ServicesWrapper>
-      <StyledIMG />
       <LeadBlock>
         <h2>
           Zapewniamy kompleksowe usługi geodezyjne, które dopasowujemy do

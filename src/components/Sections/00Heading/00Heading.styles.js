@@ -1,9 +1,24 @@
 import styled from "styled-components"
+import Image from "gatsby-image"
+
+export const StyledImage = styled(Image)`
+  display: none;
+  object-fit: cover;
+
+  ${({ theme }) => theme.media.smAbove} {
+    display: block;
+    margin-top: -98px;
+    width: 35%;
+  }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    display: block;
+    width: 40%;
+  }
+`
 
 export const StyledSection = styled.section`
   height: calc(100vh - 98px);
-  background-image: url(${({ background }) =>
-    background ? background : null});
   background-size: cover;
   background-repeat: no-repeat;
 
