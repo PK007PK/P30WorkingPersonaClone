@@ -4,7 +4,7 @@ import Heading from "../components/Sections/00Heading/00Heading"
 
 const ContactPage = ({ data }) => (
   <>
-    <Heading txt={"Kontakt"} data={data} />
+    <Heading txt={"Kontakt"} data={data} />{" "}
   </>
 )
 

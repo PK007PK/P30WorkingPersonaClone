@@ -1,4 +1,5 @@
 import React from "react"
+import slugify from "slugify"
 
 import Heading from "../components/Sections/00Heading/00Heading"
 import SectionLayout from "../utilities/SectionLayout/SectionLayout"
@@ -10,17 +11,26 @@ const NewsPage = ({ data }) => (
     <Heading txt={"Aktualności"} data={data} />
     <SectionLayout>
       <h2>Aktualności</h2>
+      <p style={{ marginBottom: "20px" }}>
+        Najnowsze informacje z życia firmy, aktualności branżowe{" "}
+      </p>
       <TilesWrapper>
-        {data.allMdx.nodes.map(item => (
-          <NewsTile
-            date={item.frontmatter.date}
-            title={item.frontmatter.title}
-            text={item.excerpt}
-            slug={item.frontmatter.slug}
-            key={item.frontmatter.slug}
-            background={item.frontmatter.featuredImage.childImageSharp.fluid}
-          />
-        ))}
+        {data.allDatoCmsNews.nodes.map(item => {
+          const abc =
+            item.articleContent[0].paragraphContentNode.childMdx.excerpt
+          return (
+            <NewsTile
+              date={item.date}
+              title={item.title}
+              text={
+                item.articleContent[0].paragraphContentNode.childMdx.excerpt
+              }
+              slug={slugify(item.title, { lower: true })}
+              key={item.id}
+              background={item.featuredImage.fluid}
+            />
+          )
+        })}
       </TilesWrapper>
     </SectionLayout>
   </>
@@ -35,22 +45,27 @@ export const query = graphql`
         }
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allDatoCmsNews(sort: { fields: [date], order: DESC }) {
       nodes {
-        frontmatter {
-          slug
-          author
-          date
-          title
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 350, maxHeight: 350) {
-                ...GatsbyImageSharpFluid_tracedSVG
+        author
+        date
+        title
+        id
+        featuredImage {
+          fluid(maxWidth: 500) {
+            ...GatsbyDatoCmsFluid_tracedSVG
+          }
+        }
+        articleContent {
+          ... on DatoCmsParagraph {
+            paragraphContentNode {
+              childMdx {
+                body
+                excerpt(pruneLength: 120)
               }
             }
           }
         }
-        excerpt(pruneLength: 120)
       }
     }
   }

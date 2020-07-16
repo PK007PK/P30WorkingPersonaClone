@@ -12,7 +12,7 @@ const Heading = ({ data, button }) => (
       <div></div>
       <div>
         <h1>
-          <span>GPI</span>
+          <span>GEO</span>
           <br />
           Usługi Geodezyjne
         </h1>

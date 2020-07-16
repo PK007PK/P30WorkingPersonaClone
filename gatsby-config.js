@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const bootstrapQueries = {
   xs_down: "(max-width: 576x)",
   sm_down: "(max-width: 768px)",
@@ -20,6 +22,12 @@ module.exports = {
     language: "pl",
   },
   plugins: [
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.API_DATO_CMS,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-styled-components",
     {
