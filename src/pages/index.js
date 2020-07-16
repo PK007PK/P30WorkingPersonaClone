@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Heading from "../components/Sections/00Heading/00Heading"
 import CompanyInfo from "../components/Sections/01CompanyInfo/01CompanyInfo"

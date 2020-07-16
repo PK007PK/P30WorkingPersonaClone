@@ -7,7 +7,7 @@ const Footer = () => (
       <a href="tel:608658488" aria-label="Numer telefonu">
         Tel: 606 553 934
       </a>
-      <p>Copyright © GPI Usługi Geodezyjne</p>
+      <p>Copyright © GEO Usługi Geodezyjne</p>
     </StyledWrapper>
   </StyledSectionLayout>
 )

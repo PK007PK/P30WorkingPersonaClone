@@ -139,6 +139,7 @@ export const StyledDate = styled.span`
 export const StyledTitle = styled.h3`
   position: absolute;
   bottom: 30px;
+  width: 95%;
   left: 15px;
   z-index: 3;
   transition: all 0.3s;

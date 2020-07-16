@@ -1,28 +1,29 @@
 const path = require(`path`)
+const slugify = require("slugify")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/layouts/post.js`)
   const result = await graphql(
     `
-      query queryArticles {
-        allMdx {
+      query queryCMSPage {
+        allDatoCmsNews {
           nodes {
-            frontmatter {
-              slug
-            }
+            id
+            title
           }
         }
       }
     `
   )
 
-  result.data.allMdx.nodes.forEach(post => {
+  result.data.allDatoCmsNews.nodes.forEach(post => {
+    const slugifiedTitle = slugify(post.title, { lower: true })
     createPage({
-      path: `articles/${post.frontmatter.slug}`,
+      path: `articles/${slugifiedTitle}`,
       component: blogPostTemplate,
       context: {
-        slug: post.frontmatter.slug,
+        id: post.id,
       },
     })
   })

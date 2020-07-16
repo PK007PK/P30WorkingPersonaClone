@@ -6,22 +6,38 @@ import { graphql } from "gatsby"
 import { StyledSectionLayout } from "./post.style"
 
 export const query = graphql`
-  query querySingleArticle($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        slug
-        author
-        date
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 800) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
+  query querySingleArticle($id: String!) {
+    datoCmsNews(id: { eq: $id }) {
+      title
+      date
+      featuredImage {
+        fluid(maxWidth: 1000) {
+          ...GatsbyDatoCmsFluid_tracedSVG
         }
       }
-      body
+      author
+      articleContent {
+        ... on DatoCmsParagraph {
+          paragraphContentNode {
+            childMdx {
+              body
+            }
+          }
+          id
+        }
+        ... on DatoCmsHeading {
+          headingContent
+          id
+        }
+        ... on DatoCmsArticleImage {
+          imageData {
+            fluid(maxWidth: 1000) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+          id
+        }
+      }
     }
   }
 `
@@ -29,13 +45,33 @@ export const query = graphql`
 const PostLayout = ({ data }) => {
   return (
     <StyledSectionLayout>
-      <Image fluid={data.mdx.frontmatter.featuredImage.childImageSharp.fluid} />
-      <h1>{data.mdx.frontmatter.title}</h1>
+      <Image fluid={data.datoCmsNews.featuredImage.fluid} />
+      <h1>{data.datoCmsNews.title}</h1>
       <div className="wrapper">
-        <p className="author">Autor: {data.mdx.frontmatter.author}</p>
-        <span className="date">Data: {data.mdx.frontmatter.date}</span>
+        <p className="author">Autor: {data.datoCmsNews.author}</p>
+        <span className="date">Data: {data.datoCmsNews.date}</span>
       </div>
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      <div>
+        {data.datoCmsNews.articleContent.map(item => {
+          const itemKey = Object.keys(item)[1]
+          switch (itemKey) {
+            case "paragraphContentNode":
+              return (
+                <div key={item.id}>
+                  <MDXRenderer>
+                    {item.paragraphContentNode.childMdx.body}
+                  </MDXRenderer>
+                </div>
+              )
+            case "headingContent":
+              return <h2 key={item.id}>{item.headingContent}</h2>
+            case "imageData":
+              return <Image key={item.id} fluid={item[itemKey].fluid} />
+            default:
+              return null
+          }
+        })}
+      </div>
     </StyledSectionLayout>
   )
 }
