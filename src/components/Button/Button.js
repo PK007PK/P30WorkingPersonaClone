@@ -1,12 +1,21 @@
 import React from "react"
-import styled from "styled-components"
-import Link from "gatsby"
 
-import { StyledButton } from "./Button.style"
+import { StyledButton, StyledA } from "./Button.style"
 
-const Button = ({ children, className }) => (
+const Button = ({ children, className, href }) => (
   <>
-    <StyledButton className={className}>{children}</StyledButton>
+    {href ? (
+      <StyledA
+        href={href}
+        target="_blank"
+        className={className}
+        rel="noopener noreferrer"
+      >
+        {children}
+      </StyledA>
+    ) : (
+      <StyledButton className={className}>{children}</StyledButton>
+    )}
   </>
 )
 

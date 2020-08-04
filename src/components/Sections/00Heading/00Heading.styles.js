@@ -1,6 +1,12 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
 
+import Button from "../../Button/Button"
+
+export const StyledButton = styled(Button)`
+  margin-left: 10px;
+`
+
 export const StyledImage = styled(Image)`
   display: none;
   object-fit: contain;
