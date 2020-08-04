@@ -1,9 +1,6 @@
 import React from "react"
 import slugify from "slugify"
-<<<<<<< HEAD
 import { graphql } from "gatsby"
-=======
->>>>>>> 4e75a33aeeffd4076ef2aada680adbf68505fef8
 
 import Heading from "../components/Sections/00Heading/00Heading"
 import SectionLayout from "../utilities/SectionLayout/SectionLayout"
