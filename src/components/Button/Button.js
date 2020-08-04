@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Link from "gatsby"
 
-const StyledButton = styled(Link)``
+import { StyledButton } from "./Button.style"
 
 const Button = ({ children, className }) => (
   <>

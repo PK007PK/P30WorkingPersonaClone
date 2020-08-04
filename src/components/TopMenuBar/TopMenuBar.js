@@ -1,18 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import {
-  StyledNav,
-  StyledLogo,
-  StyledWrapper,
-  StyledBurgerMenu,
-} from "./TopMenuBar.style"
+import Logo from "../Logo/Logo"
+import { StyledNav, StyledWrapper, StyledBurgerMenu } from "./TopMenuBar.style"
 
 const TopMenuBar = ({ className }) => (
   <>
     <StyledNav className={className}>
       <Link to="/">
-        <StyledLogo>GPI</StyledLogo>
+        <Logo />
       </Link>
       <StyledWrapper>
         <li>
@@ -27,17 +22,37 @@ const TopMenuBar = ({ className }) => (
         </li>
         <li>
           <Link
-            to="/news"
+            to="/omnie"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
-            aktualności
+            o mnie
           </Link>
         </li>
         <li>
           <Link
-            to="/contact"
+            to="/blog"
+            activeStyle={{
+              fontWeight: "bold",
+            }}
+          >
+            blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/uslugi"
+            activeStyle={{
+              fontWeight: "bold",
+            }}
+          >
+            uslugi
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/kontakt"
             activeStyle={{
               fontWeight: "bold",
             }}

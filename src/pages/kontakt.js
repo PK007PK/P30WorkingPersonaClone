@@ -2,7 +2,7 @@ import React from "react"
 
 import Heading from "../components/Sections/00Heading/00Heading"
 
-const ContactPage = ({ data }) => (
+const KontaktPage = ({ data }) => (
   <>
     <Heading txt={"Kontakt"} data={data} />{" "}
   </>
@@ -20,4 +20,4 @@ export const query = graphql`
   }
 `
 
-export default ContactPage
+export default KontaktPage

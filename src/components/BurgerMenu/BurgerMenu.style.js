@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const StyledBurgerMenu = styled.div`
   position: fixed;
-  top: 50px;
-  right: 10px;
+  top: 30px;
+  right: 0px;
   z-index: 1000;
 `
 
@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
 
   div {
     width: 40px;
-    height: 30px;
+    height: 20px;
     position: relative;
   }
 `
@@ -64,7 +64,7 @@ export const StyledNavigation = styled.div`
   background-color: black;
   color: white;
   position: absolute;
-  top: -50px;
+  top: -30px;
   right: -10px;
   transform: translateX(250px);
   transform: ${props => (props.isActive ? "translateX(0)" : null)};

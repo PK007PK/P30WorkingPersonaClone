@@ -3,11 +3,11 @@ export const theme = {
     xs: "12px",
   },
   color: {
-    lightBlue: "#E6F3FD",
-    deepBlue: "#193658",
     white: "#FFFFFF",
-    milkWhite: "rgb(214, 220, 216)",
-    carrot: "#c94d33",
+    lightBlue: "#EDF7FF",
+    blue: "#ADCCE4",
+    deepBlue: "#0F3554",
+    pink: "#EB4962",
   },
   media: {
     xsAbove: `@media (min-width: 576px)`,

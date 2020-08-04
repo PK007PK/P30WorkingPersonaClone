@@ -1,10 +1,11 @@
 import React from "react"
-import { StyledDiv, StyledSpan } from "./Logo.style"
+import { StyledWrap, StyledP, StyledSpan } from "./Logo.style"
 
 const Logo = ({ className }) => (
-  <StyledDiv className={className}>
-    <StyledSpan>GEO</StyledSpan>
-  </StyledDiv>
+  <StyledWrap className={className}>
+    <StyledP>Lex</StyledP>
+    <StyledSpan>med</StyledSpan>
+  </StyledWrap>
 )
 
 export default Logo

@@ -3,7 +3,7 @@ import Image from "gatsby-image"
 
 export const StyledImage = styled(Image)`
   display: none;
-  object-fit: cover;
+  object-fit: contain;
 
   ${({ theme }) => theme.media.smAbove} {
     display: block;
@@ -13,12 +13,12 @@ export const StyledImage = styled(Image)`
 
   ${({ theme }) => theme.media.mdAbove} {
     display: block;
-    width: 40%;
+    width: 35%;
   }
 `
 
 export const StyledSection = styled.section`
-  height: calc(100vh - 98px);
+  height: calc(100vh - 70px);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -45,7 +45,6 @@ export const StyledTxtWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
-
   ${({ theme }) => theme.media.smAbove} {
     width: 65%;
     padding-right: 40px;
@@ -57,10 +56,7 @@ export const StyledTxtWrapper = styled.div`
 
   ${({ theme }) => theme.media.lgAbove} {
     padding-right: 60px;
-  }
-
-  ${({ theme }) => theme.media.lgAbove} {
-    padding-right: 80px;
+    width: 65%;
   }
 
   div {
@@ -72,35 +68,35 @@ export const StyledTxtWrapper = styled.div`
 
   h1 {
     text-align: right;
-    margin-bottom: 20px;
+
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -5px;
+    color: ${({ theme }) => theme.color.deepBlue};
+  }
+
+  .lead {
     font-size: 36px;
-    line-height: 36px;
-    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    span {
-      font-weight: 700;
-      font-size: 150px;
-      line-height: 150px;
-      letter-spacing: -0.1em;
-      display: block;
+  .description {
+    font-size: 16px;
+    text-align: right;
+    display: block;
+    max-width: 600px;
+  }
 
-      ${({ theme }) => theme.media.xlAbove} {
-        font-size: 200px;
-      }
+  .buttonWrapper {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    button {
+      margin-left: 10px;
     }
-  }
-
-  p {
-    font-size: 24px;
-    font-weight: 200;
-    margin-top: 10px;
-  }
-
-  button {
-    background-color: black;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    font-weight: 200;
   }
 `

@@ -7,7 +7,7 @@ import SectionLayout from "../utilities/SectionLayout/SectionLayout"
 import TilesWrapper from "../utilities/TilesWrapper/TilesWrapper"
 import NewsTile from "../components/NewsTile/NewsTile"
 
-const NewsPage = ({ data }) => (
+const OMniePage = ({ data }) => (
   <>
     <Heading txt={"Aktualności"} data={data} />
     <SectionLayout>
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `
 
-export default NewsPage
+export default OMniePage
