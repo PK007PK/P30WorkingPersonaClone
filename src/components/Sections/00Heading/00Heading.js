@@ -24,7 +24,13 @@ const Heading = ({ data }) => (
           nisi, vel ullamcorper lorem.
         </p>
         <div className="buttonWrapper">
-          <IconFB as="a" href="https://youtube.com" />
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconFB as="a" href="https://youtube.com" />
+          </a>
           <StyledButton href="https://youtube.com">
             {" "}
             Sprawdź mój vlog <IconYT />
