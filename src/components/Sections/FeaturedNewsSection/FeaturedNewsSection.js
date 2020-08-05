@@ -86,7 +86,7 @@ const FeaturedNewsSection = () => {
     }
   }
   return (
-    <StyledSectionLayout>
+    <StyledSectionLayout padding={"50px 0 100px 0px"}>
       <HeadingWrapper
         title={"Wyróżnione wpisy"}
         inputColor={({ theme }) => theme.color.deepBlue}
