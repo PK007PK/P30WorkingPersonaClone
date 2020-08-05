@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.scss"
 
 import NewsTile from "../../NewsTile/NewsTile"
-import HeaderWrapper from "../../HeaderWrapper/HeaderWrapper"
+import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
 import TilesWrapper from "../../../utilities/TilesWrapper/TilesWrapper"
 
 import {
@@ -87,11 +87,11 @@ const FeaturedNewsSection = () => {
   }
   return (
     <StyledSectionLayout>
-      <HeaderWrapper
+      <HeadingWrapper
         title={"Wyróżnione wpisy"}
         inputColor={({ theme }) => theme.color.deepBlue}
         inputBackgroundColor={({ theme }) => theme.color.blue}
-      ></HeaderWrapper>
+      ></HeadingWrapper>
       <Swiper {...params} getSwiper={updateSwiper}>
         {data.allDatoCmsNews.nodes.map(item => {
           return (

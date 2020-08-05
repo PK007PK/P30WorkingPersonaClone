@@ -24,7 +24,7 @@ export const StyledImage = styled(Image)`
 `
 
 export const StyledSection = styled.section`
-  height: calc(100vh - 70px);
+  height: calc(100vh - 70px + 50px);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -39,7 +39,7 @@ export const StyledSection = styled.section`
     position: relative;
 
     @media (orientation: landscape) {
-      max-height: calc(100vh - 98px);
+      max-height: calc(100vh - 98px + 50px);
     }
   }
 `
