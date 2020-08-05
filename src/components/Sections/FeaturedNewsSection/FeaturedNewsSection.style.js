@@ -6,7 +6,7 @@ import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 export const StyledSectionLayout = styled(SectionLayout)`
   position: relative;
 
-  background-color: ${({ theme }) => theme.color.lightBlue};
+  background-color: ${({ theme }) => theme.color.blue};
 `
 
 export const StyledWrapper = styled.div`

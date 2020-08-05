@@ -86,6 +86,7 @@ export const StyledTxtWrapper = styled.div`
     font-size: 36px;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: ${({ theme }) => theme.color.deepBlue};
   }
 
   .description {
@@ -93,6 +94,7 @@ export const StyledTxtWrapper = styled.div`
     text-align: right;
     display: block;
     max-width: 600px;
+    color: ${({ theme }) => theme.color.deepBlue};
   }
 
   .buttonWrapper {

@@ -5,9 +5,9 @@ const Footer = () => (
   <StyledSectionLayout>
     <StyledWrapper>
       <a href="tel:608658488" aria-label="Numer telefonu">
-        Tel: 606 553 934
+        Tel: 777 777 222
       </a>
-      <p>Copyright © GEO Usługi Geodezyjne</p>
+      <p>Copyright © Przykładowa Firma</p>
     </StyledWrapper>
   </StyledSectionLayout>
 )

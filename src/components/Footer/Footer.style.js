@@ -6,6 +6,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
   background-color: ${({ theme }) => theme.color.deepBlue};
   padding-top: 20px;
   padding-bottom: 20px;
+  color: white;
 `
 
 export const StyledWrapper = styled.div`

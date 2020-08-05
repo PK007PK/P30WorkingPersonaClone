@@ -28,6 +28,7 @@ module.exports = {
         apiToken: process.env.API_DATO_CMS,
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-styled-components",
     {

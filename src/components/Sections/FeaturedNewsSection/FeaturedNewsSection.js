@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import slugify from "slugify"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/swiper.scss"
 
 import NewsTile from "../../NewsTile/NewsTile"
+import HeaderWrapper from "../../HeaderWrapper/HeaderWrapper"
 import TilesWrapper from "../../../utilities/TilesWrapper/TilesWrapper"
 
 import {
@@ -45,26 +48,68 @@ const query = graphql`
 
 const FeaturedNewsSection = () => {
   const data = useStaticQuery(query)
+  const [swiper, updateSwiper] = useState(null)
+  const params = {
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: "auto",
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1450: {
+        slidesPerView: 3,
+      },
+    },
+  }
 
+  const goNext = () => {
+    if (swiper !== null) {
+      swiper.slideNext()
+    }
+  }
+  const goPrev = () => {
+    if (swiper !== null) {
+      swiper.slidePrev()
+    }
+  }
   return (
     <StyledSectionLayout>
-      <h2>Wyróżnione wpisy</h2>
-      <TilesWrapper>
+      <HeaderWrapper
+        title={"Wyróżnione wpisy"}
+        inputColor={({ theme }) => theme.color.deepBlue}
+        inputBackgroundColor={({ theme }) => theme.color.blue}
+      ></HeaderWrapper>
+      <Swiper {...params} getSwiper={updateSwiper}>
         {data.allDatoCmsNews.nodes.map(item => {
           return (
-            <NewsTile
-              date={item.date}
-              title={item.title}
-              text={
-                item.articleContent[0].paragraphContentNode.childMdx.excerpt
-              }
-              slug={slugify(item.title, { lower: true })}
-              key={item.id}
-              background={item.featuredImage.fluid}
-            />
+            <SwiperSlide>
+              <NewsTile
+                date={item.date}
+                title={item.title}
+                text={
+                  item.articleContent[0].paragraphContentNode.childMdx.excerpt
+                }
+                slug={slugify(item.title, { lower: true })}
+                key={item.id}
+                background={item.featuredImage.fluid}
+              />
+            </SwiperSlide>
           )
         })}
-      </TilesWrapper>
+      </Swiper>
     </StyledSectionLayout>
   )
 }
