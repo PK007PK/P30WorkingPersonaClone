@@ -5,15 +5,10 @@ import slugify from "slugify"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.scss"
 
-import NewsTile from "../../NewsTile/NewsTile"
+import FeaturedNewsTile from "../../FeaturedNewsTile/FeaturedNewsTile"
 import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
-import TilesWrapper from "../../../utilities/TilesWrapper/TilesWrapper"
 
-import {
-  StyledSectionLayout,
-  StyledWrapper,
-  StyledLink,
-} from "./FeaturedNewsSection.style"
+import { StyledSectionLayout } from "./FeaturedNewsSection.style"
 
 const query = graphql`
   {
@@ -96,7 +91,7 @@ const FeaturedNewsSection = () => {
         {data.allDatoCmsNews.nodes.map(item => {
           return (
             <SwiperSlide>
-              <NewsTile
+              <FeaturedNewsTile
                 date={item.date}
                 title={item.title}
                 text={
