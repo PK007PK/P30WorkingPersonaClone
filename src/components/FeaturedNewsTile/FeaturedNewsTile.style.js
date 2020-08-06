@@ -29,11 +29,13 @@ export const StyledWrapper = styled(Link)`
   ${({ theme }) => theme.media.lgAbove} {
     height: 450px;
     width: 350px;
+    flex-grow: 1;
   }
 
   ${({ theme }) => theme.media.xlAbove} {
     height: 450px;
     width: 370px;
+    flex-grow: 1;
   }
 
   &:hover ::after {

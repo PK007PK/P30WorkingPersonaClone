@@ -13,15 +13,9 @@ export const StyledCarouselWrapper = styled.div`
   height: 450px;
 `
 
-export const ArrowContainer = styled.div`
-  /* background-color: black; */
-  flex-grow: 1;
-`
+export const ArrowContainer = styled.div``
 
-export const SwiperContainer = styled.div`
-  overflow: hidden;
-  width: 90%;
-`
+export const SwiperContainer = styled.div``
 
 export const StyledWrapper = styled.div`
   display: flex;

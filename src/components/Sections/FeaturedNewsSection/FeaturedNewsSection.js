@@ -54,10 +54,6 @@ const FeaturedNewsSection = () => {
     slidesPerView: "auto",
     loop: true,
     spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     breakpoints: {
       0: {
         slidesPerView: "auto",
@@ -98,32 +94,25 @@ const FeaturedNewsSection = () => {
         inputColor={({ theme }) => theme.color.deepBlue}
         inputBackgroundColor={({ theme }) => theme.color.blue}
       ></HeadingWrapper>
-      <StyledCarouselWrapper>
-        <ArrowContainer></ArrowContainer>
-        <SwiperContainer>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
-          <Swiper {...params} getSwiper={updateSwiper}>
-            {data.allDatoCmsNews.nodes.map(item => {
-              return (
-                <SwiperSlide>
-                  <FeaturedNewsTile
-                    date={item.date}
-                    title={item.title}
-                    text={
-                      item.articleContent[0].paragraphContentNode.childMdx
-                        .excerpt
-                    }
-                    slug={slugify(item.title, { lower: true })}
-                    key={item.id}
-                    background={item.featuredImage.fluid}
-                  />
-                </SwiperSlide>
-              )
-            })}
-          </Swiper>
-        </SwiperContainer>
-      </StyledCarouselWrapper>
+
+      <Swiper {...params} getSwiper={updateSwiper}>
+        {data.allDatoCmsNews.nodes.map(item => {
+          return (
+            <SwiperSlide>
+              <FeaturedNewsTile
+                date={item.date}
+                title={item.title}
+                text={
+                  item.articleContent[0].paragraphContentNode.childMdx.excerpt
+                }
+                slug={slugify(item.title, { lower: true })}
+                key={item.id}
+                background={item.featuredImage.fluid}
+              />
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
     </StyledSectionLayout>
   )
 }

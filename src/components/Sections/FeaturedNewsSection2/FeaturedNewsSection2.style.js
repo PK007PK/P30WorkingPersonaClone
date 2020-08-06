@@ -14,8 +14,10 @@ export const StyledCarouselWrapper = styled.div`
 `
 
 export const ArrowContainer = styled.div`
-  /* background-color: black; */
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `
 
 export const SwiperContainer = styled.div`

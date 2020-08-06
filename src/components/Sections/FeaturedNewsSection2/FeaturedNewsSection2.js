@@ -8,6 +8,8 @@ import "swiper/swiper.scss"
 
 import FeaturedNewsTile from "../../FeaturedNewsTile/FeaturedNewsTile"
 import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
+import IconArrowLeft from "../../IconArrowLeft/IconArrowLeft"
+import IconArrowRight from "../../IconArrowRight/IconArrowRight"
 
 import {
   StyledSectionLayout,
@@ -89,8 +91,8 @@ const FeaturedNewsSection2 = () => {
       ></HeadingWrapper>
       <StyledCarouselWrapper>
         <ArrowContainer>
-          <div className="swiper-button-next">xxx</div>
-          <div className="swiper-button-prev">yyy</div>
+          <IconArrowLeft />
+          <IconArrowRight />
         </ArrowContainer>
         <SwiperContainer>
           <Swiper {...params} getSwiper={updateSwiper}>
