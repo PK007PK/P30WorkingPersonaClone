@@ -3,14 +3,14 @@ import { graphql } from "gatsby"
 
 import Heading from "../components/Sections/00Heading/00Heading"
 
-import RecentNews from "../components/Sections/02RecentNews/02RecentNews"
-import Services from "../components/Sections/03Services/03Services"
 import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/FeaturedNewsSection"
+import RecentlyAdded from "../components/Sections/RecentlyAdded/RecentlyAdded"
 
 const IndexPage = ({ data }) => (
   <>
     <Heading data={data} />
     <FeaturedNewsSection />
+    <RecentlyAdded />
     {/* <CompanyInfo /> */}
     {/* <Services />
     <RecentNews /> */}
