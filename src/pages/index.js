@@ -5,12 +5,12 @@ import Heading from "../components/Sections/00Heading/00Heading"
 
 import RecentNews from "../components/Sections/02RecentNews/02RecentNews"
 import Services from "../components/Sections/03Services/03Services"
-import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/FeaturedNewsSection"
+import FeaturedNewsSection2 from "../components/Sections/FeaturedNewsSection2/FeaturedNewsSection2"
 
 const IndexPage = ({ data }) => (
   <>
     <Heading data={data} />
-    <FeaturedNewsSection />
+    <FeaturedNewsSection2 />
     {/* <CompanyInfo /> */}
     {/* <Services />
     <RecentNews /> */}

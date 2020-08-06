@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import slugify from "slugify"
-import { Navigation, Swiper, SwiperSlide } from "swiper/react"
+
+import Swiper from "react-id-swiper"
 import "swiper/swiper.scss"
-import "swiper/components/navigation/navigation.scss"
 
 import FeaturedNewsTile from "../../FeaturedNewsTile/FeaturedNewsTile"
 import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
@@ -14,7 +14,7 @@ import {
   SwiperContainer,
   ArrowContainer,
   StyledCarouselWrapper,
-} from "./FeaturedNewsSection.style"
+} from "./FeaturedNewsSection2.style"
 
 const query = graphql`
   {
@@ -47,7 +47,7 @@ const query = graphql`
   }
 `
 
-const FeaturedNewsSection = () => {
+const FeaturedNewsSection2 = () => {
   const data = useStaticQuery(query)
   const [swiper, updateSwiper] = useState(null)
   const params = {
@@ -80,17 +80,6 @@ const FeaturedNewsSection = () => {
     },
   }
 
-  const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext()
-    }
-  }
-  const goPrev = () => {
-    if (swiper !== null) {
-      swiper.slidePrev()
-    }
-  }
-
   return (
     <StyledSectionLayout padding={"50px 0 100px 0px"}>
       <HeadingWrapper
@@ -99,26 +88,24 @@ const FeaturedNewsSection = () => {
         inputBackgroundColor={({ theme }) => theme.color.blue}
       ></HeadingWrapper>
       <StyledCarouselWrapper>
-        <ArrowContainer></ArrowContainer>
+        <ArrowContainer>
+          <div className="swiper-button-next">xxx</div>
+          <div className="swiper-button-prev">yyy</div>
+        </ArrowContainer>
         <SwiperContainer>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
           <Swiper {...params} getSwiper={updateSwiper}>
             {data.allDatoCmsNews.nodes.map(item => {
               return (
-                <SwiperSlide>
-                  <FeaturedNewsTile
-                    date={item.date}
-                    title={item.title}
-                    text={
-                      item.articleContent[0].paragraphContentNode.childMdx
-                        .excerpt
-                    }
-                    slug={slugify(item.title, { lower: true })}
-                    key={item.id}
-                    background={item.featuredImage.fluid}
-                  />
-                </SwiperSlide>
+                <FeaturedNewsTile
+                  date={item.date}
+                  title={item.title}
+                  text={
+                    item.articleContent[0].paragraphContentNode.childMdx.excerpt
+                  }
+                  slug={slugify(item.title, { lower: true })}
+                  key={item.id}
+                  background={item.featuredImage.fluid}
+                />
               )
             })}
           </Swiper>
@@ -128,4 +115,4 @@ const FeaturedNewsSection = () => {
   )
 }
 
-export default FeaturedNewsSection
+export default FeaturedNewsSection2
