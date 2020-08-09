@@ -51,7 +51,6 @@ export const StyledWrapper = styled(Link)`
     height: 450px;
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
     z-index: 2;
-    transition: all 0.3s;
 
     ${({ theme }) => theme.media.xsAbove} {
       height: 450px;

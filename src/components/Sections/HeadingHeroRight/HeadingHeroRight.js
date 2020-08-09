@@ -2,16 +2,15 @@ import React from "react"
 
 import IconYT from "../../IconYT/IconYT"
 import IconFB from "../../IconFB/IconFB"
-// import Button from "../../Button/Button"
 
 import {
   StyledSection,
   StyledTxtWrapper,
   StyledImage,
   StyledButton,
-} from "./00Heading.styles.js"
+} from "./HeadingHeroRight.styles.js"
 
-const Heading = ({ data }) => (
+const HeadingHeroRight = ({ data }) => (
   <StyledSection>
     <StyledTxtWrapper>
       <div></div>
@@ -44,4 +43,4 @@ const Heading = ({ data }) => (
   </StyledSection>
 )
 
-export default Heading
+export default HeadingHeroRight

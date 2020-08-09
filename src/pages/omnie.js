@@ -2,46 +2,26 @@ import React from "react"
 import slugify from "slugify"
 import { graphql } from "gatsby"
 
-import Heading from "../components/Sections/00Heading/00Heading"
-import SectionLayout from "../utilities/SectionLayout/SectionLayout"
-import TilesWrapper from "../utilities/TilesWrapper/TilesWrapper"
-import NewsTile from "../components/NewsTile/NewsTile"
+import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 
 const OMniePage = ({ data }) => (
   <>
-    <Heading txt={"Aktualności"} data={data} />
-    <SectionLayout>
-      <h2>Aktualności</h2>
-      <p style={{ marginBottom: "20px" }}>
-        Najnowsze informacje z życia firmy, aktualności branżowe{" "}
-      </p>
-      <TilesWrapper>
-        {data.allDatoCmsNews.nodes.map(item => {
-          const abc =
-            item.articleContent[0].paragraphContentNode.childMdx.excerpt
-          return (
-            <NewsTile
-              date={item.date}
-              title={item.title}
-              text={
-                item.articleContent[0].paragraphContentNode.childMdx.excerpt
-              }
-              slug={slugify(item.title, { lower: true })}
-              key={item.id}
-              background={item.featuredImage.fluid}
-            />
-          )
-        })}
-      </TilesWrapper>
-    </SectionLayout>
+    <HeadingSubpage
+      data={data}
+      title={"o mnie"}
+      slug={"#o-mnie"}
+      description={
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
+      }
+    />
   </>
 )
 
 export const query = graphql`
   {
-    file(name: { eq: "tlo05" }) {
+    file(name: { eq: "o-mnie" }) {
       childImageSharp {
-        fluid(maxWidth: 800, maxHeight: 1200, quality: 90) {
+        fluid(maxWidth: 550, maxHeight: 395, quality: 100) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

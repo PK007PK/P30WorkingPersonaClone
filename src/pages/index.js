@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Heading from "../components/Sections/00Heading/00Heading"
+import HeadingHeroRight from "../components/Sections/HeadingHeroRight/HeadingHeroRight"
 
 import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/FeaturedNewsSection"
 import RecentlyAdded from "../components/Sections/RecentlyAdded/RecentlyAdded"
 
 const IndexPage = ({ data }) => (
   <>
-    <Heading data={data} />
+    <HeadingHeroRight data={data} />
     <FeaturedNewsSection />
     <RecentlyAdded />
     {/* <CompanyInfo /> */}
