@@ -19,9 +19,9 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    file(name: { eq: "tlo09" }) {
+    file(name: { eq: "tlo15" }) {
       childImageSharp {
-        fluid(maxWidth: 520, maxHeight: 754, quality: 100) {
+        fluid(maxWidth: 500, maxHeight: 900, quality: 100) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(Link)`
   background-color: ${({ theme }) => theme.color.pink};
   color: white;
   padding: 0 30px;

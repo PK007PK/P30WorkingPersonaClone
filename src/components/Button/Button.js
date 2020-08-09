@@ -2,7 +2,7 @@ import React from "react"
 
 import { StyledButton, StyledA } from "./Button.style"
 
-const Button = ({ children, className, href }) => (
+const Button = ({ children, className, href, to }) => (
   <>
     {href ? (
       <StyledA
@@ -14,7 +14,9 @@ const Button = ({ children, className, href }) => (
         {children}
       </StyledA>
     ) : (
-      <StyledButton className={className}>{children}</StyledButton>
+      <StyledButton to={to} className={className}>
+        {children}
+      </StyledButton>
     )}
   </>
 )

@@ -7,22 +7,6 @@ export const StyledButton = styled(Button)`
   margin-left: 10px;
 `
 
-export const StyledImage = styled(Image)`
-  display: none;
-  object-fit: contain;
-
-  ${({ theme }) => theme.media.smAbove} {
-    display: block;
-    margin-top: -98px;
-    width: 35%;
-  }
-
-  ${({ theme }) => theme.media.mdAbove} {
-    display: block;
-    width: 35%;
-  }
-`
-
 export const StyledSection = styled.section`
   height: calc(100vh - 70px + 50px);
   background-size: cover;
@@ -33,7 +17,7 @@ export const StyledSection = styled.section`
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    max-height: 540px;
+    max-height: 700px;
     background-image: none;
     display: flex;
     position: relative;
@@ -106,5 +90,27 @@ export const StyledTxtWrapper = styled.div`
     button {
       margin-left: 10px;
     }
+  }
+`
+
+export const StyledImage = styled(Image)`
+  display: none;
+  object-fit: contain;
+  /* object-position: right bottom; */
+
+  ${({ theme }) => theme.media.smAbove} {
+    display: block;
+    margin-top: -98px;
+    width: 35%;
+  }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    display: block;
+    width: 40%;
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    display: block;
+    width: 35%;
   }
 `
