@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
 export const StyledSection = styled.section`
-  /* padding: 100px 0; */
-  padding: ${({ padding }) => padding || "100px"};
+  padding: ${({ padding }) => padding || "50px 0"};
 `

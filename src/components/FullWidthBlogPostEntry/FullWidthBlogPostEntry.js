@@ -8,9 +8,15 @@ import {
   StyledTxtWrapper,
   StyledDate,
   StyledTitle,
-} from "./BlogPostEntry.style"
+} from "./FullWidthBlogPostEntry.style"
 
-const BlogPostEntry = ({ className, background, date, title, slug }) => (
+const FullWidthBlogPostEntry = ({
+  className,
+  background,
+  date,
+  title,
+  slug,
+}) => (
   <StyledContainer to={`/articles/${slug}`}>
     <StyledImgWrapper className={className}>
       <StyledImg fluid={background}></StyledImg>
@@ -22,11 +28,11 @@ const BlogPostEntry = ({ className, background, date, title, slug }) => (
   </StyledContainer>
 )
 
-BlogPostEntry.propTypes = {
+FullWidthBlogPostEntry.propTypes = {
   background: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
-export default BlogPostEntry
+export default FullWidthBlogPostEntry

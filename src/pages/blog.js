@@ -3,7 +3,7 @@ import slugify from "slugify"
 import { graphql } from "gatsby"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
-
+import MainBlogSection from "../components/Sections/MainBlogSection/MainBlogSection"
 const BlogPage = ({ data }) => (
   <>
     <HeadingSubpage
@@ -14,6 +14,7 @@ const BlogPage = ({ data }) => (
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
       }
     />
+    <MainBlogSection />
   </>
 )
 

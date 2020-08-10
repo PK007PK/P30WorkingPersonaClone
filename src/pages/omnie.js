@@ -1,8 +1,8 @@
 import React from "react"
-import slugify from "slugify"
 import { graphql } from "gatsby"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
+import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
 const OMniePage = ({ data }) => (
   <>
@@ -14,6 +14,7 @@ const OMniePage = ({ data }) => (
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
       }
     />
+    <PlainTextSection />
   </>
 )
 

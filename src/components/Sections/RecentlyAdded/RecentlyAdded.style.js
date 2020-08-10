@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
-import BlogPostEntry from "../../BlogPostEntry/BlogPostEntry"
+import FullWidthBlogPostEntry from "../../FullWidthBlogPostEntry/FullWidthBlogPostEntry"
 import Button from "../../Button/Button"
 
 export const StyledButtonWrapper = styled.div`
@@ -14,18 +14,13 @@ export const StyledButton = styled(Button)`
   width: 260px;
 `
 
-export const StyledBlogPostEntry = styled(BlogPostEntry)`
+export const StyledFullWidthBlogPostEntry = styled(FullWidthBlogPostEntry)`
   margin: 15px 0;
 `
 
 export const StyledSectionLayout = styled(SectionLayout)`
   position: relative;
   background-color: ${({ theme }) => theme.color.lightBlue};
-`
-
-export const StyledCarouselWrapper = styled.div`
-  display: flex;
-  height: 450px;
 `
 
 export const StyledWrapper = styled.div`

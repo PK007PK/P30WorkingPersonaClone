@@ -2,22 +2,25 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 
 export const StyledSection = styled.section`
-  height: calc(100vh - 70px + 50px);
+  height: calc(70vh);
   background-size: cover;
   background-repeat: no-repeat;
 
   ${({ theme }) => theme.media.xsAbove} {
-    max-height: 800px;
+    height: 50vh;
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    max-height: 700px;
-    background-image: none;
+    height: 40vh;
+  }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    height: 600px;
     display: flex;
     position: relative;
 
     @media (orientation: landscape) {
-      max-height: calc(100vh - 98px + 50px);
+      max-height: calc(80vh - 98px + 50px);
     }
   }
 `
@@ -28,13 +31,11 @@ export const StyledTxtWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
-  width: 50%;
+  width: 100%;
 
-  /* ${({ theme }) => theme.media.smAbove} {
+  ${({ theme }) => theme.media.mdAbove} {
     width: 50%;
-    padding-right: 40px;
-  } */
+  }
 
   div {
     display: flex;
@@ -62,38 +63,57 @@ export const StyledTxtWrapper = styled.div`
     max-width: 95%;
     color: ${({ theme }) => theme.color.deepBlue};
   }
-
 `
 
 export const StyledImageWrapper = styled.div`
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: none;
+
+  ${({ theme }) => theme.media.mdAbove} {
+    display: block;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 `
 
 export const StyledImage = styled(Image)`
   display: none;
-  object-fit: contain;
-  border: 1px solid gray;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
-  ${({ theme }) => theme.media.smAbove} {
+  ${({ theme }) => theme.media.mdAbove} {
     display: block;
+    width: 400px;
+    object-fit: contain;
+    border: 1px solid gray;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
     width: 500px;
   }
 `
 export const StyledDiv = styled.div`
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 358px;
-  border: 20px solid rgba(0, 0, 0, 0.2);
+  display: none;
+
+  ${({ theme }) => theme.media.mdAbove} {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    border: 16px solid rgba(0, 0, 0, 0.2);
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    width: 500px;
+    height: 370px;
+    border: 20px solid rgba(0, 0, 0, 0.2);
+  }
 `

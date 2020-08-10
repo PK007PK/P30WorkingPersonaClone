@@ -7,7 +7,7 @@ import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
 
 import {
   StyledSectionLayout,
-  StyledBlogPostEntry,
+  StyledFullWidthBlogPostEntry,
   StyledButton,
   StyledButtonWrapper,
 } from "./RecentlyAdded.style"
@@ -24,7 +24,7 @@ const FeaturedNewsSection = () => {
 
       {data.allDatoCmsNews.nodes.map(item => {
         return (
-          <StyledBlogPostEntry
+          <StyledFullWidthBlogPostEntry
             date={item.date}
             title={item.title}
             text={item.articleContent[0].paragraphContentNode.childMdx.excerpt}
