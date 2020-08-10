@@ -19,7 +19,7 @@ const KontaktPage = ({ data }) => (
 
 export const query = graphql`
   {
-    file(name: { eq: "uslugi" }) {
+    file(name: { eq: "kontakt" }) {
       childImageSharp {
         fluid(maxWidth: 550, maxHeight: 395, quality: 100) {
           ...GatsbyImageSharpFluid_tracedSVG
