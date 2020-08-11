@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import { StyledButton, StyledA } from "./Button.style"
 
@@ -20,5 +21,11 @@ const Button = ({ children, className, href, to }) => (
     )}
   </>
 )
+
+Button.propTypes = {
+  className: PropTypes.string,
+  href: PropTypes.string,
+  to: PropTypes.string,
+}
 
 export default Button

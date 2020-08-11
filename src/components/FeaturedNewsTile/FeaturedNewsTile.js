@@ -18,9 +18,9 @@ const FeaturedNewsTile = ({ className, background, date, title, slug }) => (
 
 FeaturedNewsTile.propTypes = {
   background: PropTypes.object.isRequired,
-  slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default FeaturedNewsTile

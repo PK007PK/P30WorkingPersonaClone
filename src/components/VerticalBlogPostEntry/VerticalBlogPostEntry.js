@@ -6,17 +6,17 @@ import { StyledContainer, StyledImg } from "./VerticalBlogPostEntry.style"
 const VerticalBlogPostEntry = ({ background, date, title, slug, text }) => (
   <StyledContainer to={`/articles/${slug}`}>
     <StyledImg fluid={background}></StyledImg>
-    <span>{date}</span>
-    <h3>{title}</h3>
-    <p>{text}</p>
+    <span className="date">{date}</span>
+    <h3 className="date">{title}</h3>
+    <p className="text">{text}</p>
   </StyledContainer>
 )
 
 VerticalBlogPostEntry.propTypes = {
   background: PropTypes.object.isRequired,
-  slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 }
 

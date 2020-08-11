@@ -1,13 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "../Logo/Logo"
-import { StyledNav, StyledWrapper, StyledBurgerMenu } from "./TopMenuBar.style"
+
+import {
+  StyledNav,
+  StyledLogo,
+  StyledWrapper,
+  StyledBurgerMenu,
+} from "./TopMenuBar.style"
 
 const TopMenuBar = ({ className }) => (
   <>
     <StyledNav className={className}>
       <Link to="/">
-        <Logo />
+        <StyledLogo />
       </Link>
       <StyledWrapper>
         <li>

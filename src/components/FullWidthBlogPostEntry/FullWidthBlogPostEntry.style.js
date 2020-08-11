@@ -20,13 +20,13 @@ export const StyledContainer = styled(Link)`
 
 export const StyledImgWrapper = styled.div`
   display: block;
-  width: 100%;
-  height: 250px;
   position: relative;
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
   flex-shrink: 0;
+  width: 100%;
+  height: 250px;
 
   ${({ theme }) => theme.media.xsAbove} {
     height: 180px;
@@ -52,59 +52,18 @@ export const StyledImgWrapper = styled.div`
     height: 230px;
     width: 370px;
   }
-
-  ::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 450px;
-
-    ${({ theme }) => theme.media.xsAbove} {
-      height: 180px;
-      width: 250px;
-    }
-
-    ${({ theme }) => theme.media.smAbove} {
-      height: 230px;
-      width: 330px;
-    }
-
-    ${({ theme }) => theme.media.mdAbove} {
-      height: 210px;
-      width: 300px;
-    }
-
-    ${({ theme }) => theme.media.lgAbove} {
-      height: 230px;
-      width: 350px;
-    }
-
-    ${({ theme }) => theme.media.xlAbove} {
-      height: 2320px;
-      width: 370px;
-    }
-  }
 `
 
-export const StyledImg = styled(Image)`
-  background-repeat: no-repeat;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`
+export const StyledImg = styled(Image)``
 
 export const StyledTxtWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 
   ${({ theme }) => theme.media.xsAbove} {
-    max-width: 50%;
-    margin: 15px 0 15px 30px;
+    margin: 15px 0 50px 30px;
   }
 `
 
@@ -114,5 +73,4 @@ export const StyledDate = styled.span`
 
 export const StyledTitle = styled.h3`
   font-size: 25px;
-  display: block;
 `

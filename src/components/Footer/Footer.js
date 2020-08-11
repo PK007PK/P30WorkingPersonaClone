@@ -2,10 +2,10 @@ import React from "react"
 import { StyledSectionLayout, StyledWrapper } from "./Footer.style"
 
 const Footer = () => (
-  <StyledSectionLayout>
+  <StyledSectionLayout padding={"20px 0"}>
     <StyledWrapper>
       Polityka prywatności
-      <p>Copyright © Przykładowa Firma</p>
+      <p className="copyryght">Copyright © Przykładowa Firma</p>
     </StyledWrapper>
   </StyledSectionLayout>
 )

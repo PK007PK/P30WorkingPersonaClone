@@ -4,7 +4,6 @@ export const StyledWrap = styled.div`
   font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
-  margin-right: 85px;
 `
 
 export const StyledP = styled.p`

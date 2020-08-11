@@ -38,10 +38,6 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: none;
   }
 
-  h2 {
-    margin-bottom: 25px;
-  }
-
   a {
     color: inherit;
     text-decoration: none;

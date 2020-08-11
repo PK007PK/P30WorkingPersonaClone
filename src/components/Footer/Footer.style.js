@@ -2,11 +2,8 @@ import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
 import styled from "styled-components"
 
 export const StyledSectionLayout = styled(SectionLayout)`
-  color: ${({ theme }) => theme.color.milkWhite};
+  color: ${({ theme }) => theme.color.white};
   background-color: ${({ theme }) => theme.color.deepBlue};
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
 `
 
 export const StyledWrapper = styled.div`
@@ -27,7 +24,7 @@ export const StyledWrapper = styled.div`
       text-align: center;
     }
 
-    p {
+    .copyryght {
       margin-top: 15px;
     }
   }

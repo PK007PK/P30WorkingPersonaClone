@@ -1,5 +1,4 @@
 import React from "react"
-import slugify from "slugify"
 import { graphql } from "gatsby"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"

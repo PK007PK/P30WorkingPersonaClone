@@ -1,20 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import slugify from "slugify"
-import { Navigation, Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react"
+
 import "swiper/swiper.scss"
 import "swiper/components/navigation/navigation.scss"
 
 import FeaturedNewsTile from "../../FeaturedNewsTile/FeaturedNewsTile"
 import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
 
-import {
-  StyledSectionLayout,
-  SwiperContainer,
-  ArrowContainer,
-  StyledCarouselWrapper,
-} from "./FeaturedNewsSection.style"
+import { StyledSectionLayout } from "./FeaturedNewsSection.style"
 
 const query = graphql`
   {
@@ -32,16 +28,6 @@ const query = graphql`
             ...GatsbyDatoCmsFluid_tracedSVG
           }
         }
-        articleContent {
-          ... on DatoCmsParagraph {
-            paragraphContentNode {
-              childMdx {
-                body
-                excerpt(pruneLength: 120)
-              }
-            }
-          }
-        }
       }
     }
   }
@@ -49,7 +35,7 @@ const query = graphql`
 
 const FeaturedNewsSection = () => {
   const data = useStaticQuery(query)
-  const [swiper, updateSwiper] = useState(null)
+
   const params = {
     slidesPerView: "auto",
     loop: true,
@@ -76,17 +62,6 @@ const FeaturedNewsSection = () => {
     },
   }
 
-  const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext()
-    }
-  }
-  const goPrev = () => {
-    if (swiper !== null) {
-      swiper.slidePrev()
-    }
-  }
-
   return (
     <StyledSectionLayout padding={"50px 0 100px 0px"}>
       <HeadingWrapper
@@ -95,19 +70,15 @@ const FeaturedNewsSection = () => {
         inputBackgroundColor={({ theme }) => theme.color.blue}
       ></HeadingWrapper>
 
-      <Swiper {...params} getSwiper={updateSwiper}>
+      <Swiper {...params}>
         {data.allDatoCmsNews.nodes.map(item => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={item.id}>
               <FeaturedNewsTile
+                background={item.featuredImage.fluid}
                 date={item.date}
                 title={item.title}
-                text={
-                  item.articleContent[0].paragraphContentNode.childMdx.excerpt
-                }
                 slug={slugify(item.title, { lower: true })}
-                key={item.id}
-                background={item.featuredImage.fluid}
               />
             </SwiperSlide>
           )

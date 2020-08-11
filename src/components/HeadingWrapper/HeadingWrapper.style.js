@@ -8,9 +8,8 @@ export const StyledDiv = styled.div`
   height: 50px;
   width: 80vw;
   border-radius: 0 50px 0 0;
-  background-color: ${props => props.inputBackgroundColor || "white"};
-  color: ${props => props.inputColor || "black"};
-  z-index: 2;
+  color: ${props => props.inputColor || null};
+  background-color: ${props => props.inputBackgroundColor || null};
 
   ${({ theme }) => theme.media.mdAbove} {
     width: 40vw;
@@ -25,15 +24,11 @@ export const StyledDiv = styled.div`
     width: 2000px;
     height: 50px;
     left: -2000px;
-    z-index: 1;
-    background-color: ${props => props.inputBackgroundColor || "white"};
+    background-color: ${props => props.inputBackgroundColor || null};
     position: absolute;
   }
 
-  h2 {
-    margin: 0;
-    text-align: left;
-    z-index: 2;
+  .title {
     font-size: 18px;
   }
 `

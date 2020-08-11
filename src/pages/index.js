@@ -11,9 +11,6 @@ const IndexPage = ({ data }) => (
     <HeadingHeroRight data={data} />
     <FeaturedNewsSection />
     <RecentlyAdded />
-    {/* <CompanyInfo /> */}
-    {/* <Services />
-    <RecentNews /> */}
   </>
 )
 

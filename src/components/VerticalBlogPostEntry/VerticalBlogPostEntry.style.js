@@ -21,11 +21,11 @@ export const StyledContainer = styled(Link)`
     background-color: ${({ theme }) => theme.color.lightBlue};
   }
 
-  span {
+  .date {
     margin-top: 20px;
   }
 
-  h3 {
+  .title {
     margin: 20px 0;
     font-size: 24px;
   }

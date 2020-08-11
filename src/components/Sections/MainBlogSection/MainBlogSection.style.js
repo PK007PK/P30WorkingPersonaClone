@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 import VerticalBlogPostEntry from "../../VerticalBlogPostEntry/VerticalBlogPostEntry"
 
 export const StyledBlogPostEntry = styled(VerticalBlogPostEntry)`

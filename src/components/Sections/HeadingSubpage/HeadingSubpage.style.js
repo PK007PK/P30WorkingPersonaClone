@@ -75,6 +75,7 @@ export const StyledImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    /* background-color: red; */
   }
 `
 
@@ -89,8 +90,8 @@ export const StyledImage = styled(Image)`
     z-index: 1;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 100%;
+    transform: translate(-100%, -50%);
   }
 
   ${({ theme }) => theme.media.lgAbove} {
@@ -104,8 +105,8 @@ export const StyledDiv = styled.div`
     display: block;
     position: absolute;
     top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+    left: 90%;
+    transform: translate(-100%, -50%);
     width: 400px;
     height: 300px;
     border: 16px solid rgba(0, 0, 0, 0.2);

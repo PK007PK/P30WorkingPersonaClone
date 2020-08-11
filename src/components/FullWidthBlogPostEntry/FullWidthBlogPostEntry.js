@@ -30,9 +30,9 @@ const FullWidthBlogPostEntry = ({
 
 FullWidthBlogPostEntry.propTypes = {
   background: PropTypes.object.isRequired,
-  slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default FullWidthBlogPostEntry

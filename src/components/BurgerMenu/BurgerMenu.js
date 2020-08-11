@@ -37,10 +37,16 @@ class BurgerMenu extends React.Component {
               <Link to="/">główna</Link>
             </li>
             <li>
-              <Link to="/news">aktualności</Link>
+              <Link to="/omnie">o mnie</Link>
             </li>
             <li>
-              <Link to="/contact">kontakt</Link>
+              <Link to="/blog">blog</Link>
+            </li>
+            <li>
+              <Link to="/uslugi">usługi</Link>
+            </li>
+            <li>
+              <Link to="/kontakt">kontakt</Link>
             </li>
           </StyledList>
         </StyledNavigation>
