@@ -45,13 +45,22 @@ export const query = graphql`
 const PostLayout = ({ data }) => {
   return (
     <StyledSectionLayout>
-      <Image fluid={data.datoCmsNews.featuredImage.fluid} />
-      <h1>{data.datoCmsNews.title}</h1>
-      <div className="wrapper">
-        <p className="author">Autor: {data.datoCmsNews.author}</p>
-        <span className="date">Data: {data.datoCmsNews.date}</span>
+      <div className="headingWrapper">
+        <div className="imgWrapper">
+          <Image
+            className="image"
+            fluid={data.datoCmsNews.featuredImage.fluid}
+          />
+        </div>
+        <div className="textWrapper">
+          <h1>{data.datoCmsNews.title}</h1>
+          <div>
+            <p className="author">Autor: {data.datoCmsNews.author}</p>
+            <span className="date">Data: {data.datoCmsNews.date}</span>
+          </div>
+        </div>
       </div>
-      <div>
+      <div className="mainPostBody">
         {data.datoCmsNews.articleContent.map(item => {
           const itemKey = Object.keys(item)[1]
           switch (itemKey) {
@@ -66,7 +75,13 @@ const PostLayout = ({ data }) => {
             case "headingContent":
               return <h2 key={item.id}>{item.headingContent}</h2>
             case "imageData":
-              return <Image key={item.id} fluid={item[itemKey].fluid} />
+              return (
+                <Image
+                  className="articleImg"
+                  key={item.id}
+                  fluid={item[itemKey].fluid}
+                />
+              )
             default:
               return null
           }
