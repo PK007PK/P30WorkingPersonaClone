@@ -115,3 +115,5 @@ export const StyledSectionLayout = styled(SectionLayout)`
     }
   }
 `
+
+export const StyledTxtWrapper = styled.div``
