@@ -8,6 +8,7 @@ import {
   StyledTxtWrapper,
   StyledDate,
   StyledTitle,
+  StyledYouTubeIcon,
 } from "./FullWidthBlogPostEntry.style"
 
 const FullWidthBlogPostEntry = ({
@@ -16,10 +17,18 @@ const FullWidthBlogPostEntry = ({
   date,
   title,
   slug,
+  youtube,
 }) => (
   <StyledContainer to={`/articles/${slug}`}>
     <StyledImgWrapper className={className}>
       <StyledImg fluid={background}></StyledImg>
+      {youtube ? (
+        <>
+          <StyledYouTubeIcon />
+        </>
+      ) : (
+        console.log("nie ma")
+      )}
     </StyledImgWrapper>
     <StyledTxtWrapper>
       <StyledDate>{date}</StyledDate>
@@ -33,6 +42,7 @@ FullWidthBlogPostEntry.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  youtube: PropTypes.string,
 }
 
 export default FullWidthBlogPostEntry

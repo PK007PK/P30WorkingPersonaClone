@@ -2,6 +2,8 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 
+import YouTubeIcon from "../../components/IconYT/IconYT"
+
 export const StyledContainer = styled(Link)`
   display: flex;
   transition: all 0.3s;
@@ -16,6 +18,18 @@ export const StyledContainer = styled(Link)`
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     background-color: ${({ theme }) => theme.color.blue};
   }
+`
+
+export const StyledYouTubeIcon = styled(YouTubeIcon)`
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
 `
 
 export const StyledImgWrapper = styled.div`

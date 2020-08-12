@@ -6,6 +6,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
   position: relative;
 
   .headingWrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

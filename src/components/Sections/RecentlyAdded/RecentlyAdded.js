@@ -31,6 +31,7 @@ const FeaturedNewsSection = () => {
             slug={slugify(item.title, { lower: true })}
             key={item.id}
             background={item.featuredImage.fluid}
+            youtube={item.youtube}
           />
         )
       })}
@@ -49,6 +50,7 @@ const query = graphql`
         date
         title
         id
+        youtube
         featuredImage {
           fluid(maxWidth: 500) {
             ...GatsbyDatoCmsFluid_tracedSVG

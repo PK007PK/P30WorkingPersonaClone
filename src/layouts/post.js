@@ -3,6 +3,8 @@ import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
 
+import YouTube from "../components/YouTube/YouTube"
+
 import { StyledSectionLayout } from "./post.style"
 
 export const query = graphql`
@@ -10,6 +12,7 @@ export const query = graphql`
     datoCmsNews(id: { eq: $id }) {
       title
       date
+      youtube
       featuredImage {
         fluid(maxWidth: 1000) {
           ...GatsbyDatoCmsFluid_tracedSVG
@@ -47,10 +50,18 @@ const PostLayout = ({ data }) => {
     <StyledSectionLayout>
       <div className="headingWrapper">
         <div className="imgWrapper">
-          <Image
-            className="image"
-            fluid={data.datoCmsNews.featuredImage.fluid}
-          />
+          {data.datoCmsNews.youtube ? (
+            <>
+              <YouTube videoId={data.datoCmsNews.youtube} />
+            </>
+          ) : (
+            <>
+              <Image
+                className="image"
+                fluid={data.datoCmsNews.featuredImage.fluid}
+              />
+            </>
+          )}
         </div>
         <div className="textWrapper">
           <h1>{data.datoCmsNews.title}</h1>

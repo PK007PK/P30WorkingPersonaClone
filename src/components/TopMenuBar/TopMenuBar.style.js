@@ -16,6 +16,7 @@ export const StyledLogo = styled(Logo)`
 export const StyledWrapper = styled.ul`
   align-items: center;
   height: 68px;
+  display: none;
 
   ${({ theme }) => theme.media.smAbove} {
     display: flex;
