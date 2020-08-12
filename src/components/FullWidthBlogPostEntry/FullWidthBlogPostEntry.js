@@ -26,9 +26,7 @@ const FullWidthBlogPostEntry = ({
         <>
           <StyledYouTubeIcon />
         </>
-      ) : (
-        console.log("nie ma")
-      )}
+      ) : null}
     </StyledImgWrapper>
     <StyledTxtWrapper>
       <StyledDate>{date}</StyledDate>

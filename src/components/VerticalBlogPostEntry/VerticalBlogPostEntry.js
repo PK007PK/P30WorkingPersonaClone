@@ -1,10 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { StyledContainer, StyledImg } from "./VerticalBlogPostEntry.style"
+import {
+  StyledContainer,
+  StyledImg,
+  StyledYouTubeIcon,
+} from "./VerticalBlogPostEntry.style"
 
-const VerticalBlogPostEntry = ({ background, date, title, slug, text }) => (
+const VerticalBlogPostEntry = ({
+  background,
+  date,
+  title,
+  slug,
+  text,
+  youtube,
+}) => (
   <StyledContainer to={`/articles/${slug}`}>
+    {youtube ? (
+      <>
+        <StyledYouTubeIcon />
+      </>
+    ) : null}
     <StyledImg fluid={background}></StyledImg>
     <span className="date">{date}</span>
     <h3 className="title">{title}</h3>
