@@ -116,4 +116,10 @@ export const StyledSectionLayout = styled(SectionLayout)`
   }
 `
 
-export const StyledTxtWrapper = styled.div``
+export const StyledPostNavigation = styled.div`
+  margin: 50px 0;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`

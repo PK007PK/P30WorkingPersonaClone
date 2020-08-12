@@ -25,7 +25,15 @@ export const StyledContainer = styled(Link)`
   }
 
   .date {
-    margin-top: 20px;
+    position: absolute;
+    display: block;
+    top: 25px;
+    left: 25px;
+    padding: 5px 15px;
+    background-color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.white};
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    z-index: 3;
   }
 
   .title {

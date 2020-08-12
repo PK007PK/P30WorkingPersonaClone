@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import YouTube from "../components/YouTube/YouTube"
 
-import { StyledSectionLayout } from "./post.style"
+import { StyledSectionLayout, StyledPostNavigation } from "./post.style"
 
 export const query = graphql`
   query querySingleArticle($id: String!) {
@@ -98,6 +98,10 @@ const PostLayout = ({ data }) => {
           }
         })}
       </div>
+      <StyledPostNavigation>
+        <a href="javascript:history.back()">Powrót</a>
+        <Link to="/blog">Wszystkie artykuły</Link>
+      </StyledPostNavigation>
     </StyledSectionLayout>
   )
 }

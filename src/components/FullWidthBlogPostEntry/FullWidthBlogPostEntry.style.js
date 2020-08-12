@@ -82,9 +82,25 @@ export const StyledTxtWrapper = styled.div`
 `
 
 export const StyledDate = styled.span`
-  margin-bottom: 20px;
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 15px;
+  padding: 5px 15px;
+  background-color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.white};
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  z-index: 3;
 `
 
 export const StyledTitle = styled.h3`
+  font-weight: 300;
   font-size: 25px;
+  line-height: 40px;
+  color: ${({ theme }) => theme.color.deepBlue};
+  display: block;
+
+  ${({ theme }) => theme.media.lgAbove} {
+    width: 80%;
+  }
 `

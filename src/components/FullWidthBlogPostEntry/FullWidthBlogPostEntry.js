@@ -27,9 +27,9 @@ const FullWidthBlogPostEntry = ({
           <StyledYouTubeIcon />
         </>
       ) : null}
+      <StyledDate>{date}</StyledDate>
     </StyledImgWrapper>
     <StyledTxtWrapper>
-      <StyledDate>{date}</StyledDate>
       <StyledTitle>{title}</StyledTitle>
     </StyledTxtWrapper>
   </StyledContainer>
