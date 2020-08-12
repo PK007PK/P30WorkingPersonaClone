@@ -2,6 +2,8 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 
+import YouTubeIcon from "../../components/IconYT/IconYT"
+
 export const StyledWrapper = styled(Link)`
   display: block;
   width: 100%;
@@ -77,6 +79,18 @@ export const StyledWrapper = styled(Link)`
       width: 370px;
     }
   }
+`
+
+export const StyledYouTubeIcon = styled(YouTubeIcon)`
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
 `
 
 export const StyledImg = styled(Image)`

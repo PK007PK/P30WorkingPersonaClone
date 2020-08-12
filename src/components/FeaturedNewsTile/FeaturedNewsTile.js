@@ -6,10 +6,23 @@ import {
   StyledImg,
   StyledDate,
   StyledTitle,
+  StyledYouTubeIcon,
 } from "./FeaturedNewsTile.style"
 
-const FeaturedNewsTile = ({ className, background, date, title, slug }) => (
+const FeaturedNewsTile = ({
+  className,
+  background,
+  date,
+  title,
+  slug,
+  youtube,
+}) => (
   <StyledWrapper className={className} to={`/articles/${slug}`}>
+    {youtube ? (
+      <>
+        <StyledYouTubeIcon />
+      </>
+    ) : null}
     <StyledImg fluid={background}></StyledImg>
     <StyledDate>{date}</StyledDate>
     <StyledTitle>{title}</StyledTitle>
@@ -21,6 +34,7 @@ FeaturedNewsTile.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  youtube: PropTypes.string,
 }
 
 export default FeaturedNewsTile

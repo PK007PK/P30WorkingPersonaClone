@@ -18,7 +18,7 @@ export const query = graphql`
   {
     file(name: { eq: "tlo15" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, maxHeight: 1500, quality: 100) {
+        fluid(maxWidth: 550, maxHeight: 800, quality: 100) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

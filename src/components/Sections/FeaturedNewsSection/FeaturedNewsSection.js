@@ -23,6 +23,7 @@ const query = graphql`
         date
         title
         id
+        youtube
         featuredImage {
           fluid(maxWidth: 500) {
             ...GatsbyDatoCmsFluid_tracedSVG
@@ -78,6 +79,7 @@ const FeaturedNewsSection = () => {
                 background={item.featuredImage.fluid}
                 date={item.date}
                 title={item.title}
+                youtube={item.youtube}
                 slug={slugify(item.title, { lower: true })}
               />
             </SwiperSlide>
