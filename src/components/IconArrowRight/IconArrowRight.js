@@ -2,9 +2,9 @@ import React from "react"
 
 import { StyledI } from "./IconArrowRight.style.js"
 
-const IconArrowLeft = props => (
+const IconArrowLeft = ({ className }) => (
   <>
-    <StyledI></StyledI>
+    <StyledI className={className}></StyledI>
   </>
 )
 

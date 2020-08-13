@@ -13,7 +13,6 @@ export const StyledContainer = styled(Link)`
   width: 100%;
   max-width: 600px;
   padding: 10px;
-  color: ${({ theme }) => theme.color.deepBlue};
 
   ${({ theme }) => theme.media.mdAbove} {
     width: 46%;
@@ -25,20 +24,20 @@ export const StyledContainer = styled(Link)`
   }
 
   .date {
+    background-color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.white};
+    font-size: ${({ theme }) => theme.fontSize.xs};
     position: absolute;
     display: block;
     top: 25px;
     left: 25px;
     padding: 5px 15px;
-    background-color: ${({ theme }) => theme.color.black};
-    color: ${({ theme }) => theme.color.white};
-    font-size: ${({ theme }) => theme.fontSize.xs};
     z-index: 3;
   }
 
   .title {
     margin: 20px 0;
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSize.md};
   }
 `
 
@@ -55,10 +54,4 @@ export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
   right: 30px;
   top: 30px;
-  width: 35px;
-  height: 35px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 4;
 `

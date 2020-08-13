@@ -45,23 +45,19 @@ export const StyledTxtWrapper = styled.div`
   }
 
   h1 {
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 50px;
-    color: ${({ theme }) => theme.color.deepBlue};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-size: ${({ theme }) => theme.fontSize.lg};
     margin: 20px 0;
   }
 
   .slug {
     color: ${({ theme }) => theme.color.pink};
-    font-weight: 700;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 
   .description {
-    font-size: 16px;
     display: block;
     max-width: 95%;
-    color: ${({ theme }) => theme.color.deepBlue};
   }
 `
 
@@ -108,12 +104,12 @@ export const StyledDiv = styled.div`
     transform: translate(-100%, -50%);
     width: 400px;
     height: 300px;
-    border: 16px solid rgba(0, 0, 0, 0.2);
+    border: 16px solid rgba(15, 53, 83, 0.4);
   }
 
   ${({ theme }) => theme.media.lgAbove} {
     width: 500px;
     height: 370px;
-    border: 20px solid rgba(0, 0, 0, 0.2);
+    border: 16px solid rgba(15, 53, 83, 0.4);
   }
 `

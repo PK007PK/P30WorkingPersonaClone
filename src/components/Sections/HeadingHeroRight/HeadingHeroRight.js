@@ -30,9 +30,9 @@ const HeadingHeroRight = ({ data }) => (
           >
             <IconFB as="a" href="https://youtube.com" />
           </a>
-          <StyledButton href="https://youtube.com">
+          <StyledButton small href="https://youtube.com">
             {" "}
-            Sprawdź mój vlog <IconYT />
+            Sprawdź mój vlog <IconYT small />
           </StyledButton>
         </div>
       </div>

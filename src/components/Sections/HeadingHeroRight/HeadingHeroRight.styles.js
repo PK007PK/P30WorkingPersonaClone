@@ -57,28 +57,23 @@ export const StyledTxtWrapper = styled.div`
   }
 
   h1 {
-    text-align: right;
-
-    font-weight: 800;
-    font-size: 80px;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    font-size: ${({ theme }) => theme.fontSize.xxl};
     line-height: 80px;
+    text-align: right;
     letter-spacing: -5px;
-    color: ${({ theme }) => theme.color.deepBlue};
   }
 
   .lead {
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.fontSize.lg};
     margin-top: 20px;
     margin-bottom: 20px;
-    color: ${({ theme }) => theme.color.deepBlue};
   }
 
   .description {
-    font-size: 16px;
     text-align: right;
     display: block;
     max-width: 600px;
-    color: ${({ theme }) => theme.color.deepBlue};
   }
 
   .buttonWrapper {
@@ -96,7 +91,6 @@ export const StyledTxtWrapper = styled.div`
 export const StyledImage = styled(Image)`
   display: none;
   object-fit: contain;
-  /* object-position: right bottom; */
 
   ${({ theme }) => theme.media.smAbove} {
     display: block;

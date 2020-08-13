@@ -24,12 +24,6 @@ export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
   right: 20px;
   top: 20px;
-  width: 35px;
-  height: 35px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 4;
 `
 
 export const StyledImgWrapper = styled.div`
@@ -82,22 +76,20 @@ export const StyledTxtWrapper = styled.div`
 `
 
 export const StyledDate = styled.span`
+  background-color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.white};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   position: absolute;
   display: block;
   top: 15px;
   left: 15px;
   padding: 5px 15px;
-  background-color: ${({ theme }) => theme.color.black};
-  color: ${({ theme }) => theme.color.white};
-  font-size: ${({ theme }) => theme.fontSize.xs};
-  z-index: 3;
 `
 
 export const StyledTitle = styled.h3`
-  font-weight: 300;
-  font-size: 25px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  font-size: ${({ theme }) => theme.fontSize.md};
   line-height: 40px;
-  color: ${({ theme }) => theme.color.deepBlue};
   display: block;
 
   ${({ theme }) => theme.media.lgAbove} {

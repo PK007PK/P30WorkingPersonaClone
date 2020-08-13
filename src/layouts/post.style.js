@@ -118,8 +118,16 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
 export const StyledPostNavigation = styled.div`
   margin: 50px 0;
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  ${({ theme }) => theme.media.lgAbove} {
+    width: 80%;
+  }
+  li {
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    text-align: right;
+
+    :hover {
+      color: ${({ theme }) => theme.color.pink};
+    }
+  }
 `

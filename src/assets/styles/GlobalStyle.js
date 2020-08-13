@@ -4,6 +4,8 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     box-sizing: border-box;
+    font-size: 62.5%;
+  }
   }
   *,
   *::before,
@@ -14,22 +16,20 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Montserrat';
+    color: ${({ theme }) => theme.color.mainTextColor};
+    font-size: ${({ theme }) => theme.fontSize.sm};
   }
   
+  p {
+    font-size: 1.6rem;
+    line-height: ${({ theme }) => theme.lineHeight.regular};
+  }
+
   button {
     padding: 0;
     cursor: pointer;
     font-family: 'Montserrat';
-    background-color: black;
-    color: white;
-    padding: 10px 30px;
     border: none;
-    font-weight: 200;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 150%;
   }
 
   ul {

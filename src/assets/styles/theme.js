@@ -1,7 +1,22 @@
 export const theme = {
   fontSize: {
-    xs: "12px",
+    xs: "1.2rem",
+    sm: "1.6rem",
+    md: "2.5rem",
+    lg: "3.5rem",
+    xxl: "8rem",
   },
+
+  lineHeight: {
+    regular: "1.5",
+  },
+
+  fontWeight: {
+    thin: "200",
+    regular: "300",
+    bold: "700",
+  },
+
   color: {
     white: "#FFFFFF",
     black: "#000000",
@@ -9,6 +24,7 @@ export const theme = {
     blue: "#ADCCE4",
     deepBlue: "#0F3554",
     pink: "#EB4962",
+    mainTextColor: "#0F3554",
   },
   media: {
     xsAbove: `@media (min-width: 576px)`,

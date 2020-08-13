@@ -4,7 +4,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import slugify from "slugify"
 import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 
-import { StyledBlogPostEntry, StyledWrapper } from "./MainBlogSection.style"
+import {
+  StyledVerticalBlogPostEntry,
+  StyledWrapper,
+} from "./MainBlogSection.style"
 
 const MainBlogSection = () => {
   const data = useStaticQuery(query)
@@ -13,7 +16,7 @@ const MainBlogSection = () => {
       <StyledWrapper>
         {data.allDatoCmsNews.nodes.map(item => {
           return (
-            <StyledBlogPostEntry
+            <StyledVerticalBlogPostEntry
               date={item.date}
               title={item.title}
               text={

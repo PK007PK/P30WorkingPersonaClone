@@ -99,8 +99,14 @@ const PostLayout = ({ data }) => {
         })}
       </div>
       <StyledPostNavigation>
-        <a href="javascript:history.back()">Powrót</a>
-        <Link to="/blog">Wszystkie artykuły</Link>
+        <ul>
+          <li>
+            <a href="javascript:history.back()">Powrót</a>
+          </li>
+          <li>
+            <Link to="/blog">Wszystkie artykuły</Link>
+          </li>
+        </ul>
       </StyledPostNavigation>
     </StyledSectionLayout>
   )
