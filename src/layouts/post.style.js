@@ -77,22 +77,18 @@ export const StyledSectionLayout = styled(SectionLayout)`
   }
 
   .mainPostBody {
-    color: ${({ theme }) => theme.color.deepBlue};
+    * {
+      ${({ theme }) => theme.media.lgAbove} {
+        width: 80%;
+      }
+    }
 
     h2 {
       margin-top: 30px;
-
-      ${({ theme }) => theme.media.lgAbove} {
-        width: 70%;
-      }
     }
 
     p {
       margin-top: 20px;
-
-      ${({ theme }) => theme.media.lgAbove} {
-        width: 80%;
-      }
     }
 
     li {

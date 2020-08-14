@@ -7,46 +7,29 @@ import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextS
 const OMniePage = ({ data }) => (
   <>
     <HeadingSubpage
-      data={data}
+      fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
       title={"o mnie"}
       slug={"#o-mnie"}
-      description={
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
-      }
+      description={data.datoCmsSiteSetup.oMniePageDescription}
     />
-    <PlainTextSection />
+    <PlainTextSection
+      data={data.datoCmsSiteSetup.oMniePageTextContentNode.childMdx.body}
+    />
   </>
 )
 
 export const query = graphql`
   {
-    file(name: { eq: "o-mnie" }) {
-      childImageSharp {
-        fluid(maxWidth: 550, maxHeight: 395, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    datoCmsSiteSetup {
+      oMniePageDescription
+      oMniePageTextContentNode {
+        childMdx {
+          body
         }
       }
-    }
-    allDatoCmsNews(sort: { fields: [date], order: DESC }) {
-      nodes {
-        author
-        date
-        title
-        id
-        featuredImage {
-          fluid(maxWidth: 500) {
-            ...GatsbyDatoCmsFluid_tracedSVG
-          }
-        }
-        articleContent {
-          ... on DatoCmsParagraph {
-            paragraphContentNode {
-              childMdx {
-                body
-                excerpt(pruneLength: 120)
-              }
-            }
-          }
+      oMniePageHeroImage {
+        fluid(maxWidth: 550, maxHeight: 800) {
+          ...GatsbyDatoCmsFluid_tracedSVG
         }
       }
     }

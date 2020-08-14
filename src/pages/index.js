@@ -6,24 +6,12 @@ import HeadingHeroRight from "../components/Sections/HeadingHeroRight/HeadingHer
 import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/FeaturedNewsSection"
 import RecentlyAdded from "../components/Sections/RecentlyAdded/RecentlyAdded"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <>
-    <HeadingHeroRight data={data} />
+    <HeadingHeroRight />
     <FeaturedNewsSection />
     <RecentlyAdded />
   </>
 )
-
-export const query = graphql`
-  {
-    file(name: { eq: "tlo15" }) {
-      childImageSharp {
-        fluid(maxWidth: 550, maxHeight: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

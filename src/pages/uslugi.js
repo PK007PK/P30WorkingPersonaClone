@@ -7,46 +7,29 @@ import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextS
 const UslugiPage = ({ data }) => (
   <>
     <HeadingSubpage
-      data={data}
+      fluid={data.datoCmsSiteSetup.uslugiPageHeroImage.fluid}
       title={"uslugi"}
       slug={"#uslugi"}
-      description={
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
-      }
+      description={data.datoCmsSiteSetup.uslugiPageDescription}
     />
-    <PlainTextSection />
+    <PlainTextSection
+      data={data.datoCmsSiteSetup.uslugiPageTextContentNode.childMdx.body}
+    />
   </>
 )
 
 export const query = graphql`
   {
-    file(name: { eq: "uslugi" }) {
-      childImageSharp {
-        fluid(maxWidth: 550, maxHeight: 395, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    datoCmsSiteSetup {
+      uslugiPageDescription
+      uslugiPageTextContentNode {
+        childMdx {
+          body
         }
       }
-    }
-    allDatoCmsNews(sort: { fields: [date], order: DESC }) {
-      nodes {
-        author
-        date
-        title
-        id
-        featuredImage {
-          fluid(maxWidth: 500) {
-            ...GatsbyDatoCmsFluid_tracedSVG
-          }
-        }
-        articleContent {
-          ... on DatoCmsParagraph {
-            paragraphContentNode {
-              childMdx {
-                body
-                excerpt(pruneLength: 120)
-              }
-            }
-          }
+      uslugiPageHeroImage {
+        fluid(maxWidth: 650, maxHeight: 500) {
+          ...GatsbyDatoCmsFluid_tracedSVG
         }
       }
     }

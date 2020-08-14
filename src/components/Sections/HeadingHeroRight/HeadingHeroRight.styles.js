@@ -68,6 +68,8 @@ export const StyledTxtWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.lg};
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: right;
+    max-width: 70%;
   }
 
   .description {

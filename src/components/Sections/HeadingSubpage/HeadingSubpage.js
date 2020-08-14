@@ -10,7 +10,7 @@ import {
 
 import BootstrapContainer from "../../../utilities/BootstrapContainer/BootstrapContainer"
 
-const HeadingSubpage = ({ data, title, slug, description }) => (
+const HeadingSubpage = ({ fluid, title, slug, description }) => (
   <BootstrapContainer>
     <StyledSection>
       <StyledTxtWrapper>
@@ -19,7 +19,7 @@ const HeadingSubpage = ({ data, title, slug, description }) => (
         <p className="description">{description}</p>
       </StyledTxtWrapper>
       <StyledImageWrapper>
-        <StyledImage fluid={data.file.childImageSharp.fluid} />
+        <StyledImage fluid={fluid} />
         <StyledDiv></StyledDiv>
       </StyledImageWrapper>
     </StyledSection>
