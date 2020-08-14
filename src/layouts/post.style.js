@@ -79,7 +79,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
   .mainPostBody {
     * {
       ${({ theme }) => theme.media.lgAbove} {
-        width: 80%;
+        width: 90%;
       }
     }
 
@@ -115,7 +115,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 export const StyledPostNavigation = styled.div`
   margin: 50px 0;
   ${({ theme }) => theme.media.lgAbove} {
-    width: 80%;
+    width: 90%;
   }
   li {
     margin-bottom: 10px;

@@ -14,7 +14,7 @@ export const query = graphql`
       date
       youtube
       featuredImage {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 600) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
       }
@@ -34,7 +34,7 @@ export const query = graphql`
         }
         ... on DatoCmsArticleImage {
           imageData {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid_tracedSVG
             }
           }
@@ -100,9 +100,6 @@ const PostLayout = ({ data }) => {
       </div>
       <StyledPostNavigation>
         <ul>
-          <li>
-            <a href="javascript:history.back()">Powrót</a>
-          </li>
           <li>
             <Link to="/blog">Wszystkie artykuły</Link>
           </li>

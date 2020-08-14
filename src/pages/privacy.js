@@ -7,15 +7,15 @@ import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextS
 
 const KontaktPage = ({ data }) => (
   <>
-    <HeadingSubpage
+    {/* <HeadingSubpage
       data={data}
       title={"polityka prywatności"}
       slug={"#polityka"}
       description={
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
       }
-    />
-    <PlainTextSection />
+    /> */}
+    {/* <PlainTextSection /> */}
   </>
 )
 

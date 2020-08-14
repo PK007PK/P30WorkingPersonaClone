@@ -12,9 +12,7 @@ const OMniePage = ({ data }) => (
       slug={"#o-mnie"}
       description={data.datoCmsSiteSetup.oMniePageDescription}
     />
-    <PlainTextSection
-      data={data.datoCmsSiteSetup.oMniePageTextContentNode.childMdx.body}
-    />
+    <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
   </>
 )
 
@@ -22,9 +20,26 @@ export const query = graphql`
   {
     datoCmsSiteSetup {
       oMniePageDescription
-      oMniePageTextContentNode {
-        childMdx {
-          body
+      oMnieArticleContent {
+        ... on DatoCmsParagraph {
+          paragraphContentNode {
+            childMdx {
+              body
+            }
+          }
+          id
+        }
+        ... on DatoCmsHeading {
+          headingContent
+          id
+        }
+        ... on DatoCmsArticleImage {
+          imageData {
+            fluid(maxWidth: 600) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+          id
         }
       }
       oMniePageHeroImage {

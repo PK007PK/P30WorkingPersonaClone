@@ -12,9 +12,7 @@ const UslugiPage = ({ data }) => (
       slug={"#uslugi"}
       description={data.datoCmsSiteSetup.uslugiPageDescription}
     />
-    <PlainTextSection
-      data={data.datoCmsSiteSetup.uslugiPageTextContentNode.childMdx.body}
-    />
+    <PlainTextSection data={data.datoCmsSiteSetup.uslugiArticleContent} />
   </>
 )
 
@@ -22,9 +20,26 @@ export const query = graphql`
   {
     datoCmsSiteSetup {
       uslugiPageDescription
-      uslugiPageTextContentNode {
-        childMdx {
-          body
+      uslugiArticleContent {
+        ... on DatoCmsParagraph {
+          paragraphContentNode {
+            childMdx {
+              body
+            }
+          }
+          id
+        }
+        ... on DatoCmsHeading {
+          headingContent
+          id
+        }
+        ... on DatoCmsArticleImage {
+          imageData {
+            fluid(maxWidth: 600) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+          id
         }
       }
       uslugiPageHeroImage {
