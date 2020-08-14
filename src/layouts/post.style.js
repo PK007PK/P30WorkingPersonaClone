@@ -77,9 +77,12 @@ export const StyledSectionLayout = styled(SectionLayout)`
   }
 
   .mainPostBody {
-    * {
+    p,
+    h2,
+    img,
+    li {
       ${({ theme }) => theme.media.lgAbove} {
-        width: 90%;
+        width: 75%;
       }
     }
 

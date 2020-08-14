@@ -2,9 +2,12 @@ import styled from "styled-components"
 import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
 
 export const StyledSectionLayout = styled(SectionLayout)`
-  * {
+  p,
+  h2,
+  img,
+  li {
     ${({ theme }) => theme.media.lgAbove} {
-      width: 90%;
+      width: 75%;
     }
   }
 
@@ -23,5 +26,18 @@ export const StyledSectionLayout = styled(SectionLayout)`
     margin: 10px 0;
     list-style-type: circle;
     margin-left: 20px;
+  }
+
+  .articleImg {
+    margin: 20px 0;
+
+    ${({ theme }) => theme.media.mdAbove} {
+      width: 50%;
+      height: 40vh;
+    }
+
+    ${({ theme }) => theme.media.lgAbove} {
+      height: 55vh;
+    }
   }
 `

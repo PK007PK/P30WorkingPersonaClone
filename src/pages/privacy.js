@@ -7,24 +7,45 @@ import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextS
 
 const KontaktPage = ({ data }) => (
   <>
-    {/* <HeadingSubpage
-      data={data}
+    <HeadingSubpage
+      fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
       title={"polityka prywatności"}
       slug={"#polityka"}
-      description={
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel odio at leo euismod dignissim id eu risus. Aliquam quis consectetur nisi, vel ullamcorper lorem. Q"
-      }
-    /> */}
-    {/* <PlainTextSection /> */}
+      description={data.datoCmsSiteSetup.policyPageDescription}
+    />
+    <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
   </>
 )
 
 export const query = graphql`
   {
-    file(name: { eq: "privacy" }) {
-      childImageSharp {
-        fluid(maxWidth: 550, maxHeight: 395, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    datoCmsSiteSetup {
+      policyPageDescription
+      policyArticleContent {
+        ... on DatoCmsParagraph {
+          paragraphContentNode {
+            childMdx {
+              body
+            }
+          }
+          id
+        }
+        ... on DatoCmsHeading {
+          headingContent
+          id
+        }
+        ... on DatoCmsArticleImage {
+          imageData {
+            fluid(maxWidth: 600) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+          id
+        }
+      }
+      policyPageHeroImage {
+        fluid(maxWidth: 650, maxHeight: 500) {
+          ...GatsbyDatoCmsFluid_tracedSVG
         }
       }
     }
