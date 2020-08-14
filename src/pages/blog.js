@@ -7,8 +7,8 @@ const BlogPage = ({ data }) => (
   <>
     <HeadingSubpage
       fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
-      title={"o mnie"}
-      slug={"#o-mnie"}
+      title={"blog"}
+      slug={"#blog"}
       description={data.datoCmsSiteSetup.blogPageDescription}
     />
     <MainBlogSection />

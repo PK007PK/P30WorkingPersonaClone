@@ -29,9 +29,9 @@ const HeadingHeroRight = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconFB as="a" href="https://youtube.com" />
+              <IconFB as="a" href={data.datoCmsSiteSetup.facebookLink} />
             </a>
-            <StyledButton small href="https://youtube.com">
+            <StyledButton small href={data.datoCmsSiteSetup.youtubeChanelLink}>
               {" "}
               Sprawdź mój vlog <IconYT small />
             </StyledButton>
@@ -51,6 +51,8 @@ const query = graphql`
       mainPageMotto
       mainPageAdditionalText
       mainPageDescription
+      youtubeChanelLink
+      facebookLink
       mainPageHeroImage {
         fluid(maxWidth: 550, maxHeight: 800) {
           ...GatsbyDatoCmsFluid_tracedSVG
