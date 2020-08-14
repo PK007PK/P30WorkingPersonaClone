@@ -13,6 +13,7 @@ const KontaktPage = ({ data }) => (
       description={data.datoCmsSiteSetup.kontaktPageDescription}
     />
     <p>asas</p>
+    <p>asas</p>
     {/* <ContactForm></ContactForm> */}
   </>
 )
