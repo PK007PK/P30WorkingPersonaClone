@@ -12,6 +12,7 @@ const KontaktPage = ({ data }) => (
       slug={"#kontakt"}
       description={data.datoCmsSiteSetup.kontaktPageDescription}
     />
+    <p>asas</p>
     {/* <ContactForm></ContactForm> */}
   </>
 )
