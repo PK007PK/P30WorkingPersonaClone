@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
-// import ContactForm from "../components/ContactForm/ContactForm"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 const KontaktPage = ({ data }) => (
   <>
@@ -14,7 +14,7 @@ const KontaktPage = ({ data }) => (
     />
     <p>asas</p>
     <p>asas</p>
-    {/* <ContactForm></ContactForm> */}
+    <ContactForm></ContactForm>
   </>
 )
 
