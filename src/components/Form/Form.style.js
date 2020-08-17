@@ -16,7 +16,7 @@ export const StyledForm = styled.form`
 
   .formItemBar {
     width: 100%;
-    height: 1px;
+    height: 2px;
     background: ${({ theme }) => theme.color.deepBlue};
     transition: 0.1s all;
   }

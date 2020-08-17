@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import { StyledButton, StyledA } from "./Button.style"
 
-const Button = ({ children, className, href, to }) => (
+const Button = ({ children, className, href, to, type }) => (
   <>
     {href ? (
       <StyledA
@@ -15,7 +15,7 @@ const Button = ({ children, className, href, to }) => (
         {children}
       </StyledA>
     ) : (
-      <StyledButton to={to} className={className}>
+      <StyledButton to={to} className={className} type={type}>
         {children}
       </StyledButton>
     )}
@@ -26,6 +26,7 @@ Button.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   to: PropTypes.string,
+  type: PropTypes.string,
 }
 
 export default Button
