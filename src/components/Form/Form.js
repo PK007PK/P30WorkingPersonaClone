@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <>
-      <h2>Formularz kontaktowy</h2>
+      <h2>Formularz:</h2>
       <StyledForm
         name="contact"
         method="post"

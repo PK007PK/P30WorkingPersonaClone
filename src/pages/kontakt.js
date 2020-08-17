@@ -2,9 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
-import Form from "../components/Form/Form"
 
-import SectionLayout from "../utilities/SectionLayout/SectionLayout"
+import ContactSection from "../components/Sections/ContactSection/ContactSection"
 
 const KontaktPage = ({ data }) => (
   <>
@@ -14,9 +13,7 @@ const KontaktPage = ({ data }) => (
       slug={"#kontakt"}
       description={data.datoCmsSiteSetup.kontaktPageDescription}
     />
-    <SectionLayout>
-      <Form></Form>
-    </SectionLayout>
+    <ContactSection />
   </>
 )
 

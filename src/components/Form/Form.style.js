@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const StyledForm = styled.form`
   width: 100%;
-  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,24 +16,20 @@ export const StyledForm = styled.form`
 
   .formItemBar {
     width: 100%;
-    height: 2px;
-    background: #7d7d7d;
+    height: 1px;
+    background: ${({ theme }) => theme.color.deepBlue};
     transition: 0.1s all;
   }
 
   .label {
-    color: #7d7d7d;
     position: absolute;
     top: 3px;
     left: 0;
     transition: 0.2s ease-out all;
-    font-size: 16px;
   }
 
   .input,
   .textarea {
-    color: #7d7d7d;
-    font-size: 16px;
     border: none;
     line-height: 22px;
     width: 100%;
@@ -54,13 +49,13 @@ export const StyledForm = styled.form`
   .input:focus + .label,
   .textarea:focus + .label {
     top: -22px;
-    font-size: 13px;
+    font-size: ${({ theme }) => theme.fontSize.xs};
   }
 
   .input:not(:placeholder-shown) + .label,
   .textarea:not(:placeholder-shown) + .label {
     top: -22px;
-    font-size: 13px;
+    font-size: ${({ theme }) => theme.fontSize.xs};
   }
 
   .input:focus ~ .formItemBar,

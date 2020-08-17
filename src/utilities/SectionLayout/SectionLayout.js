@@ -6,7 +6,9 @@ import { StyledSection } from "./SectionLayout.styles"
 
 const SectionLayout = ({ className, padding, children }) => (
   <StyledSection padding={padding} className={className}>
-    <BootstrapContainer>{children}</BootstrapContainer>
+    <BootstrapContainer className="innerContainer">
+      {children}
+    </BootstrapContainer>
   </StyledSection>
 )
 

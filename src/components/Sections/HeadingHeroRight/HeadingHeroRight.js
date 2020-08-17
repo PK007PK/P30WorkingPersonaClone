@@ -25,11 +25,11 @@ const HeadingHeroRight = () => {
           </p>
           <div className="buttonWrapper">
             <a
-              href="https://facebook.com"
+              href={data.datoCmsSiteSetup.facebookLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconFB as="a" href={data.datoCmsSiteSetup.facebookLink} />
+              <IconFB />
             </a>
             <StyledButton small href={data.datoCmsSiteSetup.youtubeChanelLink}>
               {" "}
