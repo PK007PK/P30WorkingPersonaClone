@@ -86,7 +86,6 @@ export default function Contact() {
           <div className="formItemBar" />
         </div>
         <Button type="submit">Wyślij</Button>
-        <button type="submit">Test</button>
       </StyledForm>
     </>
   )
