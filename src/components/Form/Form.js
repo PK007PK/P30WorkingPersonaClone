@@ -37,7 +37,7 @@ export default function Contact() {
     <>
       <h2>Formularz:</h2>
       <StyledForm
-        name="contact"
+        name="Template site contact form"
         method="post"
         action="/thanks/"
         data-netlify="true"

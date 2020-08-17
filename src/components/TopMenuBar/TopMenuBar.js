@@ -6,6 +6,7 @@ import {
   StyledLogo,
   StyledWrapper,
   StyledBurgerMenu,
+  StyledLink,
 } from "./TopMenuBar.style"
 
 const TopMenuBar = ({ className }) => (
@@ -16,54 +17,54 @@ const TopMenuBar = ({ className }) => (
       </Link>
       <StyledWrapper>
         <li>
-          <Link
+          <StyledLink
             to="/"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
             główna
-          </Link>
+          </StyledLink>
         </li>
         <li>
-          <Link
+          <StyledLink
             to="/omnie"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
             o mnie
-          </Link>
+          </StyledLink>
         </li>
         <li>
-          <Link
+          <StyledLink
             to="/blog"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
             blog
-          </Link>
+          </StyledLink>
         </li>
         <li>
-          <Link
+          <StyledLink
             to="/uslugi"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
             uslugi
-          </Link>
+          </StyledLink>
         </li>
         <li>
-          <Link
+          <StyledLink
             to="/kontakt"
             activeStyle={{
               fontWeight: "bold",
             }}
           >
             kontakt
-          </Link>
+          </StyledLink>
         </li>
       </StyledWrapper>
       <StyledBurgerMenu />

@@ -1,7 +1,40 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import Logo from "../Logo/Logo"
 import BurgerMenu from "../BurgerMenu/BurgerMenu"
+
+export const StyledLink = styled(Link)`
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: ${({ theme }) => theme.color.pink};
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  /* &:focus {
+    outline: none !important;
+    border: none !important;
+  }
+
+  &:focus::before {
+    visibility: visible;
+    transform: scaleX(1);
+  } */
+`
 
 export const StyledNav = styled.nav`
   color: ${({ theme }) => theme.color.deepBlue};
