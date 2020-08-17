@@ -57,7 +57,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
     }
 
     h2 {
-      margin: 0 0 10px 0;
+      margin: 0 0 20px 0;
     }
   }
 `

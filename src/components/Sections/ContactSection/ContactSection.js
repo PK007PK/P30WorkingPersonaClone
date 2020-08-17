@@ -44,7 +44,6 @@ const query = graphql`
     datoCmsSiteSetup {
       phone
       email
-      messenger
       youtubeChanelLink
       facebookLink
     }
