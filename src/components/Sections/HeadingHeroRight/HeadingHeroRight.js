@@ -14,34 +14,40 @@ import {
 const HeadingHeroRight = () => {
   const data = useStaticQuery(query)
   return (
-    <StyledSection>
-      <StyledTxtWrapper>
-        <div></div>
-        <div>
-          <h1>{data.datoCmsSiteSetup.mainPageMotto}</h1>
-          <p className="lead">{data.datoCmsSiteSetup.mainPageAdditionalText}</p>
-          <p className="description">
-            {data.datoCmsSiteSetup.mainPageDescription}
-          </p>
-          <div className="buttonWrapper">
-            <a
-              href={data.datoCmsSiteSetup.facebookLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconFB />
-            </a>
-            <StyledButton small href={data.datoCmsSiteSetup.youtubeChanelLink}>
-              {" "}
-              Sprawdź mój vlog <IconYT small />
-            </StyledButton>
+    <header>
+      <StyledSection>
+        <StyledTxtWrapper>
+          <div></div>
+          <div>
+            <h1>{data.datoCmsSiteSetup.mainPageMotto}</h1>
+            <p className="lead">
+              {data.datoCmsSiteSetup.mainPageAdditionalText}
+            </p>
+            <p className="description">
+              {data.datoCmsSiteSetup.mainPageDescription}
+            </p>
+            <div className="buttonWrapper">
+              <a
+                href={data.datoCmsSiteSetup.facebookLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconFB />
+              </a>
+              <StyledButton
+                small
+                href={data.datoCmsSiteSetup.youtubeChanelLink}
+              >
+                {" "}
+                Sprawdź mój vlog <IconYT small />
+              </StyledButton>
+            </div>
           </div>
-        </div>
-        <div></div>
-      </StyledTxtWrapper>
-
-      <StyledImage fluid={data.datoCmsSiteSetup.mainPageHeroImage.fluid} />
-    </StyledSection>
+          <div></div>
+        </StyledTxtWrapper>
+        <StyledImage fluid={data.datoCmsSiteSetup.mainPageHeroImage.fluid} />
+      </StyledSection>
+    </header>
   )
 }
 
@@ -54,7 +60,7 @@ const query = graphql`
       youtubeChanelLink
       facebookLink
       mainPageHeroImage {
-        fluid(maxWidth: 550, maxHeight: 800) {
+        fluid {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
       }

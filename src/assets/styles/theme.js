@@ -12,8 +12,8 @@ export const theme = {
   },
 
   fontWeight: {
-    thin: "200",
     regular: "300",
+    medium: "500",
     bold: "700",
   },
 

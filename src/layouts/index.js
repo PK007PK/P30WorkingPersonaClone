@@ -23,7 +23,9 @@ const MainLayout = ({ children }) => (
       <BootstrapContainer>
         <StyledTopMenuBar />
       </BootstrapContainer>
-      <BodyWrapper>{children}</BodyWrapper>
+      <BodyWrapper>
+        <main>{children}</main>
+      </BodyWrapper>
       <Footer />
     </>
   </ThemeProvider>

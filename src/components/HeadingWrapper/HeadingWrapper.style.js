@@ -30,6 +30,6 @@ export const StyledDiv = styled.div`
 
   .title {
     font-size: ${({ theme }) => theme.fontSize.md};
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
 `

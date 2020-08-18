@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
 
 import slugify from "slugify"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -34,6 +35,19 @@ const query = graphql`
   }
 `
 
+const StyledWrap = styled.div`
+  /* overflow: hidden;
+  position: relative;
+  padding-left: -30px;
+  margin-left: -30px; */
+`
+
+const StyledSwiper = styled(Swiper)`
+  background-color: ${({ theme }) => theme.color.blue};
+  padding-bottom: 100px;
+  z-index: 0;
+`
+
 const FeaturedNewsSection = () => {
   const data = useStaticQuery(query)
 
@@ -41,37 +55,49 @@ const FeaturedNewsSection = () => {
     slidesPerView: "auto",
     loop: true,
     spaceBetween: 30,
+    speed: 40,
     breakpoints: {
       0: {
-        slidesPerView: "auto",
+        slidesOffsetBefore: -40,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        slidesOffsetBefore: -40,
       },
       768: {
         slidesPerView: 2,
+        slidesOffsetBefore: -40,
       },
       992: {
         slidesPerView: 3,
+        slidesOffsetBefore: -40,
       },
       1200: {
         slidesPerView: 3,
+        slidesOffsetBefore: -40,
       },
       1450: {
-        slidesPerView: 3,
+        slidesPerView: 4,
+        slidesOffsetBefore: -40,
+      },
+      1600: {
+        slidesPerView: 5,
+        slidesOffsetBefore: -40,
       },
     },
   }
 
   return (
-    <StyledSectionLayout padding={"50px 0 100px 0px"}>
-      <HeadingWrapper
-        title={"Wyróżnione wpisy"}
-        inputColor={({ theme }) => theme.color.deepBlue}
-        inputBackgroundColor={({ theme }) => theme.color.blue}
-      ></HeadingWrapper>
-
-      <Swiper {...params}>
+    <>
+      <StyledSectionLayout padding={"50px 0 0px 0px"}>
+        <HeadingWrapper
+          title={"Wyróżnione wpisy"}
+          inputColor={({ theme }) => theme.color.deepBlue}
+          inputBackgroundColor={({ theme }) => theme.color.blue}
+        ></HeadingWrapper>
+      </StyledSectionLayout>
+      <StyledSwiper {...params}>
         {data.allDatoCmsNews.nodes.map(item => {
           return (
             <SwiperSlide key={item.id}>
@@ -85,8 +111,8 @@ const FeaturedNewsSection = () => {
             </SwiperSlide>
           )
         })}
-      </Swiper>
-    </StyledSectionLayout>
+      </StyledSwiper>
+    </>
   )
 }
 

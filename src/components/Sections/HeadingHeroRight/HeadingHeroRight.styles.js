@@ -8,28 +8,32 @@ export const StyledButton = styled(Button)`
 `
 
 export const StyledSection = styled.section`
-  height: calc(100vh - 70px + 50px);
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 100px;
 
   ${({ theme }) => theme.media.xsAbove} {
-    max-height: 800px;
+    height: 800px;
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    max-height: 700px;
+    min-height: 700px;
+    height: 700px;
     background-image: none;
     display: flex;
     position: relative;
+    padding-bottom: 0px;
 
     @media (orientation: landscape) {
-      max-height: calc(100vh - 98px + 50px);
+      height: calc(100vh - 98px + 50px);
     }
   }
 `
 
 export const StyledTxtWrapper = styled.div`
   height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,6 +53,12 @@ export const StyledTxtWrapper = styled.div`
     width: 65%;
   }
 
+  ${({ theme }) => theme.media.xlAbove} {
+    padding-right: 360px;
+    width: 65%;
+    /* flex-grow: 0; */
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -66,6 +76,7 @@ export const StyledTxtWrapper = styled.div`
 
   .lead {
     font-size: ${({ theme }) => theme.fontSize.lg};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: right;
@@ -94,19 +105,15 @@ export const StyledImage = styled(Image)`
   display: none;
   object-fit: contain;
 
-  ${({ theme }) => theme.media.smAbove} {
-    display: block;
-    margin-top: -98px;
-    width: 35%;
-  }
-
   ${({ theme }) => theme.media.mdAbove} {
     display: block;
-    width: 40%;
-  }
+    width: 30vh;
+    height: 60vh;
 
-  ${({ theme }) => theme.media.lgAbove} {
-    display: block;
-    width: 35%;
+    @media (orientation: landscape) {
+      width: 55vh;
+      height: auto;
+      margin-top: -98px;
+    }
   }
 `

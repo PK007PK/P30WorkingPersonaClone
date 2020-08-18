@@ -7,11 +7,11 @@ import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/Feat
 import RecentlyAdded from "../components/Sections/RecentlyAdded/RecentlyAdded"
 
 const IndexPage = () => (
-  <>
+  <article>
     <HeadingHeroRight />
     <FeaturedNewsSection />
     <RecentlyAdded />
-  </>
+  </article>
 )
 
 export default IndexPage

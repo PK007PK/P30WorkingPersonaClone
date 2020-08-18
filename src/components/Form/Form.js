@@ -45,9 +45,9 @@ export default function Contact() {
         onSubmit={handleSubmit}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="hiden-input" value="contact" />
         <div hidden>
-          <label>
+          <label htmlFor="bot-field">
             Don’t fill this out:{" "}
             <input name="bot-field" onChange={handleChange} />
           </label>
@@ -56,11 +56,13 @@ export default function Contact() {
           <input
             className="input"
             type="text"
-            name="name"
+            name="imie"
             placeholder=" "
             onChange={handleChange}
           />
-          <label className="label">Imię:</label>
+          <label className="label" htmlFor="imie">
+            Imię:
+          </label>
           <div className="formItemBar" />
         </div>
         <div className="formItem">
@@ -71,18 +73,35 @@ export default function Contact() {
             onChange={handleChange}
             placeholder=" "
           />
-          <label className="label">Email:</label>
+          <label className="label" htmlFor="email">
+            Email:
+          </label>
+          <div className="formItemBar" />
+        </div>
+        <div className="formItem">
+          <input
+            className="input"
+            type="text"
+            name="telefon"
+            placeholder=" "
+            onChange={handleChange}
+          />
+          <label className="label" htmlFor="telefon">
+            Telefon:
+          </label>
           <div className="formItemBar" />
         </div>
         <div className="formItem">
           <textarea
             className="textarea"
             type="email"
-            name="email"
+            name="text"
             onChange={handleChange}
             placeholder=" "
           />
-          <label className="label">Treść wiadomości:</label>
+          <label className="label" htmlFor="text">
+            Treść wiadomości:
+          </label>
           <div className="formItemBar" />
         </div>
         <Button type="submit">Wyślij</Button>

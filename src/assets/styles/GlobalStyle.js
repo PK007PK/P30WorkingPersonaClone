@@ -18,11 +18,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat';
     color: ${({ theme }) => theme.color.mainTextColor};
     font-size: ${({ theme }) => theme.fontSize.sm};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
   }
   
   p {
     font-size: 1.6rem;
     line-height: ${({ theme }) => theme.lineHeight.regular};
+  }
+
+  strong {
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
 
   button {

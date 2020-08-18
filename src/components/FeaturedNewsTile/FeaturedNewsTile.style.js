@@ -12,7 +12,7 @@ export const StyledWrapper = styled(Link)`
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
-
+/* 
   ${({ theme }) => theme.media.xsAbove} {
     height: 450px;
     width: 250px;
@@ -38,7 +38,7 @@ export const StyledWrapper = styled(Link)`
     height: 450px;
     width: 370px;
     flex-grow: 1;
-  }
+  } */
 
   &:hover ::after {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
@@ -54,7 +54,7 @@ export const StyledWrapper = styled(Link)`
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
     z-index: 2;
 
-    ${({ theme }) => theme.media.xsAbove} {
+    /* ${({ theme }) => theme.media.xsAbove} {
       height: 450px;
       width: 250px;
     }
@@ -77,7 +77,7 @@ export const StyledWrapper = styled(Link)`
     ${({ theme }) => theme.media.xlAbove} {
       height: 450px;
       width: 370px;
-    }
+    } */
   }
 `
 
@@ -110,6 +110,7 @@ export const StyledDate = styled.span`
 export const StyledTitle = styled.h3`
   color: ${({ theme }) => theme.color.white};
   line-height: ${({ theme }) => theme.lineHeight.regular};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   position: absolute;
   bottom: 30px;
   width: 95%;

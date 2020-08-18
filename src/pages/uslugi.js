@@ -5,7 +5,7 @@ import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
 const UslugiPage = ({ data }) => (
-  <>
+  <article>
     <HeadingSubpage
       fluid={data.datoCmsSiteSetup.uslugiPageHeroImage.fluid}
       title={"uslugi"}
@@ -13,7 +13,7 @@ const UslugiPage = ({ data }) => (
       description={data.datoCmsSiteSetup.uslugiPageDescription}
     />
     <PlainTextSection data={data.datoCmsSiteSetup.uslugiArticleContent} />
-  </>
+  </article>
 )
 
 export const query = graphql`

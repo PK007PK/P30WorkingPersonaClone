@@ -9,4 +9,9 @@ export const StyledI = styled.i`
   background-image: url(${icon});
   background-size: cover;
   background-position: center;
+  transition: all 0.2s;
+
+  :hover {
+    box-shadow: 0px 5px 0px ${({ theme }) => theme.color.pink};
+  }
 `

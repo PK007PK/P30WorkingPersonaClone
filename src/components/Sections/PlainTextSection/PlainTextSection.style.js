@@ -17,6 +17,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
   h2 {
     margin: 40px 0 20px 0;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
   img {
     margin: 20px 0;

@@ -61,6 +61,9 @@ export const StyledWrapper = styled.ul`
 `
 
 export const StyledBurgerMenu = styled(BurgerMenu)`
+  margin-right: 10px;
+  margin-top: 10px;
+
   ${({ theme }) => theme.media.smAbove} {
     display: none;
   }

@@ -1,6 +1,6 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-
+import { graphql, useStaticQuery, Link } from "gatsby"
+import styled from "styled-components"
 import slugify from "slugify"
 
 import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
@@ -8,9 +8,26 @@ import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
 import {
   StyledSectionLayout,
   StyledFullWidthBlogPostEntry,
-  StyledButton,
   StyledButtonWrapper,
 } from "./RecentlyAdded.style"
+
+const StyledButton = styled(Link)`
+  background-color: ${({ theme }) => theme.color.pink};
+  font-weight: ${({ theme }) => theme.fontWeight.thin};
+  color: ${({ theme }) => theme.color.white};
+  padding: 0 30px;
+  height: 45px;
+  border: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 0px ${({ theme }) => theme.color.white};
+
+  :hover {
+    background-color: ${({ theme }) => theme.color.deepBlue};
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.pink};
+  }
+`
 
 const FeaturedNewsSection = () => {
   const data = useStaticQuery(query)

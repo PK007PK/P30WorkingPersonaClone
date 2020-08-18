@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import MainBlogSection from "../components/Sections/MainBlogSection/MainBlogSection"
 const BlogPage = ({ data }) => (
-  <>
+  <article>
     <HeadingSubpage
       fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
       title={"blog"}
@@ -12,7 +12,7 @@ const BlogPage = ({ data }) => (
       description={data.datoCmsSiteSetup.blogPageDescription}
     />
     <MainBlogSection />
-  </>
+  </article>
 )
 
 export const query = graphql`

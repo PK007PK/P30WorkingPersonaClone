@@ -37,6 +37,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
       font-size: 50px;
       line-height: 50px;
       color: ${({ theme }) => theme.color.deepBlue};
+      font-weight: ${({ theme }) => theme.fontWeight.medium};
     }
 
     div {
@@ -88,6 +89,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     h2 {
       margin-top: 30px;
+      font-weight: ${({ theme }) => theme.fontWeight.medium};
     }
 
     p {

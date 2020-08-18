@@ -10,10 +10,6 @@ export const StyledButtonWrapper = styled.div`
   justify-content: flex-end;
 `
 
-export const StyledButton = styled(Button)`
-  width: 260px;
-`
-
 export const StyledFullWidthBlogPostEntry = styled(FullWidthBlogPostEntry)`
   margin: 15px 0;
 `

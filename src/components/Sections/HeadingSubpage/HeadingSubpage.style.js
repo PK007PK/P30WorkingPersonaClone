@@ -45,7 +45,7 @@ export const StyledTxtWrapper = styled.div`
   }
 
   h1 {
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
     font-size: ${({ theme }) => theme.fontSize.lg};
     margin: 20px 0;
   }
@@ -80,6 +80,8 @@ export const StyledImage = styled(Image)`
   ${({ theme }) => theme.media.mdAbove} {
     display: block;
     width: 400px;
+    height: 280px;
+
     object-fit: contain;
     border: 1px solid gray;
     z-index: 1;
@@ -91,6 +93,7 @@ export const StyledImage = styled(Image)`
 
   ${({ theme }) => theme.media.lgAbove} {
     width: 500px;
+    height: 350px;
   }
 `
 export const StyledDiv = styled.div`
@@ -103,13 +106,13 @@ export const StyledDiv = styled.div`
     left: 90%;
     transform: translate(-100%, -50%);
     width: 400px;
-    height: 300px;
+    height: 280px;
     border: 16px solid rgba(15, 53, 83, 0.4);
   }
 
   ${({ theme }) => theme.media.lgAbove} {
     width: 500px;
-    height: 370px;
+    height: 350px;
     border: 16px solid rgba(15, 53, 83, 0.4);
   }
 `
