@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { theme } from "../assets/styles/theme"
+import { Helmet } from "react-helmet"
 
 import GlobalStyle from "../assets/styles/GlobalStyle"
 
@@ -19,6 +20,15 @@ const BodyWrapper = styled.div`
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
+      <Helmet
+        title="Gatsby Default Starter"
+        meta={[
+          { name: "description", content: "Sample" },
+          { name: "keywords", content: "sample, something" },
+        ]}
+      >
+        <html lang="en" />
+      </Helmet>
       <GlobalStyle />
       <BootstrapContainer>
         <StyledTopMenuBar />

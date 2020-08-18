@@ -31,6 +31,7 @@ const HeadingHeroRight = () => {
                 href={data.datoCmsSiteSetup.facebookLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <IconFB />
               </a>

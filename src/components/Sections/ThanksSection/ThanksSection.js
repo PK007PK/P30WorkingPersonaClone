@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import IconYT from "../../IconYT/IconYT"
 import IconFB from "../../IconFB/IconFB"
-import Form from "../../Form/Form"
 import Button from "../../Button/Button"
 
 import { StyledSectionLayout } from "./ThanksSection.style"

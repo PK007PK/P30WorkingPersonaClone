@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.color.pink};
-  font-weight: ${({ theme }) => theme.fontWeight.thin};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
   padding: 0 30px;
   height: 45px;
@@ -24,7 +24,7 @@ export const StyledButton = styled.button`
 
 export const StyledA = styled.a`
   background-color: ${({ theme }) => theme.color.pink};
-  font-weight: ${({ theme }) => theme.fontWeight.thin};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
   padding: 0 30px;
   height: 45px;

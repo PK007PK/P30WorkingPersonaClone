@@ -13,7 +13,7 @@ import {
 
 const StyledButton = styled(Link)`
   background-color: ${({ theme }) => theme.color.pink};
-  font-weight: ${({ theme }) => theme.fontWeight.thin};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
   padding: 0 30px;
   height: 45px;

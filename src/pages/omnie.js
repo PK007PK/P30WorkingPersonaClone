@@ -1,19 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
 const OMniePage = ({ data }) => (
-  <article>
-    <HeadingSubpage
-      fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
-      title={"o mnie"}
-      slug={"#o-mnie"}
-      description={data.datoCmsSiteSetup.oMniePageDescription}
-    />
-    <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
-  </article>
+  <>
+    <Helmet title="O mnie" />
+    <article>
+      <HeadingSubpage
+        fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
+        title={"o mnie"}
+        slug={"#o-mnie"}
+        description={data.datoCmsSiteSetup.oMniePageDescription}
+      />
+      <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
+    </article>
+  </>
 )
 
 export const query = graphql`

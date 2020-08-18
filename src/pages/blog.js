@@ -1,18 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import MainBlogSection from "../components/Sections/MainBlogSection/MainBlogSection"
 const BlogPage = ({ data }) => (
-  <article>
-    <HeadingSubpage
-      fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
-      title={"blog"}
-      slug={"#blog"}
-      description={data.datoCmsSiteSetup.blogPageDescription}
-    />
-    <MainBlogSection />
-  </article>
+  <>
+    <Helmet title="Blog" />
+    <article>
+      <HeadingSubpage
+        fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
+        title={"blog"}
+        slug={"#blog"}
+        description={data.datoCmsSiteSetup.blogPageDescription}
+      />
+      <MainBlogSection />
+    </article>
+  </>
 )
 
 export const query = graphql`

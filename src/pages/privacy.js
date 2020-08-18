@@ -1,20 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
 const KontaktPage = ({ data }) => (
-  <article>
-    <HeadingSubpage
-      fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
-      title={"polityka prywatności"}
-      slug={"#polityka"}
-      description={data.datoCmsSiteSetup.policyPageDescription}
-    />
-    <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
-  </article>
+  <>
+    <Helmet title="Polityki" />
+    <article>
+      <HeadingSubpage
+        fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
+        title={"polityka prywatności"}
+        slug={"#polityka"}
+        description={data.datoCmsSiteSetup.policyPageDescription}
+      />
+      <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
+    </article>
+  </>
 )
 
 export const query = graphql`

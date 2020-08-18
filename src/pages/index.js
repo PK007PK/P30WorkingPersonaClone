@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import HeadingHeroRight from "../components/Sections/HeadingHeroRight/HeadingHeroRight"
 
@@ -7,11 +7,14 @@ import FeaturedNewsSection from "../components/Sections/FeaturedNewsSection/Feat
 import RecentlyAdded from "../components/Sections/RecentlyAdded/RecentlyAdded"
 
 const IndexPage = () => (
-  <article>
-    <HeadingHeroRight />
-    <FeaturedNewsSection />
-    <RecentlyAdded />
-  </article>
+  <>
+    <Helmet title="Strona główna" />
+    <article>
+      <HeadingHeroRight />
+      <FeaturedNewsSection />
+      <RecentlyAdded />
+    </article>
+  </>
 )
 
 export default IndexPage

@@ -35,13 +35,6 @@ const query = graphql`
   }
 `
 
-const StyledWrap = styled.div`
-  /* overflow: hidden;
-  position: relative;
-  padding-left: -30px;
-  margin-left: -30px; */
-`
-
 const StyledSwiper = styled(Swiper)`
   background-color: ${({ theme }) => theme.color.blue};
   padding-bottom: 100px;
