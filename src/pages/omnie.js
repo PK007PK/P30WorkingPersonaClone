@@ -5,20 +5,23 @@ import { Helmet } from "react-helmet"
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
-const OMniePage = ({ data }) => (
-  <>
-    <Helmet title="O mnie" />
-    <article>
-      <HeadingSubpage
-        fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
-        title={"o mnie"}
-        slug={"#o-mnie"}
-        description={data.datoCmsSiteSetup.oMniePageDescription}
-      />
-      <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
-    </article>
-  </>
-)
+const OMniePage = ({ data }) => {
+  const title = data.datoCmsSiteSetup.siteTitle + " - o mnie"
+  return (
+    <>
+      <Helmet title={title} />
+      <article>
+        <HeadingSubpage
+          fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
+          title={"o mnie"}
+          slug={"#o-mnie"}
+          description={data.datoCmsSiteSetup.oMniePageDescription}
+        />
+        <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
+      </article>
+    </>
+  )
+}
 
 export const query = graphql`
   {

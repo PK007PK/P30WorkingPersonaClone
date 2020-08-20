@@ -5,24 +5,28 @@ import { Helmet } from "react-helmet"
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
-const UslugiPage = ({ data }) => (
-  <>
-    <Helmet title="Usługi" />
-    <article>
-      <HeadingSubpage
-        fluid={data.datoCmsSiteSetup.uslugiPageHeroImage.fluid}
-        title={"uslugi"}
-        slug={"#uslugi"}
-        description={data.datoCmsSiteSetup.uslugiPageDescription}
-      />
-      <PlainTextSection data={data.datoCmsSiteSetup.uslugiArticleContent} />
-    </article>
-  </>
-)
+const UslugiPage = ({ data }) => {
+  const title = data.datoCmsSiteSetup.siteTitle + " - usługi"
+  return (
+    <>
+      <Helmet title={title} />
+      <article>
+        <HeadingSubpage
+          fluid={data.datoCmsSiteSetup.uslugiPageHeroImage.fluid}
+          title={"uslugi"}
+          slug={"#uslugi"}
+          description={data.datoCmsSiteSetup.uslugiPageDescription}
+        />
+        <PlainTextSection data={data.datoCmsSiteSetup.uslugiArticleContent} />
+      </article>
+    </>
+  )
+}
 
 export const query = graphql`
   {
     datoCmsSiteSetup {
+      siteTitle
       uslugiPageDescription
       uslugiArticleContent {
         ... on DatoCmsParagraph {

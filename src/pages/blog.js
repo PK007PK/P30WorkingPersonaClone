@@ -4,24 +4,28 @@ import { Helmet } from "react-helmet"
 
 import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
 import MainBlogSection from "../components/Sections/MainBlogSection/MainBlogSection"
-const BlogPage = ({ data }) => (
-  <>
-    <Helmet title="Blog" />
-    <article>
-      <HeadingSubpage
-        fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
-        title={"blog"}
-        slug={"#blog"}
-        description={data.datoCmsSiteSetup.blogPageDescription}
-      />
-      <MainBlogSection />
-    </article>
-  </>
-)
+const BlogPage = ({ data }) => {
+  const title = data.datoCmsSiteSetup.siteTitle + " - blog"
+  return (
+    <>
+      <Helmet title={title} />
+      <article>
+        <HeadingSubpage
+          fluid={data.datoCmsSiteSetup.blogPageHeroImage.fluid}
+          title={"blog"}
+          slug={"#blog"}
+          description={data.datoCmsSiteSetup.blogPageDescription}
+        />
+        <MainBlogSection />
+      </article>
+    </>
+  )
+}
 
 export const query = graphql`
   {
     datoCmsSiteSetup {
+      siteTitle
       blogPageDescription
       blogPageHeroImage {
         fluid(maxWidth: 650, maxHeight: 500) {

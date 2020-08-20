@@ -6,20 +6,23 @@ import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage
 
 import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
 
-const KontaktPage = ({ data }) => (
-  <>
-    <Helmet title="Polityki" />
-    <article>
-      <HeadingSubpage
-        fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
-        title={"polityka prywatności"}
-        slug={"#polityka"}
-        description={data.datoCmsSiteSetup.policyPageDescription}
-      />
-      <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
-    </article>
-  </>
-)
+const KontaktPage = ({ data }) => {
+  const title = data.datoCmsSiteSetup.siteTitle + " - polityki"
+  return (
+    <>
+      <Helmet title={title} />
+      <article>
+        <HeadingSubpage
+          fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
+          title={"polityka prywatności"}
+          slug={"#polityka"}
+          description={data.datoCmsSiteSetup.policyPageDescription}
+        />
+        <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
+      </article>
+    </>
+  )
+}
 
 export const query = graphql`
   {
