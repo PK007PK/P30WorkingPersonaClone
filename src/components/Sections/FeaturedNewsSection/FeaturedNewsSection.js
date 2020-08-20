@@ -51,32 +51,25 @@ const FeaturedNewsSection = () => {
     speed: 40,
     breakpoints: {
       0: {
-        slidesOffsetBefore: -40,
         slidesPerView: 1,
       },
       576: {
         slidesPerView: 1,
-        slidesOffsetBefore: -40,
       },
       768: {
         slidesPerView: 2,
-        slidesOffsetBefore: -40,
       },
       992: {
         slidesPerView: 2,
-        slidesOffsetBefore: -40,
       },
       1200: {
         slidesPerView: 3,
-        slidesOffsetBefore: -40,
       },
       1450: {
         slidesPerView: 3,
-        slidesOffsetBefore: -40,
       },
       1600: {
         slidesPerView: 4,
-        slidesOffsetBefore: -40,
       },
     },
   }
