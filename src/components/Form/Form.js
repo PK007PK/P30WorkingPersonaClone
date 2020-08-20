@@ -49,7 +49,11 @@ export default function Contact() {
         <div hidden>
           <label htmlFor="bot-field">
             Don’t fill this out:{" "}
-            <input name="bot-field" onChange={handleChange} />
+            <input
+              name="bot-field"
+              onChange={handleChange}
+              autocomplete="off"
+            />
           </label>
         </div>
         <div className="formItem">
@@ -59,6 +63,8 @@ export default function Contact() {
             name="imie"
             placeholder=" "
             onChange={handleChange}
+            autocomplete="off"
+            required
           />
           <label className="label" htmlFor="imie">
             Imię:
@@ -72,6 +78,8 @@ export default function Contact() {
             name="email"
             onChange={handleChange}
             placeholder=" "
+            autocomplete="off"
+            required
           />
           <label className="label" htmlFor="email">
             Email:
@@ -85,6 +93,8 @@ export default function Contact() {
             name="telefon"
             placeholder=" "
             onChange={handleChange}
+            autocomplete="off"
+            required
           />
           <label className="label" htmlFor="telefon">
             Telefon:
@@ -94,10 +104,10 @@ export default function Contact() {
         <div className="formItem">
           <textarea
             className="textarea"
-            type="email"
             name="text"
             onChange={handleChange}
             placeholder=" "
+            required
           />
           <label className="label" htmlFor="text">
             Treść wiadomości:
