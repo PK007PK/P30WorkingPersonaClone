@@ -61,7 +61,7 @@ const query = graphql`
       youtubeChanelLink
       facebookLink
       mainPageHeroImage {
-        fluid {
+        fluid(maxWidth: 700) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
       }

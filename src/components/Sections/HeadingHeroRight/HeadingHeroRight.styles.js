@@ -3,10 +3,6 @@ import Image from "gatsby-image"
 
 import Button from "../../Button/Button"
 
-export const StyledButton = styled(Button)`
-  margin-left: 10px;
-`
-
 export const StyledSection = styled.section`
   min-height: 100vh;
   background-size: cover;
@@ -33,14 +29,14 @@ export const StyledSection = styled.section`
 
 export const StyledTxtWrapper = styled.div`
   height: 100%;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
+
   ${({ theme }) => theme.media.smAbove} {
-    width: 65%;
+    width: 100%;
     padding-right: 40px;
   }
 
@@ -51,12 +47,12 @@ export const StyledTxtWrapper = styled.div`
   ${({ theme }) => theme.media.lgAbove} {
     padding-right: 60px;
     width: 65%;
+    padding-bottom: 100px;
   }
 
   ${({ theme }) => theme.media.xlAbove} {
     padding-right: 360px;
     width: 65%;
-    /* flex-grow: 0; */
   }
 
   div {
@@ -100,20 +96,23 @@ export const StyledTxtWrapper = styled.div`
     }
   }
 `
+export const StyledButton = styled(Button)`
+  margin-left: 10px;
+`
 
 export const StyledImage = styled(Image)`
   display: none;
-  object-fit: contain;
 
   ${({ theme }) => theme.media.mdAbove} {
     display: block;
-    width: 30vh;
-    height: 60vh;
-
+    height: calc(50vh);
+    width: calc(25vh);
+    margin-top: 20px;
     @media (orientation: landscape) {
-      width: 55vh;
-      height: auto;
-      margin-top: -98px;
+      margin-top: -100px;
+      object-fit: none;
+      height: calc(100vh + 100px);
+      width: calc(50vh + 50px);
     }
   }
 `
