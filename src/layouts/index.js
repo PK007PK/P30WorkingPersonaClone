@@ -22,6 +22,7 @@ const MainLayout = ({ children }) => {
   const data = useStaticQuery(query)
   const content = data.datoCmsSiteSetup.siteDescription
   const keywords = data.datoCmsSiteSetup.siteKeywords
+  const url = typeof window !== "undefined" ? window.location.href : ""
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -31,6 +32,7 @@ const MainLayout = ({ children }) => {
             { name: "keywords", content: keywords },
           ]}
         >
+          <link rel="canonical" href={url} />
           <html lang="pl" />
         </Helmet>
         <GlobalStyle />
@@ -48,7 +50,11 @@ const MainLayout = ({ children }) => {
 
 const query = graphql`
   {
+    sitePage {
+      path
+    }
     datoCmsSiteSetup {
+      siteUrl
       siteDescription
       siteKeywords
     }

@@ -25,7 +25,12 @@ const OMniePage = ({ data }) => {
 
 export const query = graphql`
   {
+    directory {
+      relativePath
+      root
+    }
     datoCmsSiteSetup {
+      siteTitle
       oMniePageDescription
       oMnieArticleContent {
         ... on DatoCmsParagraph {
