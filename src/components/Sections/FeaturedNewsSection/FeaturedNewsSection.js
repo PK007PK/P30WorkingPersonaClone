@@ -55,7 +55,7 @@ const FeaturedNewsSection = () => {
         slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         slidesOffsetBefore: -40,
       },
       768: {
@@ -63,7 +63,7 @@ const FeaturedNewsSection = () => {
         slidesOffsetBefore: -40,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         slidesOffsetBefore: -40,
       },
       1200: {
@@ -71,11 +71,11 @@ const FeaturedNewsSection = () => {
         slidesOffsetBefore: -40,
       },
       1450: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         slidesOffsetBefore: -40,
       },
       1600: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         slidesOffsetBefore: -40,
       },
     },
@@ -89,22 +89,23 @@ const FeaturedNewsSection = () => {
           inputColor={({ theme }) => theme.color.deepBlue}
           inputBackgroundColor={({ theme }) => theme.color.blue}
         ></HeadingWrapper>
+
+        <StyledSwiper {...params}>
+          {data.allDatoCmsNews.nodes.map(item => {
+            return (
+              <SwiperSlide key={item.id}>
+                <FeaturedNewsTile
+                  background={item.featuredImage.fluid}
+                  date={item.date}
+                  title={item.title}
+                  youtube={item.youtube}
+                  slug={slugify(item.title, { lower: true })}
+                />
+              </SwiperSlide>
+            )
+          })}
+        </StyledSwiper>
       </StyledSectionLayout>
-      <StyledSwiper {...params}>
-        {data.allDatoCmsNews.nodes.map(item => {
-          return (
-            <SwiperSlide key={item.id}>
-              <FeaturedNewsTile
-                background={item.featuredImage.fluid}
-                date={item.date}
-                title={item.title}
-                youtube={item.youtube}
-                slug={slugify(item.title, { lower: true })}
-              />
-            </SwiperSlide>
-          )
-        })}
-      </StyledSwiper>
     </>
   )
 }
