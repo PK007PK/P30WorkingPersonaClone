@@ -8,8 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.scss"
 import "swiper/components/navigation/navigation.scss"
 
-import FeaturedNewsTile from "../../FeaturedNewsTile/FeaturedNewsTile"
-import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
+import FeaturedNewsTile from "../../components/FeaturedNewsTile/FeaturedNewsTile"
+import HeadingWrapper from "../../components/HeadingWrapper/HeadingWrapper"
 
 import { StyledSectionLayout } from "./FeaturedNewsSection.style"
 
@@ -36,7 +36,6 @@ const query = graphql`
 `
 
 const StyledSwiper = styled(Swiper)`
-  background-color: ${({ theme }) => theme.color.blue};
   padding-bottom: 100px;
   z-index: 0;
 `
@@ -76,11 +75,11 @@ const FeaturedNewsSection = () => {
 
   return (
     <>
-      <StyledSectionLayout padding={"50px 0 0px 0px"}>
+      <StyledSectionLayout padding={"70px 0 0px 0px"}>
         <HeadingWrapper
           title={"Wyróżnione wpisy"}
-          inputColor={({ theme }) => theme.color.deepBlue}
-          inputBackgroundColor={({ theme }) => theme.color.blue}
+          inputColor={({ theme }) => theme.color.white}
+          inputBackgroundColor={({ theme }) => theme.color.deepBlue}
         ></HeadingWrapper>
 
         <StyledSwiper {...params}>

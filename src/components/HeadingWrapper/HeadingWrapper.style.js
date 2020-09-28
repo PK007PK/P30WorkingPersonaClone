@@ -7,7 +7,7 @@ export const StyledDiv = styled.div`
   align-items: flex-end;
   position: absolute;
   top: -40px;
-  height: 50px;
+  height: 65px;
   width: 80vw;
   border-radius: 0 50px 0 0;
 
@@ -23,13 +23,13 @@ export const StyledDiv = styled.div`
     content: "";
     background-color: ${props => props.inputBackgroundColor || null};
     width: 2000px;
-    height: 50px;
+    height: 65px;
     left: -2000px;
     position: absolute;
   }
 
-  .title {
+  /* .title {
     font-size: ${({ theme }) => theme.fontSize.md};
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
-  }
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+  } */
 `

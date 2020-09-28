@@ -1,19 +1,20 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import IconYT from "../../IconYT/IconYT"
-import IconFB from "../../IconFB/IconFB"
-import Form from "../../Form/Form"
-import Button from "../../Button/Button"
+import IconYT from "../../components/YouTube/YouTube"
+import IconFB from "../../components/IconFB/IconFB"
+import Button from "../../components/Button/Button"
 
-import { StyledSectionLayout } from "./ContactSection.style"
+import { StyledSectionLayout } from "./ThanksSection.style"
 
 const ContactSection = () => {
   const data = useStaticQuery(query)
   return (
     <StyledSectionLayout>
       <div className="formWrapper">
-        <Form></Form>
+        <p>
+          Dziękuję za przesłanie <br /> wiadomości
+        </p>
       </div>
       <div className="txtWrapper">
         <h2>Dane kontaktowe:</h2>

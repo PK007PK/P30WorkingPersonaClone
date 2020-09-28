@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import slugify from "slugify"
 
-import HeadingWrapper from "../../HeadingWrapper/HeadingWrapper"
+import HeadingWrapper from "../../components/HeadingWrapper/HeadingWrapper"
 
 import {
   StyledSectionLayout,
@@ -35,8 +35,8 @@ const FeaturedNewsSection = () => {
     <StyledSectionLayout padding={"50px 0 50px 0px"}>
       <HeadingWrapper
         title={"Najnowsze wpisy"}
-        inputColor={({ theme }) => theme.color.deepBlue}
-        inputBackgroundColor={({ theme }) => theme.color.lightBlue}
+        // inputColor={({ theme }) => theme.color.pink}
+        inputBackgroundColor={({ theme }) => theme.color.white}
       ></HeadingWrapper>
 
       {data.allDatoCmsNews.nodes.map(item => {

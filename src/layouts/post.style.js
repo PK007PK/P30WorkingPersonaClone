@@ -94,6 +94,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     p {
       margin-top: 20px;
+      text-align: justify;
     }
 
     li {

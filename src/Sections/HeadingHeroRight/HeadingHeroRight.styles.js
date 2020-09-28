@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
 
-import Button from "../../Button/Button"
+import Button from "../../components/Button/Button"
 
 export const StyledSection = styled.section`
   min-height: 100vh;
@@ -63,31 +63,33 @@ export const StyledTxtWrapper = styled.div`
   }
 
   h1 {
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
-    font-size: ${({ theme }) => theme.fontSize.xxl};
-    line-height: 80px;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 30px;
     text-align: right;
-    letter-spacing: -5px;
   }
 
   .lead {
-    font-size: ${({ theme }) => theme.fontSize.lg};
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: right;
-    max-width: 70%;
+    letter-spacing: -2px;
   }
 
   .description {
     text-align: right;
-    display: block;
+    font-weight: 200;
+    font-size: 30px;
+    /* line-height: 30px; */
+    text-align: right;
     max-width: 600px;
   }
 
   .buttonWrapper {
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
     flex-direction: row;
     flex-wrap: nowrap;
 
@@ -109,10 +111,11 @@ export const StyledImage = styled(Image)`
     width: calc(25vh);
     margin-top: 20px;
     @media (orientation: landscape) {
-      margin-top: -100px;
+      margin-top: -80px;
+      margin-right: 50px;
       object-fit: none;
-      height: calc(100vh + 100px);
-      width: calc(50vh + 50px);
+      height: calc(100vh + 50px);
+      width: calc(50vh + 250px);
     }
   }
 `

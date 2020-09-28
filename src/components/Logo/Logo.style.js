@@ -1,37 +1,22 @@
 import styled from "styled-components"
 
-export const StyledWrap = styled.div`
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  align-items: center;
-`
+export const StyledWrap = styled.div``
 
 export const StyledP = styled.p`
-  font-weight: 800;
-  font-size: 30px;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-  display: block;
-  position: relative;
-  color: white;
-
-  ::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background-color: ${({ theme }) => theme.color.deepBlue};
-    width: 58px;
-    height: 100px;
-    z-index: -1;
-    transform: translateY(-50%);
-  }
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+  letter-spacing: -3px;
 `
 
 export const StyledSpan = styled.span`
-  font-size: 30px;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-size: 25px;
   font-weight: 200;
-  margin-left: 4px;
-  margin-bottom: 5px;
-  color: ${({ theme }) => theme.color.deepBlue};
+  margin-top: -8px;
+  color: ${({ theme }) => theme.color.active};
 `

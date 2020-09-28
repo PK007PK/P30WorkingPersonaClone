@@ -12,33 +12,6 @@ export const StyledWrapper = styled(Link)`
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
-/* 
-  ${({ theme }) => theme.media.xsAbove} {
-    height: 450px;
-    width: 250px;
-  }
-
-  ${({ theme }) => theme.media.smAbove} {
-    height: 450px;
-    width: 330px;
-  }
-
-  ${({ theme }) => theme.media.mdAbove} {
-    height: 450px;
-    width: 300px;
-  }
-
-  ${({ theme }) => theme.media.lgAbove} {
-    height: 450px;
-    width: 350px;
-    flex-grow: 1;
-  }
-
-  ${({ theme }) => theme.media.xlAbove} {
-    height: 450px;
-    width: 370px;
-    flex-grow: 1;
-  } */
 
   &:hover ::after {
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);

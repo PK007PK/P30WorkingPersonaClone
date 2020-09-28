@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
-import MainBlogSection from "../components/Sections/MainBlogSection/MainBlogSection"
+import HeadingSubpage from "../Sections/HeadingSubpage/HeadingSubpage"
+import MainBlogSection from "../Sections/MainBlogSection/MainBlogSection"
 const BlogPage = ({ data }) => {
   const title = data.datoCmsSiteSetup.siteTitle + " - blog"
   return (

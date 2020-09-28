@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import HeadingSubpage from "../components/Sections/HeadingSubpage/HeadingSubpage"
+import HeadingSubpage from "../Sections/HeadingSubpage/HeadingSubpage"
 
-import PlainTextSection from "../components/Sections/PlainTextSection/PlainTextSection"
+import PlainTextSection from "../Sections/PlainTextSection/PlainTextSection"
 
 const KontaktPage = ({ data }) => {
   const title = data.datoCmsSiteSetup.siteTitle + " - polityki"

@@ -49,6 +49,13 @@ module.exports = {
             variants: [`300`, "500", "700"],
             subsets: ["latin-ext"],
           },
+          {
+            family: `Ubuntu`,
+            variants: ["700"],
+          },
+          {
+            family: `Covered By Your Grace`,
+          },
         ],
       },
     },

@@ -3,6 +3,7 @@ import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import { FacebookShareButton } from "react-share"
 
 import YouTube from "../components/YouTube/YouTube"
 
@@ -105,6 +106,9 @@ const PostLayout = ({ data }) => {
           <ul>
             <li>
               <Link to="/blog">Wszystkie artykuły</Link>
+            </li>
+            <li>
+              <FacebookShareButton></FacebookShareButton>
             </li>
           </ul>
         </StyledPostNavigation>

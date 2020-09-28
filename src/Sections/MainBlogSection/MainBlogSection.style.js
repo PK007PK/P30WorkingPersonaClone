@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import VerticalBlogPostEntry from "../../VerticalBlogPostEntry/VerticalBlogPostEntry"
+import VerticalBlogPostEntry from "../../components/VerticalBlogPostEntry/VerticalBlogPostEntry"
 
 export const StyledVerticalBlogPostEntry = styled(VerticalBlogPostEntry)`
   margin: 15px 0;

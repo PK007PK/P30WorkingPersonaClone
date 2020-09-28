@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import IconYT from "../../IconYT/IconYT"
-import IconFB from "../../IconFB/IconFB"
+import IconYT from "../../components/IconYT/IconYT"
+import IconFB from "../../components/IconFB/IconFB"
 
 import {
   StyledSection,
@@ -24,7 +24,8 @@ const HeadingHeroRight = () => {
               {data.datoCmsSiteSetup.mainPageAdditionalText}
             </p>
             <p className="description">
-              {data.datoCmsSiteSetup.mainPageDescription}
+              Przystępnie o emeryturach,<br></br>
+              rentach i zasiłkach
             </p>
             <div className="buttonWrapper">
               <a

@@ -9,12 +9,12 @@ export const StyledLink = styled(Link)`
 
   &:before {
     content: "";
+    background-color: ${({ theme }) => theme.color.active};
     position: absolute;
     width: 100%;
     height: 1px;
     bottom: -5px;
     left: 0;
-    background-color: ${({ theme }) => theme.color.pink};
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.1s ease-in-out;
@@ -37,9 +37,9 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledNav = styled.nav`
-  color: ${({ theme }) => theme.color.deepBlue};
+  color: ${({ theme }) => theme.color.color3};
   display: flex;
-  align-items: center;
+  /* align-items: flex-start; */
 `
 
 export const StyledLogo = styled(Logo)`

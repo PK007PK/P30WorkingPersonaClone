@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
 
 export const StyledSectionLayout = styled(SectionLayout)`
+  padding-bottom: 200px;
   p,
   h2,
   img,
@@ -13,6 +14,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
   p {
     margin-top: 20px;
+    text-align: justify;
   }
 
   h2 {

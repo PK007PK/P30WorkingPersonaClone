@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
 
 export const StyledSectionLayout = styled(SectionLayout)`
   padding-top: 0;
@@ -21,6 +21,9 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
   .formWrapper {
     flex-grow: 1;
+    p {
+      font-size: ${({ theme }) => theme.fontSize.md};
+    }
   }
 
   .txtWrapper {

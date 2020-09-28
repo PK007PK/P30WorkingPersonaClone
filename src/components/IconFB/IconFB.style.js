@@ -5,13 +5,13 @@ export const StyledI = styled.i`
   width: 45px;
   display: block;
   height: 45px;
-  background-color: ${({ theme }) => theme.color.pink};
+  background-color: ${({ theme }) => theme.color.active};
   background-image: url(${icon});
   background-size: cover;
   background-position: center;
   transition: all 0.2s;
 
   :hover {
-    box-shadow: 0px 5px 0px ${({ theme }) => theme.color.pink};
+    box-shadow: 0px 5px 0px ${({ theme }) => theme.color.active};
   }
 `

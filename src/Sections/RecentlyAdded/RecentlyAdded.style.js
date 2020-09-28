@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import SectionLayout from "../../../utilities/SectionLayout/SectionLayout"
-import FullWidthBlogPostEntry from "../../FullWidthBlogPostEntry/FullWidthBlogPostEntry"
+import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
+import FullWidthBlogPostEntry from "../../components/FullWidthBlogPostEntry/FullWidthBlogPostEntry"
 
 export const StyledButtonWrapper = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const StyledFullWidthBlogPostEntry = styled(FullWidthBlogPostEntry)`
 `
 
 export const StyledSectionLayout = styled(SectionLayout)`
-  background-color: ${({ theme }) => theme.color.lightBlue};
+  /* background-color: ${({ theme }) => theme.color.active}; */
   position: relative;
 `
 
