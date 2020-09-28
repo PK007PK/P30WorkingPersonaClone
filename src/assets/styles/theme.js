@@ -50,10 +50,10 @@ const colorValues = {
   white: "#FFFFFF",
   black: "#000000",
   //
-  color1: "#EB4962",
-  color2: "#546E7A",
-  color3: "#1C1C1C",
-  color4: "#4F4C4C",
+  color1: "#EDF7FF",
+  color2: "#ADCCE4",
+  color3: "#313548",
+  color4: "#EB4962",
   background1: "#1C1C1C",
   background2: null,
   background3: null,
@@ -102,14 +102,14 @@ const paragraphValues = {
     xxl: null,
   },
   lineHeight: {
-    base: "1.5em",
+    base: "2em",
     xs: null,
     sm: null,
     md: null,
     lg: null,
     xxl: null,
   },
-  fontWeight: "400",
+  fontWeight: "300",
   letterSpacing: null,
 }
 

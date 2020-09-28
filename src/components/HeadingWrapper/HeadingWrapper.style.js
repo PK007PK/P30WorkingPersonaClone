@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const StyledDiv = styled.div`
-  color: ${props => props.inputColor || null};
-  background-color: ${props => props.inputBackgroundColor || null};
+  color: ${props => props.txtColor || null};
+  background-color: ${props => props.backgroundColor || null};
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -21,15 +21,10 @@ export const StyledDiv = styled.div`
 
   ::before {
     content: "";
-    background-color: ${props => props.inputBackgroundColor || null};
+    background-color: ${props => props.backgroundColor || null};
     width: 2000px;
     height: 65px;
     left: -2000px;
     position: absolute;
   }
-
-  /* .title {
-    font-size: ${({ theme }) => theme.fontSize.md};
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
-  } */
 `

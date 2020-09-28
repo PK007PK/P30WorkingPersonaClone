@@ -3,17 +3,12 @@ import PropTypes from "prop-types"
 
 import { StyledDiv } from "./HeadingWrapper.style"
 
-const HeadingWrapper = ({
-  title,
-  inputColor,
-  inputBackgroundColor,
-  className,
-}) => (
+const HeadingWrapper = ({ title, txtColor, backgroundColor, className }) => (
   <>
     <StyledDiv
       className={className}
-      inputColor={inputColor}
-      inputBackgroundColor={inputBackgroundColor}
+      txtColor={txtColor}
+      backgroundColor={backgroundColor}
     >
       <h2 className="title">{title}</h2>
     </StyledDiv>
@@ -22,8 +17,8 @@ const HeadingWrapper = ({
 
 HeadingWrapper.propTypes = {
   title: PropTypes.string,
-  inputColor: PropTypes.func,
-  inputBackgroundColor: PropTypes.func,
+  // color: PropTypes.func,
+  backgroundColor: PropTypes.func,
   className: PropTypes.string,
 }
 

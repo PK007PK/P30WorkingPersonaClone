@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const StyledSectionLayout = styled(SectionLayout)`
   color: ${({ theme }) => theme.color.white};
-  background-color: ${({ theme }) => theme.color.deepBlue};
+  background-color: ${({ theme }) => theme.color.color3};
 `
 
 export const StyledWrapper = styled.div`

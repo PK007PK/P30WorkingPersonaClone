@@ -12,7 +12,7 @@ import {
 } from "./RecentlyAdded.style"
 
 const StyledButton = styled(Link)`
-  background-color: ${({ theme }) => theme.color.pink};
+  background-color: ${({ theme }) => theme.color.active};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
   padding: 0 30px;
@@ -24,8 +24,8 @@ const StyledButton = styled(Link)`
   box-shadow: 5px 5px 0px ${({ theme }) => theme.color.white};
 
   :hover {
-    background-color: ${({ theme }) => theme.color.deepBlue};
-    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.pink};
+    background-color: ${({ theme }) => theme.color.color3};
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.active};
   }
 `
 
@@ -35,8 +35,8 @@ const FeaturedNewsSection = () => {
     <StyledSectionLayout padding={"50px 0 50px 0px"}>
       <HeadingWrapper
         title={"Najnowsze wpisy"}
-        // inputColor={({ theme }) => theme.color.pink}
-        inputBackgroundColor={({ theme }) => theme.color.white}
+        txtColor={({ theme }) => theme.color.color3}
+        backgroundColor={({ theme }) => theme.color.white}
       ></HeadingWrapper>
 
       {data.allDatoCmsNews.nodes.map(item => {

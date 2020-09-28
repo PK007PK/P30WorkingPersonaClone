@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import slugify from "slugify"
+
 import styled from "styled-components"
 
-import slugify from "slugify"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/swiper.scss"
@@ -78,8 +79,8 @@ const FeaturedNewsSection = () => {
       <StyledSectionLayout padding={"70px 0 0px 0px"}>
         <HeadingWrapper
           title={"Wyróżnione wpisy"}
-          inputColor={({ theme }) => theme.color.white}
-          inputBackgroundColor={({ theme }) => theme.color.deepBlue}
+          txtColor={({ theme }) => theme.color.white}
+          backgroundColor={({ theme }) => theme.color.color3}
         ></HeadingWrapper>
 
         <StyledSwiper {...params}>

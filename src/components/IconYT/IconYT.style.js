@@ -3,7 +3,7 @@ import icon from "../../assets/icons/yt.svg"
 
 export const StyledI = styled.i`
   background-image: url(${icon});
-  background-color: ${({ theme }) => theme.color.pink};
+  background-color: ${({ theme }) => theme.color.active};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
