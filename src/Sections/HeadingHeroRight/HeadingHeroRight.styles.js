@@ -3,26 +3,66 @@ import Image from "gatsby-image"
 
 import Button from "../../components/Button/Button"
 
+const sectionHeight = {
+  base: `100vh`,
+  xs: `800px`,
+  sm: `800px`,
+  smLandscape: `calc(100vh - 98px + 50px)`,
+  md: `700px`,
+  mdLandscape: `calc(100vh - 98px + 50px)`,
+  lg: `calc(100vh - 98px + 50px)`,
+  xxl: `calc(100vh - 98px + 50px)`,
+}
+
+const heroImgSizes = {
+  md: {
+    height: `700px`,
+    width: `466px`,
+  },
+  mdLandscape: `(100vh - 98px + 50px)`,
+  lg: {
+    height: `calc(100vh - 98px + 80px)`,
+    width: `calc((100vh - 98px + 80px) * 0.666)`,
+  },
+  xxl: `(100vh - 98px + 50px)`,
+}
+
 export const StyledSection = styled.section`
-  height: 100vh;
+  height: ${sectionHeight.base};
   background-size: cover;
   background-repeat: no-repeat;
-  /* padding-bottom: 100px; */
+  padding-bottom: 100px;
 
   ${({ theme }) => theme.media.xsAbove} {
-    height: 800px;
+    height: ${sectionHeight.xs};
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    height: 700px;
+    height: ${sectionHeight.sm};
     background-image: none;
     display: flex;
     position: relative;
     padding-bottom: 0px;
 
     @media (orientation: landscape) {
-      height: calc(100vh - 98px + 50px);
+      height: ${sectionHeight.smLandscape};
     }
+  }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    height: ${sectionHeight.md};
+
+    @media (orientation: landscape) {
+      height: ${sectionHeight.mdLandscape};
+    }
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    height: ${sectionHeight.lg};
+  }
+
+  ${({ theme }) => theme.media.xlAbove} {
+    height: ${sectionHeight.xl};
   }
 `
 
@@ -93,21 +133,25 @@ export const StyledImage = styled(Image)`
   display: none;
 
   ${({ theme }) => theme.media.mdAbove} {
-    display: block;
-    height: calc(50vh);
-    width: calc(50vw);
-    margin-top: 20px;
+    display: flex;
+    z-index: -10;
+    flex-shrink: 0;
+    height: ${heroImgSizes.md.height};
+    width: ${heroImgSizes.md.width};
+
     @media (orientation: landscape) {
-      /* margin-top: -70px; */
+      margin-top: -30px;
       margin-right: 50px;
-      object-fit: none;
-      /* height: calc(100vh ); */
-      width: calc(50vh + 250px);
     }
   }
 
-  /* ${({ theme }) => theme.media.lgAbove} {
-    height: calc(100vh + 50px);
-    width: calc(50vh + 250px);
-  } */
+  ${({ theme }) => theme.media.lgAbove} {
+    height: ${heroImgSizes.lg.height};
+    width: ${heroImgSizes.lg.width};
+    margin-right: 80px;
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    margin-right: 8vw;
+  }
 `

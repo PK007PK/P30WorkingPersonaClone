@@ -39,6 +39,7 @@ export const StyledLink = styled(Link)`
 export const StyledNav = styled.nav`
   color: ${({ theme }) => theme.color.color3};
   display: flex;
+  z-index: 100;
   /* align-items: flex-start; */
 `
 

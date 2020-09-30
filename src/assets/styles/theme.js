@@ -45,7 +45,7 @@ const bodyValues = {
     lg: null,
     xxl: null,
   },
-  fontWeight: "400",
+  fontWeight: "500",
   letterSpacing: null,
 }
 
@@ -66,7 +66,7 @@ const paragraphValues = {
     lg: null,
     xxl: null,
   },
-  fontWeight: "300",
+  fontWeight: "500",
   letterSpacing: null,
 }
 

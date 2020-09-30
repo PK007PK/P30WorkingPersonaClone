@@ -8,9 +8,9 @@ export const StyledSectionLayout = styled(SectionLayout)`
   .headingWrapper {
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: column;
+    flex-direction: row;
 
     ${({ theme }) => theme.media.smAbove} {
       flex-direction: row-reverse;
@@ -21,15 +21,15 @@ export const StyledSectionLayout = styled(SectionLayout)`
   .textWrapper {
     width: 100%;
     /* background-color: red; */
-    padding: 30px 0;
+    /* padding: 30px 0; */
 
     ${({ theme }) => theme.media.smAbove} {
       width: 45%;
-      padding: 60px 0;
+      /* padding: 60px 0; */
     }
 
     ${({ theme }) => theme.media.lgAbove} {
-      padding: 90px 0;
+      /* padding: 90px 0; */
     }
 
     h1 {
@@ -48,7 +48,8 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     .author,
     .date {
-      font-size: 12px;
+      font-size: 14px;
+      font-weight: ${({ theme }) => theme.fontWeight.regular};
     }
 
     .date {
