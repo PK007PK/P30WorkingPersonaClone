@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import HeadingSubpage from "../sections/HeadingSubpage/HeadingSubpage"
-import PlainTextSection from "../sections/PlainTextSection/PlainTextSection"
+import HeadingSubpage from "../Sections/HeadingSubpage/HeadingSubpage"
+import PlainTextSection from "../Sections/PlainTextSection/PlainTextSection"
 
 const OMniePage = ({ data }) => {
   const title = data.datoCmsSiteSetup.siteTitle + " - o mnie"
