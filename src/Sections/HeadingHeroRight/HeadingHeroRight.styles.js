@@ -9,7 +9,7 @@ export const StyledSection = styled.section`
   background-repeat: no-repeat;
   /* padding-bottom: 100px; */
 
-  ${({ theme }) => theme.media.xsAzbove} {
+  ${({ theme }) => theme.media.xsAbove} {
     height: 800px;
   }
 
