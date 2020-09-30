@@ -19,11 +19,9 @@ const HeadingHeroRight = () => {
         <StyledTxtWrapper>
           <div></div>
           <div>
-            <h1>{data.datoCmsSiteSetup.mainPageMotto}</h1>
-            <p className="lead">
-              {data.datoCmsSiteSetup.mainPageAdditionalText}
-            </p>
-            <p className="description">
+            <p className="subtitle">{data.datoCmsSiteSetup.mainPageMotto}</p>
+            <h1>{data.datoCmsSiteSetup.mainPageAdditionalText}</h1>
+            <p className="subtitle">
               Przystępnie o emeryturach,<br></br>
               rentach i zasiłkach
             </p>

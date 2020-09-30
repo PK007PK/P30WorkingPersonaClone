@@ -4,17 +4,16 @@ import Image from "gatsby-image"
 import Button from "../../components/Button/Button"
 
 export const StyledSection = styled.section`
-  min-height: 100vh;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 
-  ${({ theme }) => theme.media.xsAbove} {
+  ${({ theme }) => theme.media.xsAzbove} {
     height: 800px;
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    min-height: 700px;
     height: 700px;
     background-image: none;
     display: flex;
@@ -62,29 +61,17 @@ export const StyledTxtWrapper = styled.div`
     align-items: flex-end;
   }
 
+  .subtitle {
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: right;
+  }
+
   h1 {
-    font-weight: 200;
-    font-size: 30px;
-    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-align: right;
-  }
-
-  .lead {
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: right;
-    letter-spacing: -2px;
-  }
-
-  .description {
-    text-align: right;
-    font-weight: 200;
-    font-size: 30px;
-    /* line-height: 30px; */
-    text-align: right;
-    max-width: 600px;
   }
 
   .buttonWrapper {
@@ -108,14 +95,19 @@ export const StyledImage = styled(Image)`
   ${({ theme }) => theme.media.mdAbove} {
     display: block;
     height: calc(50vh);
-    width: calc(25vh);
+    width: calc(50vw);
     margin-top: 20px;
     @media (orientation: landscape) {
-      margin-top: -80px;
+      /* margin-top: -70px; */
       margin-right: 50px;
       object-fit: none;
-      height: calc(100vh + 50px);
+      /* height: calc(100vh ); */
       width: calc(50vh + 250px);
     }
   }
+
+  /* ${({ theme }) => theme.media.lgAbove} {
+    height: calc(100vh + 50px);
+    width: calc(50vh + 250px);
+  } */
 `

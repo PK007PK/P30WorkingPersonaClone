@@ -10,14 +10,14 @@ const HeadingWrapper = ({ title, txtColor, backgroundColor, className }) => (
       txtColor={txtColor}
       backgroundColor={backgroundColor}
     >
-      <h2 className="title">{title}</h2>
+      <h2>{title}</h2>
     </StyledDiv>
   </>
 )
 
 HeadingWrapper.propTypes = {
   title: PropTypes.string,
-  // color: PropTypes.func,
+  // txtColor: PropTypes.func,
   backgroundColor: PropTypes.func,
   className: PropTypes.string,
 }

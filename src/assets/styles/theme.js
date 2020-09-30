@@ -1,46 +1,3 @@
-// export const theme = {
-//   fontSize: {
-//     xs: "1.2rem",
-//     sm: "1.6rem",
-//     md: "2.5rem",
-//     lg: "3.5rem",
-//     xxl: "5rem",
-//   },
-
-//   lineHeight: {
-//     regular: "1.5",
-//   },
-
-//   fontWeight: {
-//     regular: "300",
-//     medium: "500",
-//     bold: "700",
-//   },
-
-//   color: {
-//     white: "#FFFFFF",
-//     black: "#000000",
-//     lightBlue: "#EDF7FF",
-//     blue: "#ADCCE4",
-//     deepBlue: "#313548",
-//     pink: "#EB4962",
-//     mainTextColor: "#0F3554",
-//     active: "#D3AFA0",
-//   },
-//   media: {
-//     xsAbove: `@media (min-width: 576px)`,
-//     xsBelow: `@media (max-width: 575px)`,
-//     smAbove: `@media (min-width: 768px)`,
-//     smBelow: `@media (max-width: 767px)`,
-//     mdAbove: `@media (min-width: 992px)`,
-//     mdBelow: `@media (max-width: 991px)`,
-//     lgAbove: `@media (min-width: 1200px)`,
-//     lgBelow: `@media (max-width: 1199px)`,
-//     xlAbove: `@media (min-width: 1550px)`,
-//     xlBelow: `@media (max-width: 1549px)`,
-//   },
-// }
-
 const colorValues = {
   lightBlue: "#EDF7FF",
   blue: "#ADCCE4",
@@ -54,12 +11,12 @@ const colorValues = {
   color2: "#ADCCE4",
   color3: "#313548",
   color4: "#EB4962",
-  background1: "#1C1C1C",
+  background1: "#313548",
   background2: null,
   background3: null,
   background4: null,
   //
-  mainBody: "#1C1C1C",
+  mainBody: "#313548",
   mainLogo: "#4C4C4C",
   additionalLogo: "#4C4C4C",
   mainHeading: null,
@@ -115,7 +72,7 @@ const paragraphValues = {
 
 const h1Values = {
   fontSize: {
-    base: "3rem",
+    base: "5rem",
     xs: null,
     sm: null,
     md: null,
@@ -131,12 +88,12 @@ const h1Values = {
     xxl: null,
   },
   fontWeight: "700",
-  letterSpacing: "-2%",
+  letterSpacing: "-3px",
 }
 
 const h2Values = {
   fontSize: {
-    base: null,
+    base: "3rem",
     xs: null,
     sm: null,
     md: null,
