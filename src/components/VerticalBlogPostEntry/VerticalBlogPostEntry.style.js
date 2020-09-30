@@ -35,7 +35,7 @@ export const StyledContainer = styled(Link)`
     z-index: 3;
   }
 
-  .title {
+  h3 {
     margin: 20px 0;
     font-size: ${({ theme }) => theme.fontSize.md};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
