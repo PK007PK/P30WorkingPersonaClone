@@ -28,7 +28,7 @@ const heroImgSizes = {
 }
 
 export const StyledSection = styled.section`
-  height: ${sectionHeight.base};
+  /* height: ${sectionHeight.base};
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 100px;
@@ -63,7 +63,7 @@ export const StyledSection = styled.section`
 
   ${({ theme }) => theme.media.xlAbove} {
     height: ${sectionHeight.xl};
-  }
+  } */
 `
 
 export const StyledTxtWrapper = styled.div`
@@ -130,7 +130,7 @@ export const StyledButton = styled(Button)`
 `
 
 export const StyledImage = styled(Image)`
-  display: none;
+  /* display: none;
 
   ${({ theme }) => theme.media.mdAbove} {
     display: flex;
@@ -153,5 +153,5 @@ export const StyledImage = styled(Image)`
 
   ${({ theme }) => theme.media.lgAbove} {
     margin-right: 8vw;
-  }
+  } */
 `
