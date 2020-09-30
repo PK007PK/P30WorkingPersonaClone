@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-import HeadingHeroRight from "../Sections/HeadingHeroRight/HeadingHeroRight"
-import FeaturedNewsSection from "../Sections/FeaturedNewsSection/FeaturedNewsSection"
-import RecentlyAdded from "../Sections/RecentlyAdded/RecentlyAdded"
+import HeadingHeroRight from "../test/HeadingHeroRight/HeadingHeroRight"
+import FeaturedNewsSection from "../test/FeaturedNewsSection/FeaturedNewsSection"
+import RecentlyAdded from "../test/RecentlyAdded/RecentlyAdded"
 
 const IndexPage = ({ data }) => {
   const title = data.datoCmsSiteSetup.siteTitle + " - strona główna"
