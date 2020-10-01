@@ -25,12 +25,13 @@ export const BootsContainer = styled.div`
 
 export const BootsRow = styled.div`
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   margin: 0 -15px;
   position: relative;
 `
 
-export const BootsCol = styled.div`
+export const BootsColumn = styled.div`
   width: 100%;
   padding: 0 15px;
   background-color: red;
@@ -38,8 +39,8 @@ export const BootsCol = styled.div`
     xs &&
     `
     ${({ theme }) => theme.xsAbove} {
-        max-width: ${12 / xs}%;
-        flex: 0 0 ${12 / xs}%;
+        max-width: ${(xs / 12) * 100}%;
+        flex: 0 0 ${(xs / 12) * 100}%;
       }
     `}
 
@@ -47,8 +48,8 @@ export const BootsCol = styled.div`
     sm &&
     `
     ${({ theme }) => theme.smAbove} {
-        max-width: ${12 / sm}%;
-        flex: 0 0 ${12 / sm}%;
+        max-width: ${(sm / 12) * 100}%;
+        flex: 0 0 ${(sm / 12) * 100}%;
       }
     `}
 
@@ -56,8 +57,8 @@ ${({ md }) =>
   md &&
   `
     ${({ theme }) => theme.mdAbove} {
-        max-width: ${12 / md}%;
-        flex: 0 0 ${12 / md}%;
+        max-width: ${(md / 12) * 100}%;
+        flex: 0 0 ${(md / 12) * 100}%;
       }
     `}
 
@@ -65,8 +66,8 @@ ${({ lg }) =>
   lg &&
   `
     ${({ theme }) => theme.lgAbove} {
-        max-width: ${12 / lg}%;
-        flex: 0 0 ${12 / lg}%;
+        max-width: ${(lg / 12) * 100}%;
+        flex: 0 0 ${(lg / 12) * 100}%;
       }
     `}
 
@@ -74,8 +75,8 @@ ${({ xl }) =>
   xl &&
   `
     ${({ theme }) => theme.xlAbove} {
-        max-width: ${12 / xl}%;
-        flex: 0 0 ${12 / xl}%;
+        max-width: ${(xl / 12) * 100}%;
+        flex: 0 0 ${(xl / 12) * 100}%;
       }
     `}
 `

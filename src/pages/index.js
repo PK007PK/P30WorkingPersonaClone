@@ -13,12 +13,9 @@ const IndexPage = ({ data }) => {
     <>
       <Helmet title={title} />
       <article>
-        {/* <HeadingHeroRight />
+        <HeadingHeroRight />
         <FeaturedNewsSection />
-        <RecentlyAdded /> */}
-        <AspectRatioContainer width="10" height="1">
-          ABC
-        </AspectRatioContainer>
+        <RecentlyAdded />
       </article>
     </>
   )
