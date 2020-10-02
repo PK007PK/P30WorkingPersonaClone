@@ -12,12 +12,19 @@ export const StyledWrapper = styled(Link)`
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
+  transition: ${({ theme }) => theme.transitions.custom};
+  box-shadow: ${({ theme }) => theme.elevation.dp1};
 
-  &:hover ::after {
-    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  &:hover {
+    transition: ${({ theme }) => theme.transitions.custom};
+    box-shadow: ${({ theme }) => theme.elevation.dp8};
   }
 
-  ::after {
+  &:hover ::after {
+    transition: ${({ theme }) => theme.transitions.custom};
+  }
+
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -26,31 +33,7 @@ export const StyledWrapper = styled(Link)`
     height: 450px;
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
     z-index: 2;
-
-    /* ${({ theme }) => theme.media.xsAbove} {
-      height: 450px;
-      width: 250px;
-    }
-
-    ${({ theme }) => theme.media.smAbove} {
-      height: 450px;
-      width: 330px;
-    }
-
-    ${({ theme }) => theme.media.mdAbove} {
-      height: 450px;
-      width: 300px;
-    }
-
-    ${({ theme }) => theme.media.lgAbove} {
-      height: 450px;
-      width: 350px;
-    }
-
-    ${({ theme }) => theme.media.xlAbove} {
-      height: 450px;
-      width: 370px;
-    } */
+    transition: ${({ theme }) => theme.transitions.custom};
   }
 `
 

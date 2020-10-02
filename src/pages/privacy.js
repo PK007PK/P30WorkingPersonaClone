@@ -26,6 +26,7 @@ const KontaktPage = ({ data }) => {
 export const query = graphql`
   {
     datoCmsSiteSetup {
+      siteTitle
       policyPageDescription
       policyArticleContent {
         ... on DatoCmsParagraph {

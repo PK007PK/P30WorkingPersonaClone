@@ -5,15 +5,16 @@ import { Link } from "gatsby"
 import YouTubeIcon from "../../components/IconYT/IconYT"
 
 export const StyledContainer = styled(Link)`
+  transition: ${({ theme }) => theme.transitions.custom};
+  box-shadow: ${({ theme }) => theme.elevation.dp1};
   display: flex;
-  transition: all 0.3s;
   margin: 20px 0;
   flex-direction: column;
   ${({ theme }) => theme.media.xsAbove} {
     flex-direction: row;
   }
   :hover {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    box-shadow: ${({ theme }) => theme.elevation.dp8};
     background-color: ${({ theme }) => theme.color.active};
     color: white;
   }
