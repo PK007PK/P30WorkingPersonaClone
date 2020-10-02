@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import { StyledButton, StyledA } from "./Button.style"
 
-const Button = ({ children, className, href, type }) => (
+const Button = ({ children, className, href }) => (
   <>
     {href ? (
       <StyledA
