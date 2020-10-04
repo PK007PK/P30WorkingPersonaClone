@@ -1,25 +1,36 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { StyledButton, StyledA } from "./Button.style"
+import {
+  StyledWrapper,
+  StyledA,
+  StyledLink,
+  StyledButton,
+} from "./Button.style"
 
-const Button = ({ children, className, href }) => (
-  <>
-    {href ? (
+const Button = ({ children, className, href, to }) => (
+  <StyledWrapper>
+    {href && (
       <StyledA
         href={href}
         target="_blank"
-        className={className}
+        className={(className, "inner")}
         rel="noopener noreferrer"
       >
         {children}
       </StyledA>
-    ) : (
-      <StyledButton className={className} type="submit">
+    )}
+    {to && (
+      <StyledLink to={to} className={(className, "inner")}>
+        {children}
+      </StyledLink>
+    )}
+    {!to && !href && (
+      <StyledButton to={to} className={(className, "inner")} type="submit">
         {children}
       </StyledButton>
     )}
-  </>
+  </StyledWrapper>
 )
 
 Button.propTypes = {

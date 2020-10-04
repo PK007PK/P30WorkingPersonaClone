@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet"
 import { FacebookShareButton } from "react-share"
 
 import YouTube from "../components/YouTube/YouTube"
+import Button from "../components/Button/Button"
 
 import { StyledSectionLayout, StyledPostNavigation } from "./post.style"
 
@@ -76,41 +77,36 @@ const PostLayout = ({ data }) => {
           </div>
         </div>
         <div className="mainPostBody">
-          {data.datoCmsNews.articleContent.map(item => {
-            const itemKey = Object.keys(item)[1]
-            switch (itemKey) {
-              case "paragraphContentNode":
-                return (
-                  <div key={item.id}>
-                    <MDXRenderer>
-                      {item.paragraphContentNode.childMdx.body}
-                    </MDXRenderer>
-                  </div>
-                )
-              case "headingContent":
-                return <h2 key={item.id}>{item.headingContent}</h2>
-              case "imageData":
-                return (
-                  <Image
-                    className="articleImg"
-                    key={item.id}
-                    fluid={item[itemKey].fluid}
-                  />
-                )
-              default:
-                return null
-            }
-          })}
+          <div className="mainText">
+            {data.datoCmsNews.articleContent.map(item => {
+              const itemKey = Object.keys(item)[1]
+              switch (itemKey) {
+                case "paragraphContentNode":
+                  return (
+                    <div key={item.id}>
+                      <MDXRenderer>
+                        {item.paragraphContentNode.childMdx.body}
+                      </MDXRenderer>
+                    </div>
+                  )
+                case "headingContent":
+                  return <h2 key={item.id}>{item.headingContent}</h2>
+                case "imageData":
+                  return (
+                    <Image
+                      className="articleImg"
+                      key={item.id}
+                      fluid={item[itemKey].fluid}
+                    />
+                  )
+                default:
+                  return null
+              }
+            })}
+          </div>
         </div>
         <StyledPostNavigation>
-          <ul>
-            <li>
-              <Link to="/blog">Wszystkie artykuły</Link>
-            </li>
-            <li>
-              <FacebookShareButton></FacebookShareButton>
-            </li>
-          </ul>
+          <Button to="/blog">Button</Button>
         </StyledPostNavigation>
       </StyledSectionLayout>
     </>
