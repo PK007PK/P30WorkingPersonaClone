@@ -255,6 +255,8 @@ export const theme = {
     dp24: `0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)`,
   },
 
+  txtShadow: `0 2px 8px rgba(0, 0, 0, 0.3)`,
+
   body: {
     fontSize: {
       base: bodyValues.fontSize.base,

@@ -66,11 +66,12 @@ export const StyledDate = styled.span`
 
 export const StyledTitle = styled.h3`
   color: ${({ theme }) => theme.color.white};
-  line-height: ${({ theme }) => theme.lineHeight.regular};
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  /* line-height: ${({ theme }) => theme.lineHeight.regular}; */
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  text-shadow: ${({ theme }) => theme.txtShadow};
   position: absolute;
   bottom: 30px;
-  width: 95%;
-  left: 15px;
+  width: calc(100% - 40px);
+  left: 20px;
   z-index: 3;
 `
