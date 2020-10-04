@@ -10,9 +10,9 @@ export const StyledSectionLayout = styled(SectionLayout)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column-reverse;
 
-    ${({ theme }) => theme.media.smAbove} {
+    ${({ theme }) => theme.media.mdAbove} {
       flex-direction: row-reverse;
       margin-bottom: 50px;
     }
@@ -23,13 +23,13 @@ export const StyledSectionLayout = styled(SectionLayout)`
     /* background-color: red; */
     /* padding: 30px 0; */
 
-    ${({ theme }) => theme.media.smAbove} {
+    ${({ theme }) => theme.media.mdAbove} {
       width: 45%;
-      /* padding: 60px 0; */
+      padding: 60px 0;
     }
 
     ${({ theme }) => theme.media.lgAbove} {
-      /* padding: 90px 0; */
+      padding: 90px 0;
     }
 
     h1 {
@@ -58,22 +58,28 @@ export const StyledSectionLayout = styled(SectionLayout)`
   }
 
   .imgWrapper {
-    width: 100%;
+    /* width: 100%; */
 
     ${({ theme }) => theme.media.smAbove} {
-      width: 50%;
+      /* width: 50%; */
     }
 
     .image {
+      width: 100vw;
+      /* height: calc(100vw / 16 * 9);  */
       height: 50vh;
-
       ${({ theme }) => theme.media.mdAbove} {
-        height: 40vh;
-        min-height: 450px;
+        width: 50vw;
       }
 
       ${({ theme }) => theme.media.lgAbove} {
-        height: 55vh;
+        width: 40vw;
+        height: 400px;
+      }
+
+      ${({ theme }) => theme.media.xlAbove} {
+        width: 700px;
+        height: 400px;
       }
     }
   }
