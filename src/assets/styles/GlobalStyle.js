@@ -89,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p, li {
+    word-break: break-word;
     /* font-size ---------------*/
     ${({ theme }) =>
       theme.paragraph.fontSize.base &&

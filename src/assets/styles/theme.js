@@ -54,12 +54,12 @@ const paragraphValues = {
     base: "1.6rem",
     xs: null,
     sm: null,
-    md: null,
+    md: "1.8rem",
     lg: null,
     xxl: null,
   },
   lineHeight: {
-    base: "2em",
+    base: "1.6",
     xs: null,
     sm: null,
     md: null,
@@ -254,9 +254,7 @@ export const theme = {
     dp23: `0 11px 14px -7px rgba(0,0,0,.2), 0 23px 36px 3px rgba(0,0,0,.14), 0 9px 44px 8px rgba(0,0,0,.12)`,
     dp24: `0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)`,
   },
-
   txtShadow: `0 2px 8px rgba(0, 0, 0, 0.3)`,
-
   body: {
     fontSize: {
       base: bodyValues.fontSize.base,
