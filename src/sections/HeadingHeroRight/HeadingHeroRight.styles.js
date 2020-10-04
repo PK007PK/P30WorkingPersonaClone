@@ -10,7 +10,8 @@ const sectionHeight = {
   smLandscape: `calc(100vh - 98px + 50px)`,
   md: `700px`,
   mdLandscape: `calc(100vh - 98px + 50px)`,
-  lg: `calc(100vh - 98px + 50px)`,
+  lg: `700px`,
+  lgLandscape: `calc(100vh - 98px + 50px)`,
   xxl: `calc(100vh - 98px + 50px)`,
 }
 
@@ -21,6 +22,10 @@ const heroImgSizes = {
   },
   mdLandscape: `(100vh - 98px + 50px)`,
   lg: {
+    height: `calc(700px)`,
+    width: `calc((700px) * 0.666)`,
+  },
+  lgLandscape: {
     height: `calc(100vh - 98px + 80px)`,
     width: `calc((100vh - 98px + 80px) * 0.666)`,
   },
@@ -59,6 +64,10 @@ export const StyledSection = styled.section`
 
   ${({ theme }) => theme.media.lgAbove} {
     height: ${sectionHeight.lg};
+
+    @media (orientation: landscape) {
+      height: ${sectionHeight.lgLandscape};
+    }
   }
 
   ${({ theme }) => theme.media.xlAbove} {
@@ -158,6 +167,11 @@ export const StyledImage = styled(Image)`
     height: ${heroImgSizes.lg.height};
     width: ${heroImgSizes.lg.width};
     margin-right: 80px;
+
+    @media (orientation: landscape) {
+      height: ${heroImgSizes.lgLandscape.height};
+      width: ${heroImgSizes.lgLandscape.width};
+    }
   }
 
   ${({ theme }) => theme.media.lgAbove} {
