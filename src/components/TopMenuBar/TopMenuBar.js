@@ -18,6 +18,7 @@ const TopMenuBar = ({ className }) => (
       <StyledWrapper>
         <li>
           <StyledLink
+            className="txtHoverFocusTab"
             to="/"
             activeStyle={{
               fontWeight: "bold",
@@ -28,6 +29,7 @@ const TopMenuBar = ({ className }) => (
         </li>
         <li>
           <StyledLink
+            className="txtHoverFocusTab"
             to="/omnie"
             activeStyle={{
               fontWeight: "bold",
@@ -38,6 +40,7 @@ const TopMenuBar = ({ className }) => (
         </li>
         <li>
           <StyledLink
+            className="txtHoverFocusTab"
             to="/blog"
             activeStyle={{
               fontWeight: "bold",
@@ -48,6 +51,7 @@ const TopMenuBar = ({ className }) => (
         </li>
         <li>
           <StyledLink
+            className="txtHoverFocusTab"
             to="/uslugi"
             activeStyle={{
               fontWeight: "bold",
@@ -58,6 +62,7 @@ const TopMenuBar = ({ className }) => (
         </li>
         <li>
           <StyledLink
+            className="txtHoverFocusTab"
             to="/kontakt"
             activeStyle={{
               fontWeight: "bold",

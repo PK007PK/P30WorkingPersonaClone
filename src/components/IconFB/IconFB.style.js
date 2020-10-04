@@ -9,9 +9,17 @@ export const StyledI = styled.i`
   background-image: url(${icon});
   background-size: cover;
   background-position: center;
-  transition: all 0.2s;
+  transition: ${({ theme }) => theme.transition.custom};
 
   :hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0px 5px 0px ${({ theme }) => theme.color.active};
+  }
+
+  :focus {
+    outline: none !important;
+    border: none !important;
     box-shadow: 0px 5px 0px ${({ theme }) => theme.color.active};
   }
 `

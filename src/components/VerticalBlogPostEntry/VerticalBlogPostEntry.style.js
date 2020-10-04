@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import YouTubeIcon from "../../components/IconYT/IconYT"
 
 export const StyledContainer = styled(Link)`
-  transition: ${({ theme }) => theme.transitions.custom};
+  transition: ${({ theme }) => theme.transition.custom};
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   display: flex;
   position: relative;
@@ -20,6 +20,14 @@ export const StyledContainer = styled(Link)`
   }
 
   :hover {
+    box-shadow: ${({ theme }) => theme.elevation.dp8};
+    background-color: ${({ theme }) => theme.color.active};
+    color: ${({ theme }) => theme.color.white};
+  }
+
+  :focus {
+    outline: none;
+    border: none;
     box-shadow: ${({ theme }) => theme.elevation.dp8};
     background-color: ${({ theme }) => theme.color.active};
     color: ${({ theme }) => theme.color.white};

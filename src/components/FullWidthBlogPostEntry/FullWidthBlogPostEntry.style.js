@@ -4,16 +4,24 @@ import { Link } from "gatsby"
 
 import YouTubeIcon from "../../components/IconYT/IconYT"
 
-export const StyledContainer = styled(Link)`
-  transition: ${({ theme }) => theme.transitions.custom};
+export const StyledLink = styled(Link)`
+  transition: ${({ theme }) => theme.transition.custom};
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   display: flex;
   margin: 20px 0;
   flex-direction: column;
+
   ${({ theme }) => theme.media.xsAbove} {
     flex-direction: row;
   }
   :hover {
+    box-shadow: ${({ theme }) => theme.elevation.dp8};
+    background-color: ${({ theme }) => theme.color.active};
+    color: white;
+  }
+  &:focus {
+    outline: none !important;
+    border: none !important;
     box-shadow: ${({ theme }) => theme.elevation.dp8};
     background-color: ${({ theme }) => theme.color.active};
     color: white;

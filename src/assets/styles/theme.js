@@ -223,7 +223,7 @@ export const theme = {
     bold: "700",
   },
 
-  transitions: {
+  transition: {
     custom: `all 0.3s cubic-bezier(.25,.8,.25,1);`,
     material: ``,
   },

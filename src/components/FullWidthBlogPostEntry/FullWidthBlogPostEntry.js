@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import {
-  StyledContainer,
+  StyledLink,
   StyledImgWrapper,
   StyledImg,
   StyledTxtWrapper,
@@ -19,7 +19,7 @@ const FullWidthBlogPostEntry = ({
   slug,
   youtube,
 }) => (
-  <StyledContainer to={`/articles/${slug}`}>
+  <StyledLink to={`/articles/${slug}`}>
     <StyledImgWrapper className={className}>
       <StyledImg fluid={background}></StyledImg>
       {youtube ? (
@@ -32,7 +32,7 @@ const FullWidthBlogPostEntry = ({
     <StyledTxtWrapper>
       <StyledTitle>{title}</StyledTitle>
     </StyledTxtWrapper>
-  </StyledContainer>
+  </StyledLink>
 )
 
 FullWidthBlogPostEntry.propTypes = {

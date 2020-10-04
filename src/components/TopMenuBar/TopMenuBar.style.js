@@ -6,7 +6,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu"
 
 export const StyledLink = styled(Link)`
   position: relative;
-
+/* 
   &:before {
     content: "";
     background-color: ${({ theme }) => theme.color.active};
@@ -25,7 +25,7 @@ export const StyledLink = styled(Link)`
     transform: scaleX(1);
   }
 
-  /* &:focus {
+  &:focus {
     outline: none !important;
     border: none !important;
   }
@@ -40,7 +40,6 @@ export const StyledNav = styled.nav`
   color: ${({ theme }) => theme.color.color3};
   display: flex;
   z-index: 100;
-  /* align-items: flex-start; */
 `
 
 export const StyledLogo = styled(Logo)`

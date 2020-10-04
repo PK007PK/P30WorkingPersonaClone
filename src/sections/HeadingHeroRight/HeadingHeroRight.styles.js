@@ -124,6 +124,15 @@ export const StyledTxtWrapper = styled.div`
       margin-left: 10px;
     }
   }
+
+  a {
+    :focus {
+      outline: none;
+      border: none;
+      background-color: ${({ theme }) => theme.color.secondaryButton};
+      box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
+    }
+  }
 `
 export const StyledButton = styled(Button)`
   margin-left: 10px;

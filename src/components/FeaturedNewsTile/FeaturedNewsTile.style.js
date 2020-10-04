@@ -12,16 +12,17 @@ export const StyledWrapper = styled(Link)`
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
-  transition: ${({ theme }) => theme.transitions.custom};
+  transition: ${({ theme }) => theme.transition.custom};
   box-shadow: ${({ theme }) => theme.elevation.dp1};
 
   &:hover {
-    transition: ${({ theme }) => theme.transitions.custom};
     box-shadow: ${({ theme }) => theme.elevation.dp8};
   }
 
-  &:hover ::after {
-    transition: ${({ theme }) => theme.transitions.custom};
+  :focus {
+    outline: none;
+    border: none;
+    box-shadow: ${({ theme }) => theme.elevation.dp8};
   }
 
   &::after {
@@ -33,7 +34,7 @@ export const StyledWrapper = styled(Link)`
     height: 450px;
     background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
     z-index: 2;
-    transition: ${({ theme }) => theme.transitions.custom};
+    transition: ${({ theme }) => theme.transition.custom};
   }
 `
 

@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.color.mainButton};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
-  transition: ${({ theme }) => theme.transitions.custom};
+  transition: ${({ theme }) => theme.transition.custom};
   box-shadow: 5px 5px 0px ${({ theme }) => theme.color.white};
   padding: 0 30px;
   height: 45px;
@@ -13,6 +13,13 @@ export const StyledButton = styled.button`
   align-items: center;
 
   :hover {
+    background-color: ${({ theme }) => theme.color.secondaryButton};
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
+  }
+
+  :focus {
+    outline: none;
+    border: none;
     background-color: ${({ theme }) => theme.color.secondaryButton};
     box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
   }
@@ -26,7 +33,7 @@ export const StyledA = styled.a`
   background-color: ${({ theme }) => theme.color.mainButton};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.color.white};
-  transition: ${({ theme }) => theme.transitions.custom};
+  transition: ${({ theme }) => theme.transition.custom};
   box-shadow: 5px 5px 0px ${({ theme }) => theme.color.white};
   padding: 0 30px;
   height: 45px;
@@ -35,6 +42,13 @@ export const StyledA = styled.a`
   align-items: center;
 
   :hover {
+    background-color: ${({ theme }) => theme.color.secondaryButton};
+    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
+  }
+
+  :focus {
+    outline: none;
+    border: none;
     background-color: ${({ theme }) => theme.color.secondaryButton};
     box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
   }
