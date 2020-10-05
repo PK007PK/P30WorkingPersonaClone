@@ -94,7 +94,7 @@ const PostLayout = ({ data }) => {
         </div>
         <div className="mainPostBody">
           <BootsRow>
-            <BootsColumn lg="9">
+            <BootsColumn md="6" lg="9">
               <div className="mainText">
                 {data.datoCmsNews.articleContent.map(item => {
                   const itemKey = Object.keys(item)[1]
@@ -123,7 +123,7 @@ const PostLayout = ({ data }) => {
                 })}
               </div>
             </BootsColumn>
-            <BootsColumn lg="3">
+            <BootsColumn md="6" lg="3">
               <div className={"buttons"}>
                 <Button to="/blog">Wszystkie artykuły</Button>
                 <Button to="/blog">Poprzedni artykuł</Button>

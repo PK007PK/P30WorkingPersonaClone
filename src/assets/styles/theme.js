@@ -197,6 +197,8 @@ const naviValues = {
 }
 
 export const theme = {
+  test: "20px",
+
   fontSize: {
     xs: "1.2rem",
     sm: "1.6rem",

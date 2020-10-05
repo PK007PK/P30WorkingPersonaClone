@@ -33,48 +33,60 @@ export const BootsRow = styled.div`
 export const BootsColumn = styled.div`
   width: 100%;
   padding: 0 15px;
-  ${({ xs }) =>
-    xs &&
-    `
-    ${({ theme }) => theme.xsAbove} {
+  position: relative;
+
+  ${({ theme }) => theme.media.xsAbove} {
+    ${({ xs }) =>
+      xs &&
+      `
+      {
         max-width: ${(xs / 12) * 100}%;
         flex: 0 0 ${(xs / 12) * 100}%;
       }
     `}
+  }
 
-  ${({ sm }) =>
-    sm &&
-    `
-    ${({ theme }) => theme.smAbove} {
+  ${({ theme }) => theme.media.smAbove} {
+    ${({ sm }) =>
+      sm &&
+      `
+      {
         max-width: ${(sm / 12) * 100}%;
         flex: 0 0 ${(sm / 12) * 100}%;
       }
     `}
+  }
 
-${({ md }) =>
-  md &&
-  `
-    ${({ theme }) => theme.mdAbove} {
+  ${({ theme }) => theme.media.mdAbove} {
+    ${({ md }) =>
+      md &&
+      `
+      {
         max-width: ${(md / 12) * 100}%;
         flex: 0 0 ${(md / 12) * 100}%;
       }
     `}
+  }
 
-${({ lg }) =>
-  lg &&
-  `
-    ${({ theme }) => theme.lgAbove} {
+  ${({ theme }) => theme.media.lgAbove} {
+    ${({ lg }) =>
+      lg &&
+      `
+      {
         max-width: ${(lg / 12) * 100}%;
         flex: 0 0 ${(lg / 12) * 100}%;
       }
     `}
+  }
 
-${({ xl }) =>
-  xl &&
-  `
-    ${({ theme }) => theme.xlAbove} {
+  ${({ theme }) => theme.media.xlAbove} {
+    ${({ xl }) =>
+      xl &&
+      `
+      {
         max-width: ${(xl / 12) * 100}%;
         flex: 0 0 ${(xl / 12) * 100}%;
       }
     `}
+  }
 `
