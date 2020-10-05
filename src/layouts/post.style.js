@@ -136,6 +136,23 @@ export const StyledSectionLayout = styled(SectionLayout)`
       display: flex;
       justify-content: space-between;
     }
+
+    a {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      margin-top: 20px;
+      font-style: italic;
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+    }
   }
 `
 
