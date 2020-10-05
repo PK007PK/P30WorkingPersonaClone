@@ -66,7 +66,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     .image {
       width: 100vw;
-      /* height: calc(100vw / 16 * 9);  */
       height: 50vh;
       ${({ theme }) => theme.media.mdAbove} {
         width: 50vw;
