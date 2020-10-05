@@ -124,7 +124,7 @@ const PostLayout = ({ data }) => {
             </BootsColumn>
             <BootsColumn lg="3">
               <Button to="/blog">Wszystkie artykuły</Button>
-              <FacebookShareButton>
+              <FacebookShareButton url={window.location.href}>
                 <FacebookIcon></FacebookIcon>
               </FacebookShareButton>
               <EmailShareButton>
