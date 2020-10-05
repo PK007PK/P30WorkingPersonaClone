@@ -13,6 +13,7 @@ export const StyledWrapper = styled.div`
     border: none;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     :hover {
       background-color: ${({ theme }) => theme.color.secondaryButton};

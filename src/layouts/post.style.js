@@ -90,7 +90,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
     img,
     li {
       ${({ theme }) => theme.media.lgAbove} {
-        width: 75%;
+        /* width: 75%; */
       }
     }
 
@@ -102,6 +102,10 @@ export const StyledSectionLayout = styled(SectionLayout)`
     p {
       margin-top: 20px;
       text-align: justify;
+    }
+
+    p:first-child {
+      margin-top: 0px;
     }
 
     li {

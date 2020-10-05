@@ -3,11 +3,26 @@ import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import { FacebookShareButton } from "react-share"
+import {
+  FacebookShareButton,
+  EmailShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share"
+
+import {
+  FacebookIcon,
+  EmailIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share"
 
 import YouTube from "../components/YouTube/YouTube"
 import Button from "../components/Button/Button"
 
+import { BootsRow, BootsColumn } from "../utilities/BootsElements/BootsElements"
 import { StyledSectionLayout, StyledPostNavigation } from "./post.style"
 
 export const query = graphql`
@@ -77,37 +92,56 @@ const PostLayout = ({ data }) => {
           </div>
         </div>
         <div className="mainPostBody">
-          <div className="mainText">
-            {data.datoCmsNews.articleContent.map(item => {
-              const itemKey = Object.keys(item)[1]
-              switch (itemKey) {
-                case "paragraphContentNode":
-                  return (
-                    <div key={item.id}>
-                      <MDXRenderer>
-                        {item.paragraphContentNode.childMdx.body}
-                      </MDXRenderer>
-                    </div>
-                  )
-                case "headingContent":
-                  return <h2 key={item.id}>{item.headingContent}</h2>
-                case "imageData":
-                  return (
-                    <Image
-                      className="articleImg"
-                      key={item.id}
-                      fluid={item[itemKey].fluid}
-                    />
-                  )
-                default:
-                  return null
-              }
-            })}
-          </div>
+          <BootsRow>
+            <BootsColumn lg="9">
+              <div className="mainText">
+                {data.datoCmsNews.articleContent.map(item => {
+                  const itemKey = Object.keys(item)[1]
+                  switch (itemKey) {
+                    case "paragraphContentNode":
+                      return (
+                        <div key={item.id}>
+                          <MDXRenderer>
+                            {item.paragraphContentNode.childMdx.body}
+                          </MDXRenderer>
+                        </div>
+                      )
+                    case "headingContent":
+                      return <h2 key={item.id}>{item.headingContent}</h2>
+                    case "imageData":
+                      return (
+                        <Image
+                          className="articleImg"
+                          key={item.id}
+                          fluid={item[itemKey].fluid}
+                        />
+                      )
+                    default:
+                      return null
+                  }
+                })}
+              </div>
+            </BootsColumn>
+            <BootsColumn lg="3">
+              <Button to="/blog">Wszystkie artykuły</Button>
+              <FacebookShareButton>
+                <FacebookIcon></FacebookIcon>
+              </FacebookShareButton>
+              <EmailShareButton>
+                <EmailIcon></EmailIcon>
+              </EmailShareButton>
+              <LinkedinShareButton>
+                <LinkedinIcon></LinkedinIcon>
+              </LinkedinShareButton>{" "}
+              <TwitterShareButton>
+                <TwitterIcon></TwitterIcon>
+              </TwitterShareButton>
+              <WhatsappShareButton>
+                <WhatsappIcon></WhatsappIcon>
+              </WhatsappShareButton>
+            </BootsColumn>
+          </BootsRow>
         </div>
-        <StyledPostNavigation>
-          <Button to="/blog">Button</Button>
-        </StyledPostNavigation>
       </StyledSectionLayout>
     </>
   )

@@ -34,7 +34,6 @@ export const BootsRow = styled.div`
 export const BootsColumn = styled.div`
   width: 100%;
   padding: 0 15px;
-  background-color: red;
   ${({ xs }) =>
     xs &&
     `

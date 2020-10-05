@@ -9,24 +9,24 @@ import {
 } from "./Button.style"
 
 const Button = ({ children, className, href, to }) => (
-  <StyledWrapper>
+  <StyledWrapper className={className}>
     {href && (
       <StyledA
         href={href}
         target="_blank"
-        className={(className, "inner")}
+        className={"inner"}
         rel="noopener noreferrer"
       >
         {children}
       </StyledA>
     )}
     {to && (
-      <StyledLink to={to} className={(className, "inner")}>
+      <StyledLink to={to} className={"inner"}>
         {children}
       </StyledLink>
     )}
     {!to && !href && (
-      <StyledButton to={to} className={(className, "inner")} type="submit">
+      <StyledButton to={to} className={"inner"} type="submit">
         {children}
       </StyledButton>
     )}
