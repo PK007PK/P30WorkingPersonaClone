@@ -28,6 +28,15 @@ import { StyledSectionLayout, StyledPostNavigation } from "./post.style"
 export const query = graphql`
   query querySingleArticle($id: String!) {
     datoCmsNews(id: { eq: $id }) {
+      articleContent {
+        ... on DatoCmsParagraph {
+          paragraphContentNode {
+            childMdx {
+              excerpt(pruneLength: 400)
+            }
+          }
+        }
+      }
       title
       date
       youtube
@@ -129,13 +138,30 @@ const PostLayout = ({ data }) => {
               >
                 <FacebookIcon></FacebookIcon>
               </FacebookShareButton>
-              <EmailShareButton>
+              <EmailShareButton
+                url={typeof window !== "undefined" ? window.location.href : ""}
+                subject={data.datoCmsNews.title}
+                body={
+                  data.datoCmsNews.articleContent[0].paragraphContentNode
+                    .childMdx.excerpt
+                }
+                separator={"<br></br><br></br>"}
+              >
                 <EmailIcon></EmailIcon>
               </EmailShareButton>
-              <LinkedinShareButton>
+              <LinkedinShareButton
+                title={data.datoCmsNews.title}
+                summary={
+                  data.datoCmsNews.articleContent[0].paragraphContentNode
+                    .childMdx.excerpt
+                }
+                source={
+                  typeof window !== "undefined" ? window.location.href : ""
+                }
+              >
                 <LinkedinIcon></LinkedinIcon>
               </LinkedinShareButton>{" "}
-              <TwitterShareButton>
+              <TwitterShareButton title={data.datoCmsNews.title}>
                 <TwitterIcon></TwitterIcon>
               </TwitterShareButton>
               <WhatsappShareButton>
