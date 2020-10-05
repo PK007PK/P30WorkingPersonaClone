@@ -7,17 +7,9 @@ import {
   FacebookShareButton,
   EmailShareButton,
   LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
 } from "react-share"
 
-import {
-  FacebookIcon,
-  EmailIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  WhatsappIcon,
-} from "react-share"
+import { FacebookIcon, EmailIcon, LinkedinIcon } from "react-share"
 
 import YouTube from "../components/YouTube/YouTube"
 import Button from "../components/Button/Button"
@@ -132,41 +124,45 @@ const PostLayout = ({ data }) => {
               </div>
             </BootsColumn>
             <BootsColumn lg="3">
-              <Button to="/blog">Wszystkie artykuły</Button>
-              <FacebookShareButton
-                url={typeof window !== "undefined" ? window.location.href : ""}
-              >
-                <FacebookIcon></FacebookIcon>
-              </FacebookShareButton>
-              <EmailShareButton
-                url={typeof window !== "undefined" ? window.location.href : ""}
-                subject={data.datoCmsNews.title}
-                body={
-                  data.datoCmsNews.articleContent[0].paragraphContentNode
-                    .childMdx.excerpt
-                }
-                separator={"<br></br><br></br>"}
-              >
-                <EmailIcon></EmailIcon>
-              </EmailShareButton>
-              <LinkedinShareButton
-                title={data.datoCmsNews.title}
-                summary={
-                  data.datoCmsNews.articleContent[0].paragraphContentNode
-                    .childMdx.excerpt
-                }
-                source={
-                  typeof window !== "undefined" ? window.location.href : ""
-                }
-              >
-                <LinkedinIcon></LinkedinIcon>
-              </LinkedinShareButton>{" "}
-              <TwitterShareButton title={data.datoCmsNews.title}>
-                <TwitterIcon></TwitterIcon>
-              </TwitterShareButton>
-              <WhatsappShareButton>
-                <WhatsappIcon></WhatsappIcon>
-              </WhatsappShareButton>
+              <div className={"buttons"}>
+                <Button to="/blog">Wszystkie artykuły</Button>
+                <Button to="/blog">Poprzedni artykuł</Button>
+                <Button to="/blog">Następny artykuły</Button>
+              </div>
+              <div className={"socials"}>
+                <FacebookShareButton
+                  url={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
+                >
+                  <FacebookIcon></FacebookIcon>
+                </FacebookShareButton>
+                <EmailShareButton
+                  url={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
+                  subject={data.datoCmsNews.title}
+                  body={
+                    data.datoCmsNews.articleContent[0].paragraphContentNode
+                      .childMdx.excerpt
+                  }
+                  separator={"<br></br><br></br>"}
+                >
+                  <EmailIcon></EmailIcon>
+                </EmailShareButton>
+                <LinkedinShareButton
+                  title={data.datoCmsNews.title}
+                  summary={
+                    data.datoCmsNews.articleContent[0].paragraphContentNode
+                      .childMdx.excerpt
+                  }
+                  source={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
+                >
+                  <LinkedinIcon></LinkedinIcon>
+                </LinkedinShareButton>
+              </div>
             </BootsColumn>
           </BootsRow>
         </div>

@@ -25,7 +25,6 @@ export const BootsContainer = styled.div`
 
 export const BootsRow = styled.div`
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   margin: 0 -15px;
   position: relative;

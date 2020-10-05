@@ -126,6 +126,17 @@ export const StyledSectionLayout = styled(SectionLayout)`
         height: 55vh;
       }
     }
+
+    .buttons {
+      & > * {
+        margin-bottom: 20px;
+      }
+    }
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `
 
