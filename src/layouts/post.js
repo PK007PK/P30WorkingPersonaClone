@@ -152,13 +152,13 @@ const PostLayout = ({ data }) => {
                 </EmailShareButton>
                 <LinkedinShareButton
                   title={data.datoCmsNews.title}
-                  // summary={
-                  //   data.datoCmsNews.articleContent[0].paragraphContentNode
-                  //     .childMdx.excerpt
-                  // }
-                  // source={
-                  //   typeof window !== "undefined" ? window.location.href : ""
-                  // }
+                  summary={
+                    data.datoCmsNews.articleContent[0].paragraphContentNode
+                      .childMdx.excerpt
+                  }
+                  source={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
                   url={
                     typeof window !== "undefined" ? window.location.href : ""
                   }
