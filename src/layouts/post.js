@@ -135,7 +135,7 @@ const PostLayout = ({ data }) => {
                     typeof window !== "undefined" ? window.location.href : ""
                   }
                 >
-                  <FacebookIcon></FacebookIcon>
+                  <FacebookIcon size={45} round={true}></FacebookIcon>
                 </FacebookShareButton>
                 <EmailShareButton
                   url={
@@ -148,19 +148,22 @@ const PostLayout = ({ data }) => {
                   }
                   separator={"<br></br><br></br>"}
                 >
-                  <EmailIcon></EmailIcon>
+                  <EmailIcon size={45} round={true}></EmailIcon>
                 </EmailShareButton>
                 <LinkedinShareButton
                   title={data.datoCmsNews.title}
-                  summary={
-                    data.datoCmsNews.articleContent[0].paragraphContentNode
-                      .childMdx.excerpt
-                  }
-                  source={
+                  // summary={
+                  //   data.datoCmsNews.articleContent[0].paragraphContentNode
+                  //     .childMdx.excerpt
+                  // }
+                  // source={
+                  //   typeof window !== "undefined" ? window.location.href : ""
+                  // }
+                  url={
                     typeof window !== "undefined" ? window.location.href : ""
                   }
                 >
-                  <LinkedinIcon></LinkedinIcon>
+                  <LinkedinIcon size={45} round={true}></LinkedinIcon>
                 </LinkedinShareButton>
               </div>
             </BootsColumn>
