@@ -10,9 +10,7 @@ const HeadingWrapper = ({ title, txtColor, backgroundColor, className }) => (
       txtColor={txtColor}
       backgroundColor={backgroundColor}
     >
-      <h2 className="txtHoverFocusTab" tabIndex="0">
-        {title}
-      </h2>
+      <h2 tabIndex="0">{title}</h2>
     </StyledDiv>
   </>
 )

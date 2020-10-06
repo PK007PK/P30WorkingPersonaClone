@@ -4,30 +4,13 @@ import styled from "styled-components"
 import slugify from "slugify"
 
 import HeadingWrapper from "../../components/HeadingWrapper/HeadingWrapper"
+import Button from "../../components/Button/Button"
 
 import {
   StyledSectionLayout,
   StyledFullWidthBlogPostEntry,
   StyledButtonWrapper,
 } from "./RecentlyAdded.style"
-
-const StyledButton = styled(Link)`
-  background-color: ${({ theme }) => theme.color.active};
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
-  color: ${({ theme }) => theme.color.white};
-  padding: 0 30px;
-  height: 45px;
-  border: none;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-  box-shadow: 5px 5px 0px ${({ theme }) => theme.color.white};
-
-  :hover {
-    background-color: ${({ theme }) => theme.color.color3};
-    box-shadow: 5px 5px 0px ${({ theme }) => theme.color.active};
-  }
-`
 
 const FeaturedNewsSection = () => {
   const data = useStaticQuery(query)
@@ -53,7 +36,7 @@ const FeaturedNewsSection = () => {
         )
       })}
       <StyledButtonWrapper>
-        <StyledButton to="/blog">Wszystkie wpisy na blogu</StyledButton>
+        <Button to="/blog">Wszystkie wpisy na blogu</Button>
       </StyledButtonWrapper>
     </StyledSectionLayout>
   )
