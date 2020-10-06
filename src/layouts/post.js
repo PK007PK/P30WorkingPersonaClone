@@ -5,17 +5,25 @@ import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import {
   FacebookShareButton,
+  FacebookMessengerShareButton,
+  WhatsappShareButton,
   EmailShareButton,
   LinkedinShareButton,
 } from "react-share"
 
-import { FacebookIcon, EmailIcon, LinkedinIcon } from "react-share"
+import {
+  FacebookIcon,
+  FacebookMessengerIcon,
+  WhatsappIcon,
+  EmailIcon,
+  LinkedinIcon,
+} from "react-share"
 
 import YouTube from "../components/YouTube/YouTube"
 import Button from "../components/Button/Button"
 
 import { BootsRow, BootsColumn } from "../utilities/BootsElements/BootsElements"
-import { StyledSectionLayout, StyledPostNavigation } from "./post.style"
+import { StyledSectionLayout } from "./post.style"
 
 export const query = graphql`
   query querySingleArticle($id: String!) {
@@ -131,13 +139,34 @@ const PostLayout = ({ data }) => {
               </div>
               <div className={"socials"}>
                 <FacebookShareButton
+                  className={"social__button"}
                   url={
                     typeof window !== "undefined" ? window.location.href : ""
                   }
                 >
                   <FacebookIcon size={45} round={true}></FacebookIcon>
                 </FacebookShareButton>
+                <FacebookMessengerShareButton
+                  url={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
+                  appId="xxx"
+                  className={"social__button"}
+                >
+                  <FacebookMessengerIcon size={45} round />
+                </FacebookMessengerShareButton>
+                <WhatsappShareButton
+                  url={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
+                  title={data.datoCmsNews.title}
+                  separator=":: "
+                  className={"social__button"}
+                >
+                  <WhatsappIcon size={45} round />
+                </WhatsappShareButton>
                 <EmailShareButton
+                  className={"social__button"}
                   url={
                     typeof window !== "undefined" ? window.location.href : ""
                   }
@@ -151,14 +180,15 @@ const PostLayout = ({ data }) => {
                   <EmailIcon size={45} round={true}></EmailIcon>
                 </EmailShareButton>
                 <LinkedinShareButton
+                  className={"social__button"}
                   title={data.datoCmsNews.title}
-                  // summary={
-                  //   data.datoCmsNews.articleContent[0].paragraphContentNode
-                  //     .childMdx.excerpt
-                  // }
-                  // source={
-                  //   typeof window !== "undefined" ? window.location.href : ""
-                  // }
+                  summary={
+                    data.datoCmsNews.articleContent[0].paragraphContentNode
+                      .childMdx.excerpt
+                  }
+                  source={
+                    typeof window !== "undefined" ? window.location.href : ""
+                  }
                   url={
                     typeof window !== "undefined" ? window.location.href : ""
                   }

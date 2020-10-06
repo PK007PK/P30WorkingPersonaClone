@@ -20,8 +20,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
   .textWrapper {
     width: 100%;
-    /* background-color: red; */
-    /* padding: 30px 0; */
 
     ${({ theme }) => theme.media.mdAbove} {
       width: 45%;
@@ -132,12 +130,16 @@ export const StyledSectionLayout = styled(SectionLayout)`
       }
     }
     .socials {
-      margin-top: 20px;
+      margin-top: 30px;
       display: flex;
       justify-content: space-between;
     }
 
-    a {
+    .social__button:hover:not(:active) {
+      opacity: 0.75;
+    }
+
+    svg {
       text-decoration: underline;
     }
 
@@ -152,22 +154,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     .buttons a {
       text-decoration: none;
-    }
-  }
-`
-
-export const StyledPostNavigation = styled.div`
-  margin: 50px 0;
-  ${({ theme }) => theme.media.lgAbove} {
-    width: 90%;
-  }
-  li {
-    margin-bottom: 10px;
-    transition: all 0.5s;
-    text-align: right;
-
-    :hover {
-      color: ${({ theme }) => theme.color.pink};
     }
   }
 `
