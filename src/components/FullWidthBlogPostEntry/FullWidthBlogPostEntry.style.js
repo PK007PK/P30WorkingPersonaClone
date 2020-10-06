@@ -38,7 +38,7 @@ export const StyledImgWrapper = styled.div`
   display: block;
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   overflow: hidden;
   flex-shrink: 0;
   width: 100%;

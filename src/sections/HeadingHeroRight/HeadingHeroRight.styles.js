@@ -17,17 +17,17 @@ const sectionHeight = {
 
 const heroImgSizes = {
   md: {
-    height: `700px`,
-    width: `466px`,
+    height: `735px`,
+    width: `489px`,
   },
-  mdLandscape: `(100vh - 98px + 50px)`,
+  mdLandscape: `(100vh - 98px + 70px)`,
   lg: {
     height: `calc(700px)`,
     width: `calc((700px) * 0.666)`,
   },
   lgLandscape: {
-    height: `calc(100vh - 98px + 80px)`,
-    width: `calc((100vh - 98px + 80px) * 0.666)`,
+    height: `calc(100vh - 98px + 120px)`,
+    width: `calc((100vh - 98px + 120px) * 0.666)`,
   },
   xxl: `(100vh - 98px + 50px)`,
 }
@@ -158,15 +158,15 @@ export const StyledImage = styled(Image)`
     width: ${heroImgSizes.md.width};
 
     @media (orientation: landscape) {
-      margin-top: -30px;
-      margin-right: 50px;
+      margin-top: -70px;
+      margin-right: 40px;
     }
   }
 
   ${({ theme }) => theme.media.lgAbove} {
     height: ${heroImgSizes.lg.height};
     width: ${heroImgSizes.lg.width};
-    margin-right: 80px;
+    margin-right: 120px;
 
     @media (orientation: landscape) {
       height: ${heroImgSizes.lgLandscape.height};
@@ -174,7 +174,7 @@ export const StyledImage = styled(Image)`
     }
   }
 
-  ${({ theme }) => theme.media.lgAbove} {
+  ${({ theme }) => theme.media.xlAbove} {
     margin-right: 8vw;
   }
 `
