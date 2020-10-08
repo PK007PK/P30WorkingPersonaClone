@@ -186,7 +186,11 @@ const PostLayout = ({ data, pageContext }) => {
                       .childMdx.excerpt
                   }
                   source={
+<<<<<<< HEAD
                     typeof window !== 'undefined' ? window.location.href : ''
+=======
+                    typeof window !== "undefined" ? window.location.href : ""
+>>>>>>> origin/snyk-upgrade-ae4d40f8d5bc3986eac3576f701479b0
                   }
                   url={
                     typeof window !== 'undefined' ? window.location.href : ''
