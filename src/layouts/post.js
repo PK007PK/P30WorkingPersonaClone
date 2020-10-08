@@ -1,8 +1,8 @@
-import React from "react"
-import Image from "gatsby-image"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from 'react';
+import Image from 'gatsby-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import {
   FacebookShareButton,
   FacebookMessengerShareButton,
@@ -14,13 +14,13 @@ import {
   WhatsappIcon,
   EmailIcon,
   LinkedinIcon,
-} from "react-share"
+} from 'react-share';
 
-import YouTube from "../components/YouTube/YouTube"
-import Button from "../components/Button/Button"
+import YouTube from '../components/YouTube/YouTube';
+import Button from '../components/Button/Button';
 
-import { BootsRow, BootsColumn } from "../utils/BootsElements/BootsElements"
-import { StyledSectionLayout } from "./post.style"
+import { BootsRow, BootsColumn } from '../utils/BootsElements/BootsElements';
+import { StyledSectionLayout } from './post.style';
 
 export const query = graphql`
   query querySingleArticle($id: String!) {
@@ -67,10 +67,10 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const PostLayout = ({ data, pageContext }) => {
-  console.log(pageContext)
+  console.log(pageContext);
   return (
     <>
       <Helmet title={data.datoCmsNews.title} />
@@ -103,28 +103,28 @@ const PostLayout = ({ data, pageContext }) => {
             <BootsColumn md="8" lg="9">
               <div className="mainText">
                 {data.datoCmsNews.articleContent.map(item => {
-                  const itemKey = Object.keys(item)[1]
+                  const itemKey = Object.keys(item)[1];
                   switch (itemKey) {
-                    case "paragraphContentNode":
+                    case 'paragraphContentNode':
                       return (
                         <div key={item.id}>
                           <MDXRenderer>
                             {item.paragraphContentNode.childMdx.body}
                           </MDXRenderer>
                         </div>
-                      )
-                    case "headingContent":
-                      return <h2 key={item.id}>{item.headingContent}</h2>
-                    case "imageData":
+                      );
+                    case 'headingContent':
+                      return <h2 key={item.id}>{item.headingContent}</h2>;
+                    case 'imageData':
                       return (
                         <Image
                           className="articleImg"
                           key={item.id}
                           fluid={item[itemKey].fluid}
                         />
-                      )
+                      );
                     default:
-                      return null
+                      return null;
                   }
                 })}
               </div>
@@ -139,14 +139,14 @@ const PostLayout = ({ data, pageContext }) => {
                 <FacebookShareButton
                   className="social__button"
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                 >
                   <FacebookIcon size={45} round />
                 </FacebookShareButton>
                 <FacebookMessengerShareButton
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   appId="xxx"
                   className="social__button"
@@ -155,7 +155,7 @@ const PostLayout = ({ data, pageContext }) => {
                 </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   title={data.datoCmsNews.title}
                   separator=":: "
@@ -166,7 +166,7 @@ const PostLayout = ({ data, pageContext }) => {
                 <EmailShareButton
                   className="social__button"
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   subject={data.datoCmsNews.title}
                   body={
@@ -186,10 +186,10 @@ const PostLayout = ({ data, pageContext }) => {
                       .childMdx.excerpt
                   }
                   source={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                 >
                   <LinkedinIcon size={45} round />
@@ -200,7 +200,7 @@ const PostLayout = ({ data, pageContext }) => {
         </div>
       </StyledSectionLayout>
     </>
-  )
-}
+  );
+};
 
-export default PostLayout
+export default PostLayout;

@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyledWrapper,
   StyledA,
   StyledLink,
   StyledButton,
-} from './Button.style'
+} from './Button.style';
 
 const Button = ({ children, className, href, to }) => (
   <StyledWrapper className={className}>
@@ -31,13 +31,13 @@ const Button = ({ children, className, href, to }) => (
       </StyledButton>
     )}
   </StyledWrapper>
-)
+);
 
 Button.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   to: PropTypes.string,
   type: PropTypes.string,
-}
+};
 
-export default Button
+export default Button;

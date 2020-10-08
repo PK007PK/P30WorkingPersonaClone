@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
 import {
   StyledBurgerMenu,
@@ -7,18 +7,18 @@ import {
   StyledSpan,
   StyledNavigation,
   StyledList,
-} from "./BurgerMenu.style"
+} from './BurgerMenu.style';
 
 class BurgerMenu extends React.Component {
   state = {
     IsBurgerActive: false,
-  }
+  };
 
   handleClick = () => {
     this.setState(prevState => ({
       IsBurgerActive: !prevState.IsBurgerActive,
-    }))
-  }
+    }));
+  };
 
   render() {
     return (
@@ -51,8 +51,8 @@ class BurgerMenu extends React.Component {
           </StyledList>
         </StyledNavigation>
       </StyledBurgerMenu>
-    )
+    );
   }
 }
 
-export default BurgerMenu
+export default BurgerMenu;
