@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { theme } from 'src/assets/theme/theme';
 
 import 'normalize.css';
-import GlobalStyle from '../assets/styles/GlobalStyle';
+import GlobalStyle from 'src/styles/GlobalStyle';
 
 import BootstrapContainer from '../utils/BootstrapContainer/BootstrapContainer';
 import TopMenuBar from '../components/TopMenuBar/TopMenuBar';
