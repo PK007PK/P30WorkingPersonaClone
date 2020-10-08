@@ -6,7 +6,7 @@
   "homepage": "https://pk007pk.github.io/P21GeodezjaReactGatsby/",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.6",
-    "@mdx-js/react": "^1.6.6",
+    "@mdx-js/react": "^1.6.17",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.3",
