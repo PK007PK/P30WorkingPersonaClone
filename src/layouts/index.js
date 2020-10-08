@@ -1,14 +1,15 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled, { ThemeProvider } from "styled-components"
-import { theme } from "../assets/styles/theme"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled, { ThemeProvider } from 'styled-components'
+import { Helmet } from 'react-helmet'
+import { theme } from '../assets/styles/theme'
 
-import GlobalStyle from "../assets/styles/GlobalStyle"
+import 'normalize.css'
+import GlobalStyle from '../assets/styles/GlobalStyle'
 
-import BootstrapContainer from "../utilities/BootstrapContainer/BootstrapContainer"
-import TopMenuBar from "../components/TopMenuBar/TopMenuBar"
-import Footer from "../components/Footer/Footer"
+import BootstrapContainer from '../utilities/BootstrapContainer/BootstrapContainer'
+import TopMenuBar from '../components/TopMenuBar/TopMenuBar'
+import Footer from '../components/Footer/Footer'
 
 const StyledTopMenuBar = styled(TopMenuBar)`
   margin-top: 30px;
@@ -22,14 +23,14 @@ const MainLayout = ({ children }) => {
   const data = useStaticQuery(query)
   const content = data.datoCmsSiteSetup.siteDescription
   const keywords = data.datoCmsSiteSetup.siteKeywords
-  const url = typeof window !== "undefined" ? window.location.href : ""
+  const url = typeof window !== 'undefined' ? window.location.href : ''
   return (
     <ThemeProvider theme={theme}>
       <>
         <Helmet
           meta={[
-            { name: "description", content: content },
-            { name: "keywords", content: keywords },
+            { name: 'description', content },
+            { name: 'keywords', content: keywords },
           ]}
         >
           <link rel="canonical" href={url} />

@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   StyledWrapper,
   StyledA,
   StyledLink,
   StyledButton,
-} from "./Button.style"
+} from './Button.style'
 
 const Button = ({ children, className, href, to }) => (
   <StyledWrapper className={className}>
@@ -14,19 +14,19 @@ const Button = ({ children, className, href, to }) => (
       <StyledA
         href={href}
         target="_blank"
-        className={"inner"}
+        className="inner"
         rel="noopener noreferrer"
       >
         {children}
       </StyledA>
     )}
     {to && (
-      <StyledLink to={to} className={"inner"}>
+      <StyledLink to={to} className="inner">
         {children}
       </StyledLink>
     )}
     {!to && !href && (
-      <StyledButton to={to} className={"inner"} type="submit">
+      <StyledButton to={to} className="inner" type="submit">
         {children}
       </StyledButton>
     )}

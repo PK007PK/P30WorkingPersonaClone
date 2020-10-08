@@ -1,29 +1,26 @@
-import React from "react"
-import Image from "gatsby-image"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql, Link } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import Image from 'gatsby-image'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import {
   FacebookShareButton,
   FacebookMessengerShareButton,
   WhatsappShareButton,
   EmailShareButton,
   LinkedinShareButton,
-} from "react-share"
-
-import {
   FacebookIcon,
   FacebookMessengerIcon,
   WhatsappIcon,
   EmailIcon,
   LinkedinIcon,
-} from "react-share"
+} from 'react-share'
 
-import YouTube from "../components/YouTube/YouTube"
-import Button from "../components/Button/Button"
+import YouTube from '../components/YouTube/YouTube'
+import Button from '../components/Button/Button'
 
-import { BootsRow, BootsColumn } from "../utilities/BootsElements/BootsElements"
-import { StyledSectionLayout } from "./post.style"
+import { BootsRow, BootsColumn } from '../utilities/BootsElements/BootsElements'
+import { StyledSectionLayout } from './post.style'
 
 export const query = graphql`
   query querySingleArticle($id: String!) {
@@ -72,10 +69,11 @@ export const query = graphql`
   }
 `
 
-const PostLayout = ({ data }) => {
+const PostLayout = ({ data, pageContext }) => {
+  console.log(pageContext)
   return (
     <>
-      <Helmet title={data.datoCmsNews.title}></Helmet>
+      <Helmet title={data.datoCmsNews.title} />
       <StyledSectionLayout>
         <div className="headingWrapper">
           <div className="imgWrapper">
@@ -107,7 +105,7 @@ const PostLayout = ({ data }) => {
                 {data.datoCmsNews.articleContent.map(item => {
                   const itemKey = Object.keys(item)[1]
                   switch (itemKey) {
-                    case "paragraphContentNode":
+                    case 'paragraphContentNode':
                       return (
                         <div key={item.id}>
                           <MDXRenderer>
@@ -115,9 +113,9 @@ const PostLayout = ({ data }) => {
                           </MDXRenderer>
                         </div>
                       )
-                    case "headingContent":
+                    case 'headingContent':
                       return <h2 key={item.id}>{item.headingContent}</h2>
-                    case "imageData":
+                    case 'imageData':
                       return (
                         <Image
                           className="articleImg"
@@ -132,68 +130,69 @@ const PostLayout = ({ data }) => {
               </div>
             </BootsColumn>
             <BootsColumn md="4" lg="3">
-              <div className={"buttons"}>
+              <div className="buttons">
                 <Button to="/blog">Wszystkie artykuły</Button>
                 <Button to="/blog">Poprzedni artykuł</Button>
                 <Button to="/blog">Następny artykuły</Button>
               </div>
-              <div className={"socials"}>
+              <div className="socials">
                 <FacebookShareButton
-                  className={"social__button"}
+                  className="social__button"
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                 >
-                  <FacebookIcon size={45} round={true}></FacebookIcon>
+                  <FacebookIcon size={45} round />
                 </FacebookShareButton>
                 <FacebookMessengerShareButton
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   appId="xxx"
-                  className={"social__button"}
+                  className="social__button"
                 >
                   <FacebookMessengerIcon size={45} round />
                 </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   title={data.datoCmsNews.title}
                   separator=":: "
-                  className={"social__button"}
+                  className="social__button"
                 >
                   <WhatsappIcon size={45} round />
                 </WhatsappShareButton>
                 <EmailShareButton
-                  className={"social__button"}
+                  className="social__button"
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   subject={data.datoCmsNews.title}
                   body={
                     data.datoCmsNews.articleContent[0].paragraphContentNode
                       .childMdx.excerpt
                   }
-                  separator={"<br></br><br></br>"}
+                  separator="<br></br><br></br>"
                 >
-                  <EmailIcon size={45} round={true}></EmailIcon>
+                  <EmailIcon size={45} round />
                 </EmailShareButton>
+
                 <LinkedinShareButton
-                  className={"social__button"}
+                  className="social__button"
                   title={data.datoCmsNews.title}
                   summary={
                     data.datoCmsNews.articleContent[0].paragraphContentNode
                       .childMdx.excerpt
                   }
                   source={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                   url={
-                    typeof window !== "undefined" ? window.location.href : ""
+                    typeof window !== 'undefined' ? window.location.href : ''
                   }
                 >
-                  <LinkedinIcon size={45} round={true}></LinkedinIcon>
+                  <LinkedinIcon size={45} round />
                 </LinkedinShareButton>
               </div>
             </BootsColumn>

@@ -1,17 +1,17 @@
-require("dotenv").config()
+require('dotenv').config()
 
 const bootstrapQueries = {
-  xs_down: "(max-width: 576x)",
-  sm_down: "(max-width: 768px)",
-  md_down: "(max-width: 992px)",
-  lg_down: "(max-width: 1200px)",
-  xxl_down: "(max-width: 1550px)",
-  xs_up: "(min-width: 576x)",
-  sm_up: "(min-width: 768px)",
-  md_up: "(min-width: 992px)",
-  lg_up: "(min-width: 1200px)",
-  xxl_up: "(min-width: 1550px)",
-  portrait: "(orientation: portrait)",
+  xs_down: '(max-width: 576x)',
+  sm_down: '(max-width: 768px)',
+  md_down: '(max-width: 992px)',
+  lg_down: '(max-width: 1200px)',
+  xxl_down: '(max-width: 1550px)',
+  xs_up: '(min-width: 576x)',
+  sm_up: '(min-width: 768px)',
+  md_up: '(min-width: 992px)',
+  lg_up: '(min-width: 1200px)',
+  xxl_up: '(min-width: 1550px)',
+  portrait: '(orientation: portrait)',
 }
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    language: "pl",
+    language: 'pl',
   },
   plugins: [
     {
@@ -30,7 +30,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,12 +46,12 @@ module.exports = {
         fonts: [
           {
             family: `Montserrat`,
-            variants: [`300`, "500", "700"],
-            subsets: ["latin-ext"],
+            variants: [`300`, '500', '700'],
+            subsets: ['latin-ext'],
           },
           {
             family: `Ubuntu`,
-            variants: ["700"],
+            variants: ['700'],
           },
           {
             family: `Covered By Your Grace`,
@@ -60,7 +60,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-breakpoints",
+      resolve: 'gatsby-plugin-breakpoints',
       options: {
         queries: bootstrapQueries,
       },
