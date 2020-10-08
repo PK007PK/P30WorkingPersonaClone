@@ -5,7 +5,7 @@ import HeadingHeroRight from "../sections/HeadingHeroRight/HeadingHeroRight"
 import FeaturedNewsSection from "../sections/FeaturedNewsSection/FeaturedNewsSection"
 import RecentlyAdded from "../sections/RecentlyAdded/RecentlyAdded"
 
-import AspectRatioContainer from "../utilities/AspectRatioContainer/AspectRatioContainer"
+import AspectRatioContainer from "../utils/AspectRatioContainer/AspectRatioContainer"
 
 const IndexPage = ({ data }) => {
   const title = data.datoCmsSiteSetup.siteTitle + " - strona główna"

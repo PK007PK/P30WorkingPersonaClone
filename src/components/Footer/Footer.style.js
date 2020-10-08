@@ -1,4 +1,4 @@
-import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../../utils/SectionLayout/SectionLayout"
 import styled from "styled-components"
 
 export const StyledSectionLayout = styled(SectionLayout)`

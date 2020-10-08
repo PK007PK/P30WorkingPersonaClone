@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import Image from "gatsby-image"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import {
   FacebookShareButton,
   FacebookMessengerShareButton,
@@ -14,13 +14,13 @@ import {
   WhatsappIcon,
   EmailIcon,
   LinkedinIcon,
-} from 'react-share'
+} from "react-share"
 
-import YouTube from '../components/YouTube/YouTube'
-import Button from '../components/Button/Button'
+import YouTube from "../components/YouTube/YouTube"
+import Button from "../components/Button/Button"
 
-import { BootsRow, BootsColumn } from '../utilities/BootsElements/BootsElements'
-import { StyledSectionLayout } from './post.style'
+import { BootsRow, BootsColumn } from "../utils/BootsElements/BootsElements"
+import { StyledSectionLayout } from "./post.style"
 
 export const query = graphql`
   query querySingleArticle($id: String!) {
@@ -105,7 +105,7 @@ const PostLayout = ({ data, pageContext }) => {
                 {data.datoCmsNews.articleContent.map(item => {
                   const itemKey = Object.keys(item)[1]
                   switch (itemKey) {
-                    case 'paragraphContentNode':
+                    case "paragraphContentNode":
                       return (
                         <div key={item.id}>
                           <MDXRenderer>
@@ -113,9 +113,9 @@ const PostLayout = ({ data, pageContext }) => {
                           </MDXRenderer>
                         </div>
                       )
-                    case 'headingContent':
+                    case "headingContent":
                       return <h2 key={item.id}>{item.headingContent}</h2>
-                    case 'imageData':
+                    case "imageData":
                       return (
                         <Image
                           className="articleImg"
@@ -139,14 +139,14 @@ const PostLayout = ({ data, pageContext }) => {
                 <FacebookShareButton
                   className="social__button"
                   url={
-                    typeof window !== 'undefined' ? window.location.href : ''
+                    typeof window !== "undefined" ? window.location.href : ""
                   }
                 >
                   <FacebookIcon size={45} round />
                 </FacebookShareButton>
                 <FacebookMessengerShareButton
                   url={
-                    typeof window !== 'undefined' ? window.location.href : ''
+                    typeof window !== "undefined" ? window.location.href : ""
                   }
                   appId="xxx"
                   className="social__button"
@@ -155,7 +155,7 @@ const PostLayout = ({ data, pageContext }) => {
                 </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={
-                    typeof window !== 'undefined' ? window.location.href : ''
+                    typeof window !== "undefined" ? window.location.href : ""
                   }
                   title={data.datoCmsNews.title}
                   separator=":: "
@@ -166,7 +166,7 @@ const PostLayout = ({ data, pageContext }) => {
                 <EmailShareButton
                   className="social__button"
                   url={
-                    typeof window !== 'undefined' ? window.location.href : ''
+                    typeof window !== "undefined" ? window.location.href : ""
                   }
                   subject={data.datoCmsNews.title}
                   body={
@@ -186,14 +186,10 @@ const PostLayout = ({ data, pageContext }) => {
                       .childMdx.excerpt
                   }
                   source={
-<<<<<<< HEAD
-                    typeof window !== 'undefined' ? window.location.href : ''
-=======
                     typeof window !== "undefined" ? window.location.href : ""
->>>>>>> origin/snyk-upgrade-ae4d40f8d5bc3986eac3576f701479b0
                   }
                   url={
-                    typeof window !== 'undefined' ? window.location.href : ''
+                    typeof window !== "undefined" ? window.location.href : ""
                   }
                 >
                   <LinkedinIcon size={45} round />

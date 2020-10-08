@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import slugify from "slugify"
-import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../../utils/SectionLayout/SectionLayout"
 
 import {
   StyledVerticalBlogPostEntry,

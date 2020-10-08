@@ -7,7 +7,7 @@ import { theme } from '../assets/styles/theme'
 import 'normalize.css'
 import GlobalStyle from '../assets/styles/GlobalStyle'
 
-import BootstrapContainer from '../utilities/BootstrapContainer/BootstrapContainer'
+import BootstrapContainer from '../utils/BootstrapContainer/BootstrapContainer'
 import TopMenuBar from '../components/TopMenuBar/TopMenuBar'
 import Footer from '../components/Footer/Footer'
 

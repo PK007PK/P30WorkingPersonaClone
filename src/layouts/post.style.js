@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import SectionLayout from "../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../utils/SectionLayout/SectionLayout"
 
 export const StyledSectionLayout = styled(SectionLayout)`
   position: relative;

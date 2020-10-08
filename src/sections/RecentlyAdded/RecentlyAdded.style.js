@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
+import SectionLayout from "../../utils/SectionLayout/SectionLayout"
 import FullWidthBlogPostEntry from "../../components/FullWidthBlogPostEntry/FullWidthBlogPostEntry"
 
 export const StyledButtonWrapper = styled.div`

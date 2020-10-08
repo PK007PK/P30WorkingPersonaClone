@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const bootstrapQueries = {
   xs_down: '(max-width: 576x)',
@@ -12,7 +12,7 @@ const bootstrapQueries = {
   lg_up: '(min-width: 1200px)',
   xxl_up: '(min-width: 1550px)',
   portrait: '(orientation: portrait)',
-}
+};
 
 module.exports = {
   siteMetadata: {
@@ -22,6 +22,7 @@ module.exports = {
     language: 'pl',
   },
   plugins: [
+    'gatsby-plugin-root-import',
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -84,4 +85,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

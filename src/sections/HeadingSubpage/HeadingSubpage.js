@@ -8,7 +8,7 @@ import {
   StyledDiv,
 } from "./HeadingSubpage.style.js"
 
-import BootstrapContainer from "../../utilities/BootstrapContainer/BootstrapContainer"
+import BootstrapContainer from "../../utils/BootstrapContainer/BootstrapContainer"
 
 const HeadingSubpage = ({ fluid, title, slug, description }) => (
   <BootstrapContainer>

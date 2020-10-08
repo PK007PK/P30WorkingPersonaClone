@@ -1,9 +1,8 @@
-import styled from "styled-components"
-import SectionLayout from "../../utilities/SectionLayout/SectionLayout"
+import styled from 'styled-components';
+import SectionLayout from '../../utils/SectionLayout/SectionLayout';
 
 export const StyledSectionLayout = styled(SectionLayout)`
   padding-top: 0;
-
   .innerContainer {
     display: flex;
     flex-direction: column-reverse;
@@ -60,4 +59,4 @@ export const StyledSectionLayout = styled(SectionLayout)`
       margin: 0 0 20px 0;
     }
   }
-`
+`;
