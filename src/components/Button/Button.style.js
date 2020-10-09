@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const StyledWrapper = styled.div`
   .inner {
@@ -31,8 +31,8 @@ export const StyledWrapper = styled.div`
       margin-left: 10px;
     }
   }
-`
+`;
 
-export const StyledLink = styled(Link)``
-export const StyledA = styled.a``
-export const StyledButton = styled.button``
+export const StyledLink = styled(Link)``;
+export const StyledA = styled.a``;
+export const StyledButton = styled.button``;

@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StyledContainer,
   StyledImg,
   StyledYouTubeIcon,
-} from "./VerticalBlogPostEntry.style"
+} from './VerticalBlogPostEntry.style';
 
 const VerticalBlogPostEntry = ({
   background,
@@ -22,11 +22,11 @@ const VerticalBlogPostEntry = ({
       </>
     ) : null}
     <span className="date">{date}</span>
-    <StyledImg fluid={background}></StyledImg>
+    <StyledImg fluid={background} />
     <h3>{title}</h3>
     <p className="text">{text}</p>
   </StyledContainer>
-)
+);
 
 VerticalBlogPostEntry.propTypes = {
   background: PropTypes.object.isRequired,
@@ -34,6 +34,6 @@ VerticalBlogPostEntry.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-}
+};
 
-export default VerticalBlogPostEntry
+export default VerticalBlogPostEntry;

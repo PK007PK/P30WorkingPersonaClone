@@ -6,6 +6,8 @@ import { theme } from 'src/assets/theme/theme';
 
 import 'normalize.css';
 import GlobalStyle from 'src/styles/GlobalStyle';
+import Typography from 'src/styles/Typography';
+import TxtHoverFocusTab from 'src/styles/TxtHoverFocusTab';
 
 import BootstrapContainer from '../utils/BootstrapContainer/BootstrapContainer';
 import TopMenuBar from '../components/TopMenuBar/TopMenuBar';
@@ -37,6 +39,8 @@ const MainLayout = ({ children }) => {
           <html lang="pl" />
         </Helmet>
         <GlobalStyle />
+        <Typography />
+        <TxtHoverFocusTab />
         <BootstrapContainer>
           <StyledTopMenuBar />
         </BootstrapContainer>

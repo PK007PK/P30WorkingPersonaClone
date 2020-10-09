@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 
-import YouTubeIcon from "../../components/IconYT/IconYT"
+import YouTubeIcon from '../IconYT/IconYT';
 
 export const StyledContainer = styled(Link)`
   transition: ${({ theme }) => theme.transition.custom};
@@ -50,7 +50,7 @@ export const StyledContainer = styled(Link)`
     font-size: ${({ theme }) => theme.fontSize.md};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
-`
+`;
 
 export const StyledImg = styled(Image)`
   background-repeat: no-repeat;
@@ -59,10 +59,10 @@ export const StyledImg = styled(Image)`
   height: 100%;
   max-height: 230px;
   z-index: 1;
-`
+`;
 
 export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
   right: 30px;
   top: 30px;
-`
+`;
