@@ -22,6 +22,8 @@ import Button from '../components/Button/Button';
 import { BootsRow, BootsColumn } from '../utils/BootsElements/BootsElements';
 import { StyledSectionLayout } from './post.style';
 
+const slugify = require('slugify');
+
 export const query = graphql`
   query querySingleArticle($id: String!) {
     datoCmsNews(id: { eq: $id }) {
@@ -66,11 +68,35 @@ export const query = graphql`
         }
       }
     }
+
+    allDatoCmsNews {
+      edges {
+        previous {
+          id
+        }
+        next {
+          id
+        }
+        node {
+          title
+          date
+          youtube
+          author
+        }
+      }
+    }
   }
 `;
 
 const PostLayout = ({ data, pageContext }) => {
-  console.log(pageContext);
+  console.log(pageContext.next);
+  const nextLink =
+    pageContext.next &&
+    `/articles/${slugify(pageContext.next, { lower: true })}`;
+  const previousLink =
+    pageContext.previous &&
+    `/articles/${slugify(pageContext.previous, { lower: true })}`;
+
   return (
     <>
       <Helmet title={data.datoCmsNews.title} />
@@ -132,8 +158,20 @@ const PostLayout = ({ data, pageContext }) => {
             <BootsColumn md="4" lg="3">
               <div className="buttons">
                 <Button to="/blog">Wszystkie artykuły</Button>
-                <Button to="/blog">Poprzedni artykuł</Button>
-                <Button to="/blog">Następny artykuły</Button>
+                <Button
+                  to={previousLink}
+                  className={!previousLink && 'diseabled'}
+                  diseabled={!previousLink && ''}
+                >
+                  Poprzedni artykuł
+                </Button>
+                <Button
+                  to={nextLink}
+                  className={!nextLink && 'diseabled'}
+                  diseabled={!nextLink && ''}
+                >
+                  Następny artykuły
+                </Button>
               </div>
               <div className="socials">
                 <FacebookShareButton

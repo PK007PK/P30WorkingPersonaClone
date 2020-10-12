@@ -14,6 +14,7 @@ export const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     :hover {
       background-color: ${({ theme }) => theme.color.secondaryButton};
@@ -35,4 +36,3 @@ export const StyledWrapper = styled.div`
 
 export const StyledLink = styled(Link)``;
 export const StyledA = styled.a``;
-export const StyledButton = styled.button``;

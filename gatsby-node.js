@@ -8,22 +8,34 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       query queryCMSPage {
         allDatoCmsNews {
-          nodes {
-            id
-            title
+          edges {
+            node {
+              id
+              title
+            }
+            next {
+              title
+            }
+            previous {
+              title
+            }
           }
         }
       }
     `
   );
 
-  result.data.allDatoCmsNews.nodes.forEach(post => {
-    const slugifiedTitle = slugify(post.title, { lower: true });
+  result.data.allDatoCmsNews.edges.forEach(post => {
+    const slugifiedTitle = slugify(post.node.title, { lower: true });
+    const next = post.next && post.next.title;
+    const previous = post.previous && post.previous.title;
     createPage({
       path: `articles/${slugifiedTitle}`,
       component: blogPostTemplate,
       context: {
-        id: post.id,
+        id: post.node.id,
+        next,
+        previous,
       },
     });
   });

@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  StyledWrapper,
-  StyledA,
-  StyledLink,
-  StyledButton,
-} from './Button.style';
+import { StyledWrapper, StyledA, StyledLink } from './Button.style';
 
-const Button = ({ children, className, href, to }) => (
+const Button = ({ children, className, href, to, diseabled }) => (
   <StyledWrapper className={className}>
     {href && (
       <StyledA
@@ -26,18 +21,22 @@ const Button = ({ children, className, href, to }) => (
       </StyledLink>
     )}
     {!to && !href && (
-      <StyledButton to={to} className="inner" type="submit">
+      <button
+        className="inner"
+        type="submit"
+        diseabled=""
+        style={{ backgroundColor: `gray`, cursor: 'default' }}
+      >
         {children}
-      </StyledButton>
+      </button>
     )}
   </StyledWrapper>
 );
 
 Button.propTypes = {
-  className: PropTypes.string,
-  href: PropTypes.string,
-  to: PropTypes.string,
-  type: PropTypes.string,
+  // className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // href: PropTypes.string,
+  // to: PropTypes.string,
 };
 
 export default Button;
