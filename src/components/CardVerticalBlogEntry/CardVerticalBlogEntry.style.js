@@ -39,8 +39,8 @@ export const StyledContainer = styled(Link)`
     font-size: ${({ theme }) => theme.fontSize.xs};
     position: absolute;
     display: block;
-    top: 25px;
-    left: 25px;
+    top: 35px;
+    left: 35px;
     padding: 5px 15px;
     z-index: 3;
   }
@@ -63,6 +63,6 @@ export const StyledImg = styled(Image)`
 
 export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 35px;
+  top: 35px;
 `;
