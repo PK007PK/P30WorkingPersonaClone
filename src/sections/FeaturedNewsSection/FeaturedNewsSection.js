@@ -1,18 +1,18 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import slugify from "slugify"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import slugify from 'slugify';
 
-import styled from "styled-components"
+import styled from 'styled-components';
 
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "swiper/swiper.scss"
-import "swiper/components/navigation/navigation.scss"
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
 
-import FeaturedNewsTile from "../../components/FeaturedNewsTile/FeaturedNewsTile"
-import HeadingWrapper from "../../components/HeadingWrapper/HeadingWrapper"
+import CardFeaturedNews from 'src/components/CardFeaturedNews/CardFeaturedNews';
+import HeadingWrapper from '../../components/HeadingWrapper/HeadingWrapper';
 
-import { StyledSectionLayout } from "./FeaturedNewsSection.style"
+import { StyledSectionLayout } from './FeaturedNewsSection.style';
 
 const query = graphql`
   {
@@ -34,18 +34,18 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const StyledSwiper = styled(Swiper)`
   padding-bottom: 100px;
   z-index: 0;
-`
+`;
 
 const FeaturedNewsSection = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
 
   const params = {
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     loop: true,
     spaceBetween: 30,
     speed: 40,
@@ -72,35 +72,33 @@ const FeaturedNewsSection = () => {
         slidesPerView: 4,
       },
     },
-  }
+  };
 
   return (
     <>
-      <StyledSectionLayout padding={"70px 0 0px 0px"}>
+      <StyledSectionLayout padding="70px 0 0px 0px">
         <HeadingWrapper
-          title={"Wyróżnione wpisy"}
+          title="Wyróżnione wpisy"
           txtColor={({ theme }) => theme.color.white}
           backgroundColor={({ theme }) => theme.color.color3}
-        ></HeadingWrapper>
+        />
 
         <StyledSwiper {...params}>
-          {data.allDatoCmsNews.nodes.map(item => {
-            return (
-              <SwiperSlide key={item.id}>
-                <FeaturedNewsTile
-                  background={item.featuredImage.fluid}
-                  date={item.date}
-                  title={item.title}
-                  youtube={item.youtube}
-                  slug={slugify(item.title, { lower: true })}
-                />
-              </SwiperSlide>
-            )
-          })}
+          {data.allDatoCmsNews.nodes.map(item => (
+            <SwiperSlide key={item.id}>
+              <CardFeaturedNews
+                background={item.featuredImage && item.featuredImage.fluid}
+                date={item.date}
+                title={item.title}
+                youtube={item.youtube}
+                slug={slugify(item.title, { lower: true })}
+              />
+            </SwiperSlide>
+          ))}
         </StyledSwiper>
       </StyledSectionLayout>
     </>
-  )
-}
+  );
+};
 
-export default FeaturedNewsSection
+export default FeaturedNewsSection;

@@ -1,46 +1,43 @@
-import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import styled from "styled-components"
-import slugify from "slugify"
+import React from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import slugify from 'slugify';
 
-import HeadingWrapper from "../../components/HeadingWrapper/HeadingWrapper"
-import Button from "../../components/Button/Button"
+import HeadingWrapper from '../../components/HeadingWrapper/HeadingWrapper';
+import Button from '../../components/Button/Button';
 
 import {
   StyledSectionLayout,
-  StyledFullWidthBlogPostEntry,
+  StyledCardFullWidthBlogPostEntry,
   StyledButtonWrapper,
-} from "./RecentlyAdded.style"
+} from './RecentlyAdded.style';
 
 const FeaturedNewsSection = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return (
-    <StyledSectionLayout padding={"50px 0 50px 0px"}>
+    <StyledSectionLayout padding="50px 0 50px 0px">
       <HeadingWrapper
-        title={"Najnowsze wpisy"}
+        title="Najnowsze wpisy"
         txtColor={({ theme }) => theme.color.color3}
         backgroundColor={({ theme }) => theme.color.white}
-      ></HeadingWrapper>
+      />
 
-      {data.allDatoCmsNews.nodes.map(item => {
-        return (
-          <StyledFullWidthBlogPostEntry
-            date={item.date}
-            title={item.title}
-            text={item.articleContent[0].paragraphContentNode.childMdx.excerpt}
-            slug={slugify(item.title, { lower: true })}
-            key={item.id}
-            background={item.featuredImage.fluid}
-            youtube={item.youtube}
-          />
-        )
-      })}
+      {data.allDatoCmsNews.nodes.map(item => (
+        <StyledCardFullWidthBlogPostEntry
+          date={item.date}
+          title={item.title}
+          text={item.articleContent[0].paragraphContentNode.childMdx.excerpt}
+          slug={slugify(item.title, { lower: true })}
+          key={item.id}
+          background={item.featuredImage && item.featuredImage.fluid}
+          youtube={item.youtube}
+        />
+      ))}
       <StyledButtonWrapper>
         <Button to="/blog">Wszystkie wpisy na blogu</Button>
       </StyledButtonWrapper>
     </StyledSectionLayout>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -69,6 +66,6 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
-export default FeaturedNewsSection
+export default FeaturedNewsSection;

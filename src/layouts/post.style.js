@@ -1,6 +1,24 @@
-import styled from "styled-components"
+import styled from 'styled-components';
+import ImgPlaceholder from '../components/ImgPlaceholder/ImgPlaceholder';
+import SectionLayout from '../utils/SectionLayout/SectionLayout';
 
-import SectionLayout from "../utils/SectionLayout/SectionLayout"
+export const StyledImgPlaceholder = styled(ImgPlaceholder)`
+  width: 100vw;
+  height: 50vh;
+  ${({ theme }) => theme.media.mdAbove} {
+    width: 50vw;
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    width: 40vw;
+    height: 400px;
+  }
+
+  ${({ theme }) => theme.media.xlAbove} {
+    width: 700px;
+    height: 400px;
+  }
+`;
 
 export const StyledSectionLayout = styled(SectionLayout)`
   position: relative;
@@ -156,4 +174,4 @@ export const StyledSectionLayout = styled(SectionLayout)`
       text-decoration: none;
     }
   }
-`
+`;

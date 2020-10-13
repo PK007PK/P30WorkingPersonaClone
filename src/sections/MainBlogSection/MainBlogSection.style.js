@@ -1,13 +1,13 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
-import VerticalBlogPostEntry from "../../components/VerticalBlogPostEntry/VerticalBlogPostEntry"
+import CardVerticalBlogEntry from '../../components/CardVerticalBlogEntry/CardVerticalBlogEntry';
 
-export const StyledVerticalBlogPostEntry = styled(VerticalBlogPostEntry)`
+export const StyledCardVerticalBlogEntry = styled(CardVerticalBlogEntry)`
   margin: 15px 0;
-`
+`;
 
 export const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-`
+`;

@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 
-import YouTubeIcon from "../../components/IconYT/IconYT"
+import YouTubeIcon from '../IconYT/IconYT';
 
 export const StyledLink = styled(Link)`
   transition: ${({ theme }) => theme.transition.custom};
@@ -14,6 +14,7 @@ export const StyledLink = styled(Link)`
   ${({ theme }) => theme.media.xsAbove} {
     flex-direction: row;
   }
+
   :hover {
     box-shadow: ${({ theme }) => theme.elevation.dp8};
     background-color: ${({ theme }) => theme.color.active};
@@ -26,13 +27,13 @@ export const StyledLink = styled(Link)`
     background-color: ${({ theme }) => theme.color.active};
     color: white;
   }
-`
+`;
 
 export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
   right: 20px;
   top: 20px;
-`
+`;
 
 export const StyledImgWrapper = styled.div`
   display: block;
@@ -63,9 +64,9 @@ export const StyledImgWrapper = styled.div`
     height: 230px;
     width: 370px;
   }
-`
+`;
 
-export const StyledImg = styled(Image)``
+export const StyledImg = styled(Image)``;
 
 export const StyledTxtWrapper = styled.div`
   display: flex;
@@ -75,7 +76,7 @@ export const StyledTxtWrapper = styled.div`
   ${({ theme }) => theme.media.xsAbove} {
     margin: 15px 0 50px 30px;
   }
-`
+`;
 
 export const StyledDate = styled.span`
   background-color: ${({ theme }) => theme.color.black};
@@ -86,7 +87,7 @@ export const StyledDate = styled.span`
   top: 15px;
   left: 15px;
   padding: 5px 15px;
-`
+`;
 
 export const StyledTitle = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeight.regular};
@@ -97,4 +98,4 @@ export const StyledTitle = styled.h3`
   ${({ theme }) => theme.media.lgAbove} {
     width: 80%;
   }
-`
+`;

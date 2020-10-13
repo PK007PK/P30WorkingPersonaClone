@@ -18,9 +18,10 @@ import {
 
 import YouTube from '../components/YouTube/YouTube';
 import Button from '../components/Button/Button';
+import ImgPlaceholder from '../components/ImgPlaceholder/ImgPlaceholder';
 
 import { BootsRow, BootsColumn } from '../utils/BootsElements/BootsElements';
-import { StyledSectionLayout } from './post.style';
+import { StyledSectionLayout, StyledImgPlaceholder } from './post.style';
 
 const slugify = require('slugify');
 
@@ -104,16 +105,14 @@ const PostLayout = ({ data, pageContext }) => {
         <div className="headingWrapper">
           <div className="imgWrapper">
             {data.datoCmsNews.youtube ? (
-              <>
-                <YouTube videoId={data.datoCmsNews.youtube} />
-              </>
+              <YouTube videoId={data.datoCmsNews.youtube} />
+            ) : data.datoCmsNews.featuredImage ? (
+              <Image
+                className="image"
+                fluid={data.datoCmsNews.featuredImage.fluid}
+              />
             ) : (
-              <>
-                <Image
-                  className="image"
-                  fluid={data.datoCmsNews.featuredImage.fluid}
-                />
-              </>
+              <StyledImgPlaceholder light />
             )}
           </div>
           <div className="textWrapper">

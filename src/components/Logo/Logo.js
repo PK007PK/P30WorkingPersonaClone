@@ -1,11 +1,11 @@
-import React from "react"
-import { StyledWrap, StyledP, StyledSpan } from "./Logo.style"
+import React from 'react';
+import { StyledWrap, StyledP, StyledSpan } from './Logo.style';
 
-const Logo = ({ className }) => (
-  <StyledP className={className}>
+const Logo = ({ className, secondary }) => (
+  <StyledP secondary={secondary} className={className}>
     Obywatel
-    <StyledSpan>kontra ZUS</StyledSpan>
+    <StyledSpan className="logoTxtSec">kontra ZUS</StyledSpan>
   </StyledP>
-)
+);
 
-export default Logo
+export default Logo;

@@ -1,38 +1,34 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import slugify from "slugify"
-import SectionLayout from "../../utils/SectionLayout/SectionLayout"
+import slugify from 'slugify';
+import SectionLayout from '../../utils/SectionLayout/SectionLayout';
 
 import {
-  StyledVerticalBlogPostEntry,
+  StyledCardVerticalBlogEntry,
   StyledWrapper,
-} from "./MainBlogSection.style"
+} from './MainBlogSection.style';
 
 const MainBlogSection = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return (
-    <SectionLayout padding={"50px 0 50px 0px"}>
+    <SectionLayout padding="50px 0 50px 0px">
       <StyledWrapper>
-        {data.allDatoCmsNews.nodes.map(item => {
-          return (
-            <StyledVerticalBlogPostEntry
-              date={item.date}
-              title={item.title}
-              text={
-                item.articleContent[0].paragraphContentNode.childMdx.excerpt
-              }
-              slug={slugify(item.title, { lower: true })}
-              key={item.id}
-              background={item.featuredImage.fluid}
-              youtube={item.youtube}
-            />
-          )
-        })}
+        {data.allDatoCmsNews.nodes.map(item => (
+          <StyledCardVerticalBlogEntry
+            date={item.date}
+            title={item.title}
+            text={item.articleContent[0].paragraphContentNode.childMdx.excerpt}
+            slug={slugify(item.title, { lower: true })}
+            key={item.id}
+            background={item.featuredImage && item.featuredImage.fluid}
+            youtube={item.youtube}
+          />
+        ))}
       </StyledWrapper>
     </SectionLayout>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -61,6 +57,6 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
-export default MainBlogSection
+export default MainBlogSection;

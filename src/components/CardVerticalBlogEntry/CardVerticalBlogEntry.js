@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ImgPlaceholder from '../ImgPlaceholder/ImgPlaceholder';
+
 import {
   StyledContainer,
   StyledImg,
   StyledYouTubeIcon,
-} from './VerticalBlogPostEntry.style';
+} from './CardVerticalBlogEntry.style';
 
-const VerticalBlogPostEntry = ({
+const CardVerticalBlogEntry = ({
   background,
   date,
   title,
@@ -22,13 +24,14 @@ const VerticalBlogPostEntry = ({
       </>
     ) : null}
     <span className="date">{date}</span>
-    <StyledImg fluid={background} />
+
+    {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
     <h3>{title}</h3>
     <p className="text">{text}</p>
   </StyledContainer>
 );
 
-VerticalBlogPostEntry.propTypes = {
+CardVerticalBlogEntry.propTypes = {
   background: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -36,4 +39,4 @@ VerticalBlogPostEntry.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default VerticalBlogPostEntry;
+export default CardVerticalBlogEntry;

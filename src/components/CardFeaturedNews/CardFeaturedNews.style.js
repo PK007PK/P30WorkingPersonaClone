@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 
-import YouTubeIcon from "../../components/IconYT/IconYT"
+import YouTubeIcon from '../IconYT/IconYT';
 
 export const StyledWrapper = styled(Link)`
   display: block;
@@ -26,7 +26,7 @@ export const StyledWrapper = styled(Link)`
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -36,13 +36,13 @@ export const StyledWrapper = styled(Link)`
     z-index: 2;
     transition: ${({ theme }) => theme.transition.custom};
   }
-`
+`;
 
 export const StyledYouTubeIcon = styled(YouTubeIcon)`
   position: absolute;
   right: 20px;
   top: 20px;
-`
+`;
 
 export const StyledImg = styled(Image)`
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@ export const StyledImg = styled(Image)`
   width: 100%;
   height: 100%;
   z-index: 1;
-`
+`;
 
 export const StyledDate = styled.span`
   background-color: ${({ theme }) => theme.color.black};
@@ -62,7 +62,7 @@ export const StyledDate = styled.span`
   left: 15px;
   padding: 5px 15px;
   z-index: 3;
-`
+`;
 
 export const StyledTitle = styled.h3`
   color: ${({ theme }) => theme.color.white};
@@ -74,4 +74,4 @@ export const StyledTitle = styled.h3`
   width: calc(100% - 40px);
   left: 20px;
   z-index: 3;
-`
+`;

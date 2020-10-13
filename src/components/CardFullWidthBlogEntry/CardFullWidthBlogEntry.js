@@ -1,5 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import ImgPlaceholder from '../ImgPlaceholder/ImgPlaceholder';
 
 import {
   StyledLink,
@@ -9,9 +11,9 @@ import {
   StyledDate,
   StyledTitle,
   StyledYouTubeIcon,
-} from "./FullWidthBlogPostEntry.style"
+} from './CardFullWidthBlogEntry.styles';
 
-const FullWidthBlogPostEntry = ({
+const CardFullWidthBlogEntry = ({
   className,
   background,
   date,
@@ -21,7 +23,8 @@ const FullWidthBlogPostEntry = ({
 }) => (
   <StyledLink to={`/articles/${slug}`}>
     <StyledImgWrapper className={className}>
-      <StyledImg fluid={background}></StyledImg>
+      <StyledImg fluid={background} />
+      {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
       {youtube ? (
         <>
           <StyledYouTubeIcon />
@@ -33,14 +36,14 @@ const FullWidthBlogPostEntry = ({
       <StyledTitle>{title}</StyledTitle>
     </StyledTxtWrapper>
   </StyledLink>
-)
+);
 
-FullWidthBlogPostEntry.propTypes = {
+CardFullWidthBlogEntry.propTypes = {
   background: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   youtube: PropTypes.string,
-}
+};
 
-export default FullWidthBlogPostEntry
+export default CardFullWidthBlogEntry;
