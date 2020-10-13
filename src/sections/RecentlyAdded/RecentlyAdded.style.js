@@ -10,9 +10,7 @@ export const StyledButtonWrapper = styled.div`
 
 export const StyledCardFullWidthBlogPostEntry = styled(
   CardFullWidthBlogPostEntry
-)`
-  margin: 15px 0;
-`;
+)``;
 
 export const StyledSectionLayout = styled(SectionLayout)`
   /* background-color: ${({ theme }) => theme.color.active}; */

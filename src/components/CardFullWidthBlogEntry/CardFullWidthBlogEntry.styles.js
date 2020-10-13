@@ -8,11 +8,13 @@ export const StyledLink = styled(Link)`
   transition: ${({ theme }) => theme.transition.custom};
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   display: flex;
+  padding: 20px;
   margin: 20px 0;
   flex-direction: column;
 
   ${({ theme }) => theme.media.xsAbove} {
     flex-direction: row;
+    align-items: center;
   }
 
   :hover {
@@ -38,8 +40,7 @@ export const StyledYouTubeIcon = styled(YouTubeIcon)`
 export const StyledImgWrapper = styled.div`
   display: block;
   position: relative;
-  margin: 0;
-  /* margin-bottom: 20px; */
+  margin: 0px;
   overflow: hidden;
   flex-shrink: 0;
   width: 100%;
