@@ -12,11 +12,11 @@ export const StyledContainer = styled(Link)`
   margin-bottom: 120px;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
-  padding: 10px;
+  max-width: 670px;
+  padding: 20px;
 
   ${({ theme }) => theme.media.mdAbove} {
-    width: 46%;
+    width: 48%;
   }
 
   :hover {

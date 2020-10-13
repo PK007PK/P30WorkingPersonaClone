@@ -158,18 +158,18 @@ const PostLayout = ({ data, pageContext }) => {
               <div className="buttons">
                 <Button to="/blog">Wszystkie artykuły</Button>
                 <Button
-                  to={previousLink}
-                  className={!previousLink && 'diseabled'}
-                  diseabled={!previousLink && ''}
-                >
-                  Poprzedni artykuł
-                </Button>
-                <Button
                   to={nextLink}
                   className={!nextLink && 'diseabled'}
                   diseabled={!nextLink && ''}
                 >
                   Następny artykuły
+                </Button>
+                <Button
+                  to={previousLink}
+                  className={!previousLink && 'diseabled'}
+                  diseabled={!previousLink && ''}
+                >
+                  Poprzedni artykuł
                 </Button>
               </div>
               <div className="socials">

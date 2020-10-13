@@ -7,7 +7,7 @@ export const ImgPlaceholderStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  min-height: 230px;
   color: ${({ light, theme }) => (light ? theme.color.color3 : 'white')};
   background-color: ${({ light }) => (light ? 'white' : 'inherit')};
   border: 1px solid ${({ light }) => (light ? 'rgba(0,0,0,0.5)' : 'none')};
