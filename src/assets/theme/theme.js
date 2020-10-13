@@ -1,36 +1,36 @@
 const colorValues = {
-  lightBlue: "#EDF7FF",
-  blue: "#ADCCE4",
-  deepBlue: "#313548",
-  pink: "#EB4962",
+  lightBlue: '#EDF7FF',
+  blue: '#ADCCE4',
+  deepBlue: '#313548',
+  pink: '#EB4962',
   //
-  white: "#FFFFFF",
-  black: "#000000",
+  white: '#FFFFFF',
+  black: '#000000',
   //
-  color1: "#EDF7FF",
-  color2: "#ADCCE4",
-  color3: "#313548",
-  color4: "#EB4962",
-  background1: "#313548",
+  color1: '#EDF7FF',
+  color2: '#ADCCE4',
+  color3: '#313548',
+  color4: '#EB4962',
+  background1: '#313548',
   background2: null,
   background3: null,
   background4: null,
   //
-  mainBody: "#313548",
-  mainLogo: "#4C4C4C",
-  additionalLogo: "#4C4C4C",
+  mainBody: '#313548',
+  mainLogo: '#4C4C4C',
+  additionalLogo: '#4C4C4C',
   mainHeading: null,
   extraHeading: null,
-  naviColor: "#4F4C4C",
+  naviColor: '#4F4C4C',
   lead: null,
-  active: "#EB4962",
-  mainButton: "#EB4962",
-  secondaryButton: "#313548",
-}
+  active: '#EB4962',
+  mainButton: '#EB4962',
+  secondaryButton: '#313548',
+};
 
 const bodyValues = {
   fontSize: {
-    base: "1.6rem",
+    base: '1.6rem',
     xs: null,
     sm: null,
     md: null,
@@ -38,41 +38,41 @@ const bodyValues = {
     xxl: null,
   },
   lineHeight: {
-    base: "1.5em",
+    base: '1.5em',
     xs: null,
     sm: null,
     md: null,
     lg: null,
     xxl: null,
   },
-  fontWeight: "500",
+  fontWeight: '500',
   letterSpacing: null,
-}
+};
 
 const paragraphValues = {
   fontSize: {
-    base: "1.6rem",
+    base: '1.6rem',
     xs: null,
     sm: null,
-    md: "1.8rem",
+    md: '1.8rem',
     lg: null,
     xxl: null,
   },
   lineHeight: {
-    base: "1.6",
+    base: '1.6',
     xs: null,
     sm: null,
     md: null,
     lg: null,
     xxl: null,
   },
-  fontWeight: "500",
+  fontWeight: '500',
   letterSpacing: null,
-}
+};
 
 const h1Values = {
   fontSize: {
-    base: "5rem",
+    base: '5rem',
     xs: null,
     sm: null,
     md: null,
@@ -80,20 +80,20 @@ const h1Values = {
     xxl: null,
   },
   lineHeight: {
-    base: "1.2em",
+    base: '1.2em',
     xs: null,
     sm: null,
     md: null,
     lg: null,
     xxl: null,
   },
-  fontWeight: "700",
-  letterSpacing: "-3px",
-}
+  fontWeight: '700',
+  letterSpacing: '-3px',
+};
 
 const h2Values = {
   fontSize: {
-    base: "3rem",
+    base: '3rem',
     xs: null,
     sm: null,
     md: null,
@@ -110,7 +110,7 @@ const h2Values = {
   },
   fontWeight: 700,
   letterSpacing: null,
-}
+};
 
 const h3Values = {
   fontSize: {
@@ -122,7 +122,7 @@ const h3Values = {
     xxl: null,
   },
   lineHeight: {
-    base: "1.5em",
+    base: '1.5em',
     xs: null,
     sm: null,
     md: null,
@@ -131,7 +131,7 @@ const h3Values = {
   },
   fontWeight: null,
   letterSpacing: null,
-}
+};
 
 const leadValues = {
   fontSize: {
@@ -152,7 +152,7 @@ const leadValues = {
   },
   fontWeight: null,
   letterSpacing: null,
-}
+};
 
 const buttonValues = {
   fontSize: {
@@ -173,11 +173,11 @@ const buttonValues = {
   },
   fontWeight: null,
   letterSpacing: null,
-}
+};
 
 const naviValues = {
   fontSize: {
-    base: "1.8rem",
+    base: '1.8rem',
     xs: null,
     sm: null,
     md: null,
@@ -192,37 +192,37 @@ const naviValues = {
     lg: null,
     xxl: null,
   },
-  fontWeight: "300",
-  letterSpacing: "-1px",
-}
+  fontWeight: '300',
+  letterSpacing: '-1px',
+};
 
 export const theme = {
-  test: "20px",
+  test: '20px',
 
   fontSize: {
-    xs: "1.2rem",
-    sm: "1.6rem",
-    md: "2.5rem",
-    lg: "3.5rem",
-    xxl: "8rem",
+    xs: '1.2rem',
+    sm: '1.6rem',
+    md: '2.5rem',
+    lg: '3.5rem',
+    xxl: '8rem',
   },
 
   lineHeight: {
-    regular: "1.5",
+    regular: '1.5',
   },
 
   font: {
-    mainFont: "Montserrat",
+    mainFont: 'Montserrat',
     headingFonts: null,
-    logoFonts: "Ubuntu",
+    logoFonts: 'Ubuntu',
     fancyFonts: `Covered By Your Grace`,
   },
 
   fontWeight: {
-    light: "300",
-    regular: "400",
-    medium: "500",
-    bold: "700",
+    light: '300',
+    regular: '400',
+    medium: '500',
+    bold: '700',
   },
 
   transition: {
@@ -469,4 +469,4 @@ export const theme = {
     xlAbove: `@media (min-width: 1550px)`,
     xlBelow: `@media (max-width: 1549px)`,
   },
-}
+};

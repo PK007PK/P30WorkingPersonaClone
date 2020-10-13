@@ -1,15 +1,13 @@
-import React from "react"
+import React from 'react';
 
-import BootstrapContainer from "../BootstrapContainer/BootstrapContainer"
+import { BootsContainer } from '../BootsElements/BootsElements';
 
-import { StyledSection } from "./SectionLayout.styles"
+import { StyledSection } from './SectionLayout.styles';
 
 const SectionLayout = ({ className, padding, children }) => (
   <StyledSection padding={padding} className={className}>
-    <BootstrapContainer className="innerContainer">
-      {children}
-    </BootstrapContainer>
+    <BootsContainer className="innerContainer">{children}</BootsContainer>
   </StyledSection>
-)
+);
 
-export default SectionLayout
+export default SectionLayout;
