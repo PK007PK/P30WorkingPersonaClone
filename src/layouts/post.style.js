@@ -41,17 +41,17 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     ${({ theme }) => theme.media.mdAbove} {
       width: 45%;
-      padding: 60px 0;
+      /* padding: 60px 0; */
     }
 
     ${({ theme }) => theme.media.lgAbove} {
-      padding: 90px 0;
+      /* padding: 90px 0; */
     }
 
     h1 {
       font-weight: 300;
       font-size: 50px;
-      line-height: 50px;
+      line-height: 1.4;
       color: ${({ theme }) => theme.color.deepBlue};
       font-weight: ${({ theme }) => theme.fontWeight.medium};
     }
