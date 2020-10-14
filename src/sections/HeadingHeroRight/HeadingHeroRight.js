@@ -1,28 +1,29 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import IconYT from "../../components/IconYT/IconYT"
-import IconFB from "../../components/IconFB/IconFB"
+import IconYT from '../../components/IconYT/IconYT';
+import IconFB from '../../components/IconFB/IconFB';
 
 import {
   StyledSection,
   StyledTxtWrapper,
   StyledImage,
   StyledButton,
-} from "./HeadingHeroRight.styles.js"
+} from './HeadingHeroRight.styles.js';
 
 const HeadingHeroRight = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return (
     <header>
       <StyledSection>
         <StyledTxtWrapper>
-          <div></div>
+          <div />
           <div>
             <p className="subtitle">{data.datoCmsSiteSetup.mainPageMotto}</p>
             <h1>{data.datoCmsSiteSetup.mainPageAdditionalText}</h1>
             <p className="subtitle">
-              Przystępnie o emeryturach,<br></br>
+              Przystępnie o emeryturach,
+              <br />
               rentach i zasiłkach
             </p>
             <div className="buttonWrapper">
@@ -38,18 +39,18 @@ const HeadingHeroRight = () => {
                 small
                 href={data.datoCmsSiteSetup.youtubeChanelLink}
               >
-                {" "}
+                {' '}
                 Sprawdź mój vlog <IconYT small />
               </StyledButton>
             </div>
           </div>
-          <div></div>
+          <div />
         </StyledTxtWrapper>
         <StyledImage fluid={data.datoCmsSiteSetup.mainPageHeroImage.fluid} />
       </StyledSection>
     </header>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -66,6 +67,6 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
-export default HeadingHeroRight
+export default HeadingHeroRight;

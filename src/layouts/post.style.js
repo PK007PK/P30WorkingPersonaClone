@@ -147,15 +147,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
         margin-bottom: 20px;
       }
     }
-    .socials {
-      margin-top: 30px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .social__button:hover:not(:active) {
-      opacity: 0.75;
-    }
 
     svg {
       text-decoration: underline;

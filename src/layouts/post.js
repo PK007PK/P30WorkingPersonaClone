@@ -3,22 +3,10 @@ import Image from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import {
-  FacebookShareButton,
-  FacebookMessengerShareButton,
-  WhatsappShareButton,
-  EmailShareButton,
-  LinkedinShareButton,
-  FacebookIcon,
-  FacebookMessengerIcon,
-  WhatsappIcon,
-  EmailIcon,
-  LinkedinIcon,
-} from 'react-share';
 
 import YouTube from '../components/YouTube/YouTube';
 import Button from '../components/Button/Button';
-import ImgPlaceholder from '../components/ImgPlaceholder/ImgPlaceholder';
+import SocialShare from '../components/SocialShare/SocialShare';
 
 import { BootsRow, BootsColumn } from '../utils/BootsElements/BootsElements';
 import { StyledSectionLayout, StyledImgPlaceholder } from './post.style';
@@ -69,7 +57,6 @@ export const query = graphql`
         }
       }
     }
-
     allDatoCmsNews {
       edges {
         previous {
@@ -86,11 +73,14 @@ export const query = graphql`
         }
       }
     }
+    datoCmsSiteSetup {
+      messengerId
+    }
   }
 `;
 
 const PostLayout = ({ data, pageContext }) => {
-  console.log(pageContext.next);
+  console.log(pageContext.id);
   const nextLink =
     pageContext.next &&
     `/articles/${slugify(pageContext.next, { lower: true })}`;
@@ -158,79 +148,29 @@ const PostLayout = ({ data, pageContext }) => {
               <div className="buttons">
                 <Button to="/blog">Wszystkie artykuły</Button>
                 <Button
-                  to={nextLink}
-                  className={!nextLink && 'diseabled'}
-                  diseabled={!nextLink && ''}
-                >
-                  Następny artykuły
-                </Button>
-                <Button
                   to={previousLink}
                   className={!previousLink && 'diseabled'}
                   diseabled={!previousLink && ''}
+                >
+                  Następny artykuł
+                </Button>
+                <Button
+                  to={nextLink}
+                  className={!nextLink && 'diseabled'}
+                  diseabled={!nextLink && ''}
                 >
                   Poprzedni artykuł
                 </Button>
               </div>
               <div className="socials">
-                <FacebookShareButton
-                  className="social__button"
-                  url={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
-                >
-                  <FacebookIcon size={45} round />
-                </FacebookShareButton>
-                <FacebookMessengerShareButton
-                  url={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
-                  appId="xxx"
-                  className="social__button"
-                >
-                  <FacebookMessengerIcon size={45} round />
-                </FacebookMessengerShareButton>
-                <WhatsappShareButton
-                  url={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
+                <SocialShare
                   title={data.datoCmsNews.title}
-                  separator=":: "
-                  className="social__button"
-                >
-                  <WhatsappIcon size={45} round />
-                </WhatsappShareButton>
-                <EmailShareButton
-                  className="social__button"
-                  url={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
-                  subject={data.datoCmsNews.title}
-                  body={
+                  excerpt={
                     data.datoCmsNews.articleContent[0].paragraphContentNode
                       .childMdx.excerpt
                   }
-                  separator="<br></br><br></br>"
-                >
-                  <EmailIcon size={45} round />
-                </EmailShareButton>
-
-                <LinkedinShareButton
-                  className="social__button"
-                  title={data.datoCmsNews.title}
-                  summary={
-                    data.datoCmsNews.articleContent[0].paragraphContentNode
-                      .childMdx.excerpt
-                  }
-                  source={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
-                  url={
-                    typeof window !== 'undefined' ? window.location.href : ''
-                  }
-                >
-                  <LinkedinIcon size={45} round />
-                </LinkedinShareButton>
+                  messengerID={data.datoCmsSiteSetup.messengerID}
+                />
               </div>
             </BootsColumn>
           </BootsRow>
