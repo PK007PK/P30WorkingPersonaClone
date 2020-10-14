@@ -71,6 +71,10 @@ export const StyledSectionLayout = styled(SectionLayout)`
     .date {
       margin-left: 40px;
     }
+
+    .date:first-child {
+      margin-left: 0px;
+    }
   }
 
   .imgWrapper {

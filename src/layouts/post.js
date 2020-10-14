@@ -109,7 +109,9 @@ const PostLayout = ({ data, pageContext }) => {
           <div className="textWrapper">
             <h1>{data.datoCmsNews.title}</h1>
             <div>
-              <p className="author">Autor: {data.datoCmsNews.author}</p>
+              {data.datoCmsNews.author && (
+                <p className="author">`Autor: ${data.datoCmsNews.author}`</p>
+              )}
               <span className="date">Data: {data.datoCmsNews.date}</span>
             </div>
           </div>
