@@ -121,6 +121,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     p:first-child {
       margin-top: 0px;
+      font-weight: ${({ theme }) => theme.fontWeight.bold};
     }
 
     li {

@@ -34,6 +34,7 @@ export const query = graphql`
         }
       }
       author
+      leadText
       articleContent {
         ... on DatoCmsParagraph {
           paragraphContentNode {
@@ -123,6 +124,7 @@ const PostLayout = ({ data, pageContext }) => {
                     case 'paragraphContentNode':
                       return (
                         <div key={item.id}>
+                          <p className="lead">{data.datoCmsNews.leadText}</p>
                           <MDXRenderer>
                             {item.paragraphContentNode.childMdx.body}
                           </MDXRenderer>
