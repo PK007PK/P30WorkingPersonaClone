@@ -1,27 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-import HeadingSubpage from "../sections/HeadingSubpage/HeadingSubpage"
-import PlainTextSection from "../sections/PlainTextSection/PlainTextSection"
+import HeadingSubpage from '../sections/HeadingSubpage/HeadingSubpage';
+import PlainTextSection from '../sections/PlainTextSection/PlainTextSection';
 
 const KontaktPage = ({ data }) => {
-  const title = data.datoCmsSiteSetup.siteTitle + " - polityki"
+  const title = `${data.datoCmsSiteSetup.siteTitle} - polityki`;
   return (
     <>
       <Helmet title={title} />
       <article>
         <HeadingSubpage
           fluid={data.datoCmsSiteSetup.policyPageHeroImage.fluid}
-          title={"polityka prywatności"}
-          slug={"#polityka"}
+          title="polityka prywatności"
+          slug="#polityka"
           description={data.datoCmsSiteSetup.policyPageDescription}
+          alt={data.datoCmsSiteSetup.policyPageHeroImage.alt}
         />
         <PlainTextSection data={data.datoCmsSiteSetup.policyArticleContent} />
       </article>
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -54,9 +55,10 @@ export const query = graphql`
         fluid(maxWidth: 650, maxHeight: 500) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
+        alt
       }
     }
   }
-`
+`;
 
-export default KontaktPage
+export default KontaktPage;

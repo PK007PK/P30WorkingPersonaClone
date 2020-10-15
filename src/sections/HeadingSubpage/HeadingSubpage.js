@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 import {
   StyledSection,
@@ -6,11 +6,11 @@ import {
   StyledImageWrapper,
   StyledImage,
   StyledDiv,
-} from "./HeadingSubpage.style.js"
+} from './HeadingSubpage.style.js';
 
-import BootstrapContainer from "../../utils/BootstrapContainer/BootstrapContainer"
+import BootstrapContainer from '../../utils/BootstrapContainer/BootstrapContainer';
 
-const HeadingSubpage = ({ fluid, title, slug, description }) => (
+const HeadingSubpage = ({ fluid, alt, title, slug, description }) => (
   <BootstrapContainer>
     <StyledSection>
       <StyledTxtWrapper>
@@ -19,11 +19,12 @@ const HeadingSubpage = ({ fluid, title, slug, description }) => (
         <p className="description">{description}</p>
       </StyledTxtWrapper>
       <StyledImageWrapper>
-        <StyledImage fluid={fluid} />
-        <StyledDiv></StyledDiv>
+        <StyledImage fluid={fluid} alt={alt} />
+        {console.log(alt)}
+        <StyledDiv />
       </StyledImageWrapper>
     </StyledSection>
   </BootstrapContainer>
-)
+);
 
-export default HeadingSubpage
+export default HeadingSubpage;

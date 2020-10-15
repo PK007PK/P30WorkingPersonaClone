@@ -53,6 +53,7 @@ export const query = graphql`
             fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid_tracedSVG
             }
+            alt
           }
           id
         }
@@ -101,6 +102,7 @@ const PostLayout = ({ data, pageContext }) => {
               <Image
                 className="image"
                 fluid={data.datoCmsNews.featuredImage.fluid}
+                alt={data.datoCmsNews.featuredImage.alt}
               />
             ) : (
               <StyledImgPlaceholder light />

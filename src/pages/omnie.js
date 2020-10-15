@@ -1,27 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-import HeadingSubpage from "../sections/HeadingSubpage/HeadingSubpage"
-import PlainTextSection from "../sections/PlainTextSection/PlainTextSection"
+import HeadingSubpage from '../sections/HeadingSubpage/HeadingSubpage';
+import PlainTextSection from '../sections/PlainTextSection/PlainTextSection';
 
 const OMniePage = ({ data }) => {
-  const title = data.datoCmsSiteSetup.siteTitle + " - o mnie"
+  const title = `${data.datoCmsSiteSetup.siteTitle} - o mnie`;
   return (
     <>
       <Helmet title={title} />
       <article>
         <HeadingSubpage
           fluid={data.datoCmsSiteSetup.oMniePageHeroImage.fluid}
-          title={"o mnie"}
-          slug={"#o-mnie"}
+          title="o mnie"
+          slug="#o-mnie"
           description={data.datoCmsSiteSetup.oMniePageDescription}
+          alt={data.datoCmsSiteSetup.oMniePageHeroImage.alt}
         />
         <PlainTextSection data={data.datoCmsSiteSetup.oMnieArticleContent} />
       </article>
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -58,9 +59,10 @@ export const query = graphql`
         fluid(maxWidth: 550, maxHeight: 800) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
+        alt
       }
     }
   }
-`
+`;
 
-export default OMniePage
+export default OMniePage;

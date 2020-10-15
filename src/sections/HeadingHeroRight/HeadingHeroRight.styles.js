@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import Image from "gatsby-image"
+import styled from 'styled-components';
+import Image from 'gatsby-image';
 
-import Button from "../../components/Button/Button"
+import Button from '../../components/Button/Button';
 
 const sectionHeight = {
   base: `100vh`,
@@ -13,7 +13,7 @@ const sectionHeight = {
   lg: `700px`,
   lgLandscape: `calc(100vh - 98px + 50px)`,
   xxl: `calc(100vh - 98px + 50px)`,
-}
+};
 
 const heroImgSizes = {
   md: {
@@ -30,7 +30,7 @@ const heroImgSizes = {
     width: `calc((100vh - 98px + 120px) * 0.666)`,
   },
   xxl: `(100vh - 98px + 50px)`,
-}
+};
 
 export const StyledSection = styled.section`
   height: ${sectionHeight.base};
@@ -73,7 +73,7 @@ export const StyledSection = styled.section`
   ${({ theme }) => theme.media.xlAbove} {
     height: ${sectionHeight.xl};
   }
-`
+`;
 
 export const StyledTxtWrapper = styled.div`
   display: flex;
@@ -142,10 +142,10 @@ export const StyledTxtWrapper = styled.div`
       box-shadow: 5px 5px 0px ${({ theme }) => theme.color.mainButton};
     }
   }
-`
+`;
 export const StyledButton = styled(Button)`
   margin-left: 10px;
-`
+`;
 
 export const StyledImage = styled(Image)`
   display: none;
@@ -177,4 +177,4 @@ export const StyledImage = styled(Image)`
   ${({ theme }) => theme.media.xlAbove} {
     margin-right: 8vw;
   }
-`
+`;

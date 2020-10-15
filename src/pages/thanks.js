@@ -1,27 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-import HeadingSubpage from "../sections/HeadingSubpage/HeadingSubpage"
-import ThanksSection from "../sections/ThanksSection/ThanksSection"
+import HeadingSubpage from '../sections/HeadingSubpage/HeadingSubpage';
+import ThanksSection from '../sections/ThanksSection/ThanksSection';
 
 const ThanksPage = ({ data }) => {
-  const title = data.datoCmsSiteSetup.siteTitle + " - kontakt"
+  const title = `${data.datoCmsSiteSetup.siteTitle} - kontakt`;
   return (
     <>
       <Helmet title={title} />
       <article>
         <HeadingSubpage
           fluid={data.datoCmsSiteSetup.kontaktPageHeroImage.fluid}
-          title={"kontakt"}
-          slug={"#kontakt"}
+          title="kontakt"
+          slug="#kontakt"
           description={data.datoCmsSiteSetup.kontaktPageDescription}
+          alt={data.datoCmsSiteSetup.kontaktPageHeroImage.alt}
         />
         <ThanksSection />
       </article>
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -32,9 +33,10 @@ export const query = graphql`
         fluid(maxWidth: 650, maxHeight: 500) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
+        alt
       }
     }
   }
-`
+`;
 
-export default ThanksPage
+export default ThanksPage;

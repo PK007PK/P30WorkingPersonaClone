@@ -46,7 +46,10 @@ const HeadingHeroRight = () => {
           </div>
           <div />
         </StyledTxtWrapper>
-        <StyledImage fluid={data.datoCmsSiteSetup.mainPageHeroImage.fluid} />
+        <StyledImage
+          fluid={data.datoCmsSiteSetup.mainPageHeroImage.fluid}
+          alt={data.datoCmsSiteSetup.mainPageHeroImage.alt}
+        />
       </StyledSection>
     </header>
   );
@@ -64,6 +67,7 @@ const query = graphql`
         fluid(maxWidth: 700) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
+        alt
       }
     }
   }
