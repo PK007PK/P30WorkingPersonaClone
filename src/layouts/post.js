@@ -82,13 +82,12 @@ export const query = graphql`
 `;
 
 const PostLayout = ({ data, pageContext }) => {
-  console.log(pageContext.id);
-  const nextLink =
-    pageContext.next &&
-    `/articles/${slugify(pageContext.next, { lower: true })}`;
-  const previousLink =
+  const nextArticleLink =
+    pageContext.nextArticle &&
+    `/articles/${slugify(pageContext.nextArticle, { lower: true })}`;
+  const previousArticleLink =
     pageContext.previous &&
-    `/articles/${slugify(pageContext.previous, { lower: true })}`;
+    `/articles/${slugify(pageContext.previousArticle, { lower: true })}`;
 
   return (
     <>
@@ -154,16 +153,16 @@ const PostLayout = ({ data, pageContext }) => {
               <div className="buttons">
                 <Button to="/blog">Wszystkie artykuły</Button>
                 <Button
-                  to={previousLink}
-                  className={!previousLink && 'diseabled'}
-                  diseabled={!previousLink && ''}
+                  to={previousArticleLink}
+                  className={!previousArticleLink && 'diseabled'}
+                  diseabled={!previousArticleLink && ''}
                 >
                   Następny artykuł
                 </Button>
                 <Button
-                  to={nextLink}
-                  className={!nextLink && 'diseabled'}
-                  diseabled={!nextLink && ''}
+                  to={nextArticleLink}
+                  className={!nextArticleLink && 'diseabled'}
+                  diseabled={!nextArticleLink && ''}
                 >
                   Poprzedni artykuł
                 </Button>

@@ -31,8 +31,12 @@ const MainBlogSection = () => {
 };
 
 const query = graphql`
-  {
-    allDatoCmsNews(sort: { fields: [date], order: DESC }) {
+  query BlogPosts($skip: Int! = 0) {
+    allDatoCmsNews(
+      sort: { fields: [date], order: DESC }
+      limit: 4
+      skip: $skip
+    ) {
       nodes {
         author
         date
