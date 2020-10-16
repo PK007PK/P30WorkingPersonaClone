@@ -7,12 +7,13 @@ import SectionLayout from '../../utils/SectionLayout/SectionLayout';
 import {
   StyledCardVerticalBlogEntry,
   StyledWrapper,
-} from './MainBlogSection.style';
+} from './PaginatedMainBlogSection.style';
 
-const MainBlogSection = () => {
+export default function PaginatedMainBlogSection({ pageContext, path }) {
   const data = useStaticQuery(query);
   return (
     <SectionLayout padding="50px 0 50px 0px">
+      <h3>{`Hot Tips — Page ${pageContext.currentPage} ${pageContext.skip}`}</h3>
       <StyledWrapper>
         {data.allDatoCmsNews.nodes.map(item => (
           <StyledCardVerticalBlogEntry
@@ -28,11 +29,15 @@ const MainBlogSection = () => {
       </StyledWrapper>
     </SectionLayout>
   );
-};
+}
 
 const query = graphql`
-  {
-    allDatoCmsNews(sort: { fields: [date], order: DESC }) {
+  query articles($skip: Int! = 0) {
+    allDatoCmsNews(
+      sort: { fields: [date], order: DESC }
+      limit: 4
+      skip: $skip
+    ) {
       nodes {
         author
         date
@@ -58,5 +63,3 @@ const query = graphql`
     }
   }
 `;
-
-export default MainBlogSection;

@@ -40,7 +40,7 @@ class BurgerMenu extends React.Component {
               <Link to="/omnie">o mnie</Link>
             </li>
             <li>
-              <Link to="/blog">blog</Link>
+              <Link to="/blog/1">blog</Link>
             </li>
             <li>
               <Link to="/uslugi">usługi</Link>

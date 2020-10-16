@@ -17,7 +17,7 @@ const CardVerticalBlogEntry = ({
   text,
   youtube,
 }) => (
-  <StyledContainer to={`/articles/${slug}`}>
+  <StyledContainer to={`/blog/${slug}`}>
     {youtube ? (
       <>
         <StyledYouTubeIcon />

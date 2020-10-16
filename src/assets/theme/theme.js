@@ -470,3 +470,7 @@ export const theme = {
     xlBelow: `@media (max-width: 1549px)`,
   },
 };
+
+theme.padding = {
+  card: '20px',
+};

@@ -84,10 +84,10 @@ export const query = graphql`
 const PostLayout = ({ data, pageContext }) => {
   const nextArticleLink =
     pageContext.nextArticle &&
-    `/articles/${slugify(pageContext.nextArticle, { lower: true })}`;
+    `/blog/${slugify(pageContext.nextArticle, { lower: true })}`;
   const previousArticleLink =
-    pageContext.previous &&
-    `/articles/${slugify(pageContext.previousArticle, { lower: true })}`;
+    pageContext.previousArticle &&
+    `/blog/${slugify(pageContext.previousArticle, { lower: true })}`;
 
   return (
     <>
@@ -151,7 +151,7 @@ const PostLayout = ({ data, pageContext }) => {
             </BootsColumn>
             <BootsColumn md="4" lg="3">
               <div className="buttons">
-                <Button to="/blog">Wszystkie artykuły</Button>
+                <Button to="/blog/1">Wszystkie artykuły</Button>
                 <Button
                   to={previousArticleLink}
                   className={!previousArticleLink && 'diseabled'}

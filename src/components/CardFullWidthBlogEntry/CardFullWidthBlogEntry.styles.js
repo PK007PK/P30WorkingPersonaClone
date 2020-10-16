@@ -45,6 +45,7 @@ export const StyledImgWrapper = styled.div`
   flex-shrink: 0;
   width: 100%;
   height: 250px;
+
   ${({ theme }) => theme.media.xsAbove} {
     height: 180px;
     width: 250px;
@@ -67,7 +68,10 @@ export const StyledImgWrapper = styled.div`
   }
 `;
 
-export const StyledImg = styled(Image)``;
+export const StyledImg = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
 
 export const StyledTxtWrapper = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
 import {
   StyledNav,
@@ -7,7 +7,7 @@ import {
   StyledWrapper,
   StyledBurgerMenu,
   StyledLink,
-} from "./TopMenuBar.style"
+} from './TopMenuBar.style';
 
 const TopMenuBar = ({ className }) => (
   <>
@@ -21,7 +21,7 @@ const TopMenuBar = ({ className }) => (
             className="txtHoverFocusTab"
             to="/"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: 'bold',
             }}
           >
             główna
@@ -32,7 +32,7 @@ const TopMenuBar = ({ className }) => (
             className="txtHoverFocusTab"
             to="/omnie"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: 'bold',
             }}
           >
             o mnie
@@ -41,9 +41,9 @@ const TopMenuBar = ({ className }) => (
         <li>
           <StyledLink
             className="txtHoverFocusTab"
-            to="/blog"
+            to="/blog/1"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: 'bold',
             }}
           >
             blog
@@ -54,7 +54,7 @@ const TopMenuBar = ({ className }) => (
             className="txtHoverFocusTab"
             to="/uslugi"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: 'bold',
             }}
           >
             uslugi
@@ -65,7 +65,7 @@ const TopMenuBar = ({ className }) => (
             className="txtHoverFocusTab"
             to="/kontakt"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: 'bold',
             }}
           >
             kontakt
@@ -75,6 +75,6 @@ const TopMenuBar = ({ className }) => (
       <StyledBurgerMenu />
     </StyledNav>
   </>
-)
+);
 
-export default TopMenuBar
+export default TopMenuBar;

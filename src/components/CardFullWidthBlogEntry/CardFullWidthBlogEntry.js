@@ -21,7 +21,7 @@ const CardFullWidthBlogEntry = ({
   slug,
   youtube,
 }) => (
-  <StyledLink to={`/articles/${slug}`}>
+  <StyledLink to={`/blog/${slug}`}>
     <StyledImgWrapper className={className}>
       <StyledImg fluid={background} />
       {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}

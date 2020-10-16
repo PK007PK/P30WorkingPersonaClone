@@ -39,6 +39,21 @@ export const BootsColumn = styled.div`
   padding: 0 15px;
   position: relative;
 
+  ${({ yPadding }) =>
+    yPadding && `padding-top: ${yPadding}; padding-bottom: ${yPadding};`}
+
+  ${({ center }) =>
+    center &&
+    `
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    `}
+
+
   ${({ theme }) => theme.media.xsAbove} {
     ${({ xs }) =>
       xs &&
