@@ -19,7 +19,7 @@ const CardFeaturedNews = ({
   slug,
   youtube,
 }) => (
-  <StyledWrapper className={className} to={`/articles/${slug}`}>
+  <StyledWrapper className={className} to={`/blog/${slug}`}>
     {youtube ? (
       <>
         <StyledYouTubeIcon />

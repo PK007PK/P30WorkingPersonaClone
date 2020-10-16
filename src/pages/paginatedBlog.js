@@ -78,6 +78,50 @@ export default function paginatedBlogPage({ data, pageContext }) {
   );
 }
 
+export const query = graphql`
+  query data($skip: Int! = 0) {
+    datoCmsSiteSetup {
+      siteTitle
+      blogPageDescription
+      blogPageHeroImage {
+        fluid(maxWidth: 650, maxHeight: 500) {
+          ...GatsbyDatoCmsFluid_tracedSVG
+        }
+        alt
+      }
+    }
+    allDatoCmsNews(
+      sort: { fields: [date], order: DESC }
+      limit: 4
+      skip: $skip
+    ) {
+      nodes {
+        author
+        date
+        title
+        id
+        youtube
+        leadText
+        featuredImage {
+          fluid(maxWidth: 500) {
+            ...GatsbyDatoCmsFluid_tracedSVG
+          }
+        }
+        articleContent {
+          ... on DatoCmsParagraph {
+            paragraphContentNode {
+              childMdx {
+                body
+                excerpt(pruneLength: 220)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const StyledCardVerticalBlogEntry = styled(CardVerticalBlogEntry)`
   margin: 15px 0;
 `;

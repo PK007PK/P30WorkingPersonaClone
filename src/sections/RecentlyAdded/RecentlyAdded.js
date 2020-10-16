@@ -25,7 +25,6 @@ const FeaturedNewsSection = () => {
         <StyledCardFullWidthBlogPostEntry
           date={item.date}
           title={item.title}
-          text={item.articleContent[0].paragraphContentNode.childMdx.excerpt}
           slug={slugify(item.title, { lower: true })}
           key={item.id}
           background={item.featuredImage && item.featuredImage.fluid}
