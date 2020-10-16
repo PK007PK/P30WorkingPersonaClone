@@ -32,7 +32,7 @@ const FeaturedNewsSection = () => {
         />
       ))}
       <StyledButtonWrapper>
-        <Button to="/blog">Wszystkie wpisy na blogu</Button>
+        <Button to="/blog/1">Wszystkie wpisy na blogu</Button>
       </StyledButtonWrapper>
     </StyledSectionLayout>
   );
