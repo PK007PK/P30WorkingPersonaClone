@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
   color: ${props => props.txtColor || null};
@@ -8,8 +8,16 @@ export const StyledDiv = styled.div`
   position: absolute;
   top: -40px;
   height: 65px;
-  width: 80vw;
+  width: 96vw;
   border-radius: 0 50px 0 0;
+
+  ${({ theme }) => theme.media.xsAbove} {
+    width: 60vw;
+  }
+
+  ${({ theme }) => theme.media.smAbove} {
+    width: 45vw;
+  }
 
   ${({ theme }) => theme.media.mdAbove} {
     width: 40vw;
@@ -19,12 +27,16 @@ export const StyledDiv = styled.div`
     width: 30vw;
   }
 
+  ${({ theme }) => theme.media.xlAbove} {
+    width: 20vw;
+  }
+
   ::before {
-    content: "";
+    content: '';
     background-color: ${props => props.backgroundColor || null};
     width: 2000px;
     height: 65px;
     left: -2000px;
     position: absolute;
   }
-`
+`;

@@ -53,22 +53,16 @@ const FeaturedNewsSection = () => {
       0: {
         slidesPerView: 1,
       },
-      576: {
-        slidesPerView: 1,
-      },
       768: {
         slidesPerView: 2,
       },
       992: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
       1200: {
         slidesPerView: 3,
       },
-      1450: {
-        slidesPerView: 3,
-      },
-      1600: {
+      1550: {
         slidesPerView: 4,
       },
     },
