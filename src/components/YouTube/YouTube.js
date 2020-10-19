@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import { StyledWrapper } from "./YouTube.style"
+import { StyledWrapper } from './YouTube.style';
 
 class YouTube extends React.Component {
   render() {
@@ -14,10 +14,10 @@ class YouTube extends React.Component {
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-        ></iframe>
+        />
       </StyledWrapper>
-    )
+    );
   }
 }
 
-export default YouTube
+export default YouTube;

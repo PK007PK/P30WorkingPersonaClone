@@ -453,7 +453,7 @@ export const theme = {
     sm: 768,
     md: 992,
     lg: 1200,
-    xl: 1550,
+    xl: 1400,
   },
   media: {
     xsAbove: `@media (min-width: 576px)`,
@@ -464,7 +464,7 @@ export const theme = {
     mdBelow: `@media (max-width: 991px)`,
     lgAbove: `@media (min-width: 1200px)`,
     lgBelow: `@media (max-width: 1199px)`,
-    xlAbove: `@media (min-width: 1550px)`,
+    xlAbove: `@media (min-width: 1400px)`,
     xlBelow: `@media (max-width: 1549px)`,
   },
 };

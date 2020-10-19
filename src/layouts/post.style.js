@@ -3,21 +3,21 @@ import ImgPlaceholder from '../components/ImgPlaceholder/ImgPlaceholder';
 import SectionLayout from '../utils/SectionLayout/SectionLayout';
 
 export const StyledImgPlaceholder = styled(ImgPlaceholder)`
-  width: 100vw;
-  height: 50vh;
-  ${({ theme }) => theme.media.mdAbove} {
+  width: 560px;
+  height: 315px;
+  /* ${({ theme }) => theme.media.mdAbove} {
     width: 50vw;
   }
 
   ${({ theme }) => theme.media.lgAbove} {
-    width: 40vw;
-    height: 400px;
-  }
+    width: 560px;
+    height: 315px;
+  } */
 
-  ${({ theme }) => theme.media.xlAbove} {
+  /* ${({ theme }) => theme.media.xlAbove} {
     width: 700px;
     height: 400px;
-  }
+  } */
 `;
 
 export const StyledSectionLayout = styled(SectionLayout)`
@@ -88,10 +88,11 @@ export const StyledSectionLayout = styled(SectionLayout)`
       width: 100vw;
       height: 50vh;
       ${({ theme }) => theme.media.mdAbove} {
-        width: 50vw;
+        width: 560px;
+        height: 315px;
       }
 
-      ${({ theme }) => theme.media.lgAbove} {
+      /* ${({ theme }) => theme.media.lgAbove} {
         width: 40vw;
         height: 400px;
       }
@@ -99,7 +100,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
       ${({ theme }) => theme.media.xlAbove} {
         width: 700px;
         height: 400px;
-      }
+      } */
     }
   }
 
