@@ -110,4 +110,14 @@ export const StyledSectionLayout = styled(SectionLayout)`
       margin-top: 0px;
     }
   }
+
+  .socials {
+    border: 1px solid black;
+    margin-top: 40px;
+    padding: 10px 20px;
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
 `;

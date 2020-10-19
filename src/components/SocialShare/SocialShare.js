@@ -21,14 +21,14 @@ const SocialShare = ({ title, excerpt, messengerId }) => (
       className="social__button"
       url={typeof window !== 'undefined' ? window.location.href : ''}
     >
-      <FacebookIcon size={45} round />
+      <FacebookIcon size={38} round />
     </FacebookShareButton>
     <FacebookMessengerShareButton
       url={typeof window !== 'undefined' ? window.location.href : ''}
       appId={messengerId}
       className="social__button"
     >
-      <FacebookMessengerIcon size={45} round />
+      <FacebookMessengerIcon size={38} round />
     </FacebookMessengerShareButton>
     <WhatsappShareButton
       url={typeof window !== 'undefined' ? window.location.href : ''}
@@ -36,7 +36,7 @@ const SocialShare = ({ title, excerpt, messengerId }) => (
       separator=":: "
       className="social__button"
     >
-      <WhatsappIcon size={45} round />
+      <WhatsappIcon size={38} round />
     </WhatsappShareButton>
     <EmailShareButton
       className="social__button"
@@ -45,7 +45,7 @@ const SocialShare = ({ title, excerpt, messengerId }) => (
       body={excerpt}
       separator="<br></br><br></br>"
     >
-      <EmailIcon size={45} round />
+      <EmailIcon size={38} round />
     </EmailShareButton>
     <LinkedinShareButton
       className="social__button"
@@ -54,7 +54,7 @@ const SocialShare = ({ title, excerpt, messengerId }) => (
       source={typeof window !== 'undefined' ? window.location.href : ''}
       url={typeof window !== 'undefined' ? window.location.href : ''}
     >
-      <LinkedinIcon size={45} round />
+      <LinkedinIcon size={38} round />
     </LinkedinShareButton>
   </SocialShareStyle>
 );

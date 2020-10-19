@@ -22,6 +22,33 @@ const ArticleStyling = styled.div`
     margin-left: 20px;
   }
 
+  blockquote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    p {
+      display: block;
+      font-weight: ${({ theme }) => theme.fontWeight.regular} !important;
+      font-style: italic;
+      line-height: 2;
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      padding: 0.5em 20px;
+    }
+  }
+
+  p,
+  li,
+  h1,
+  h2,
+  strong,
+  a {
+    ::selection {
+      background-color: ${({ theme }) => theme.color.active};
+      color: white;
+    }
+  }
+
   .lead {
     margin-top: 40px;
     font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -41,21 +68,6 @@ const ArticleStyling = styled.div`
 
     ${({ theme }) => theme.media.lgAbove} {
       height: 55vh;
-    }
-  }
-
-  blockquote {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    p {
-      display: block;
-      font-weight: ${({ theme }) => theme.fontWeight.regular} !important;
-      font-style: italic;
-      line-height: 2;
-      background: #f9f9f9;
-      border-left: 10px solid #ccc;
-      padding: 0.5em 20px;
     }
   }
 `;

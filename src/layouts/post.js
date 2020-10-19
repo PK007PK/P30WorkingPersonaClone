@@ -4,6 +4,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
+import ArrowRight from '../components/IconArrowRight/IconArrowRight';
+import ArrowLeft from '../components/IconArrowLeft/IconArrowLeft';
 import YouTube from '../components/YouTube/YouTube';
 import Button from '../components/Button/Button';
 import SocialShare from '../components/SocialShare/SocialShare';
@@ -169,6 +171,7 @@ const PostLayout = ({ data, pageContext }) => {
                 </Button>
               </div>
               <div className="socials">
+                <h3>Poleć moje artykuły!</h3>
                 <SocialShare
                   title={data.datoCmsNews.title}
                   excerpt={data.datoCmsNews.leadText}
