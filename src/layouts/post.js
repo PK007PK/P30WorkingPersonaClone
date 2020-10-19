@@ -158,14 +158,14 @@ const PostLayout = ({ data, pageContext }) => {
                   margin
                   to={previousArticleLink}
                   className={!previousArticleLink && 'diseabled'}
-                  diseabled={!previousArticleLink && ''}
+                  diseabled={!previousArticleLink && 'diseabled'}
                 >
                   Następny artykuł
                 </Button>
                 <Button
                   to={nextArticleLink}
                   className={!nextArticleLink && 'diseabled'}
-                  diseabled={!nextArticleLink && ''}
+                  diseabled={!nextArticleLink && 'diseabled'}
                 >
                   Poprzedni artykuł
                 </Button>

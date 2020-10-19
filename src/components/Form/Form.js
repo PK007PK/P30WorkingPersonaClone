@@ -1,37 +1,37 @@
-import React from "react"
-import { navigate } from "gatsby-link"
+import React from 'react';
+import { navigate } from 'gatsby-link';
 
-import Button from "../Button/Button"
+import Button from '../Button/Button';
 
-import { StyledForm } from "./Form.style"
+import { StyledForm } from './Form.style';
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
 }
 
 export default function Contact() {
-  const [state, setState] = React.useState({})
+  const [state, setState] = React.useState({});
 
   const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        'form-name': form.getAttribute('name'),
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
-  }
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error));
+  };
 
   return (
     <>
@@ -48,11 +48,11 @@ export default function Contact() {
         <input type="hidden" name="hiden-input" value="contact" />
         <div hidden>
           <label htmlFor="bot-field">
-            Don’t fill this out:{" "}
+            Don’t fill this out:{' '}
             <input
               name="bot-field"
               onChange={handleChange}
-              autocomplete="off"
+              autoComplete="off"
             />
           </label>
         </div>
@@ -63,7 +63,7 @@ export default function Contact() {
             name="imie"
             placeholder=" "
             onChange={handleChange}
-            autocomplete="off"
+            autoComplete="off"
             required
           />
           <label className="label" htmlFor="imie">
@@ -78,7 +78,7 @@ export default function Contact() {
             name="email"
             onChange={handleChange}
             placeholder=" "
-            autocomplete="off"
+            autoComplete="off"
             required
           />
           <label className="label" htmlFor="email">
@@ -93,7 +93,7 @@ export default function Contact() {
             name="telefon"
             placeholder=" "
             onChange={handleChange}
-            autocomplete="off"
+            autoComplete="off"
             required
           />
           <label className="label" htmlFor="telefon">
@@ -114,8 +114,18 @@ export default function Contact() {
           </label>
           <div className="formItemBar" />
         </div>
+        <div className="policy">
+          <input type="checkbox" id="policy" name="policy" required />
+          <p>
+            Wyrażam zgodę na przetwarzanie przez Michał Pankiewicz &
+            Współpracownicy Kancelaria Prawna moich danych osobowych w celu
+            odpowiedzi na zadane pytanie zgodnie z zasadami ochrony danych
+            osobowych wyrażonymi w Polityce Prywatności.
+          </p>
+        </div>
+
         <Button type="submit">Wyślij</Button>
       </StyledForm>
     </>
-  )
+  );
 }
