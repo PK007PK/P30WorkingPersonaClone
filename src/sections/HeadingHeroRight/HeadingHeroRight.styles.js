@@ -9,7 +9,7 @@ const sectionHeight = {
   sm: `800px`,
   smLandscape: `calc(100vh - 98px + 50px)`,
   md: `700px`,
-  mdLandscape: `calc(100vh - 98px + 50px)`,
+  mdLandscape: `700px`,
   lg: `700px`,
   lgLandscape: `calc(100vh - 98px + 50px)`,
   xxl: `calc(100vh - 98px + 50px)`,
@@ -46,6 +46,7 @@ export const StyledSection = styled.section`
     height: ${sectionHeight.sm};
     background-image: none;
     display: flex;
+    align-items: flex-end;
     position: relative;
     padding-bottom: 0px;
 
@@ -166,7 +167,7 @@ export const StyledImage = styled(Image)`
   ${({ theme }) => theme.media.lgAbove} {
     height: ${heroImgSizes.lg.height};
     width: ${heroImgSizes.lg.width};
-    margin-right: 120px;
+    margin-right: 5vw;
 
     @media (orientation: landscape) {
       height: ${heroImgSizes.lgLandscape.height};
