@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import YouTube from '../components/YouTube/YouTube';
 import Button from '../components/Button/Button';
 import SocialShare from '../components/SocialShare/SocialShare';
-
+import ArticleStyling from '../components/ArticleStyling/ArticleStyling';
 import { BootsRow, BootsColumn } from '../utils/BootsElements/BootsElements';
 import { StyledSectionLayout, StyledImgPlaceholder } from './post.style';
 
@@ -120,14 +120,14 @@ const PostLayout = ({ data, pageContext }) => {
         <div className="mainPostBody">
           <BootsRow>
             <BootsColumn md="8" lg="9">
-              <div className="mainText">
+              <ArticleStyling className="mainText">
+                <p className="lead">{data.datoCmsNews.leadText}</p>
                 {data.datoCmsNews.articleContent.map(item => {
                   const itemKey = Object.keys(item)[1];
                   switch (itemKey) {
                     case 'paragraphContentNode':
                       return (
                         <div key={item.id}>
-                          <p className="lead">{data.datoCmsNews.leadText}</p>
                           <MDXRenderer>
                             {item.paragraphContentNode.childMdx.body}
                           </MDXRenderer>
@@ -147,7 +147,7 @@ const PostLayout = ({ data, pageContext }) => {
                       return null;
                   }
                 })}
-              </div>
+              </ArticleStyling>
             </BootsColumn>
             <BootsColumn md="4" lg="3">
               <div className="buttons">
@@ -170,10 +170,7 @@ const PostLayout = ({ data, pageContext }) => {
               <div className="socials">
                 <SocialShare
                   title={data.datoCmsNews.title}
-                  excerpt={
-                    data.datoCmsNews.articleContent[0].paragraphContentNode
-                      .childMdx.excerpt
-                  }
+                  excerpt={data.datoCmsNews.leadText}
                   messengerID={data.datoCmsSiteSetup.messengerID}
                 />
               </div>
