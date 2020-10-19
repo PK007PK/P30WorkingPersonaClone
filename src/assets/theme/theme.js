@@ -453,6 +453,13 @@ export const theme = {
     sm: 768,
     md: 992,
     lg: 1200,
+    xl: 1550,
+  },
+  maxContainerWidth: {
+    xs: 540,
+    sm: 720,
+    md: 960,
+    lg: 1184,
     xl: 1400,
   },
   media: {
@@ -464,7 +471,7 @@ export const theme = {
     mdBelow: `@media (max-width: 991px)`,
     lgAbove: `@media (min-width: 1200px)`,
     lgBelow: `@media (max-width: 1199px)`,
-    xlAbove: `@media (min-width: 1400px)`,
+    xlAbove: `@media (min-width: 1550px)`,
     xlBelow: `@media (max-width: 1549px)`,
   },
 };

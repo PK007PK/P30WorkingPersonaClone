@@ -8,22 +8,22 @@ export const BootsContainer = styled.div`
   margin-right: auto;
 
   ${({ theme }) => theme.media.xsAbove} {
-    max-width: ${({ theme }) => theme.breakpoint.xs}px;
+    max-width: ${({ theme }) => theme.maxContainerWidth.xs}px;
   }
 
   ${({ theme }) => theme.media.smAbove} {
-    max-width: ${({ theme }) => theme.breakpoint.sm}px;
+    max-width: ${({ theme }) => theme.maxContainerWidth.sm}px;
   }
 
   ${({ theme }) => theme.media.mdAbove} {
-    max-width: ${({ theme }) => theme.breakpoint.md}px;
+    max-width: ${({ theme }) => theme.maxContainerWidth.md}px;
   }
 
   ${({ theme }) => theme.media.lgAbove} {
-    max-width: ${({ theme }) => theme.breakpoint.lg}px;
+    max-width: ${({ theme }) => theme.maxContainerWidth.lg}px;
 
   ${({ theme }) => theme.media.xlAbove} {
-    max-width: ${({ theme }) => theme.breakpoint.xl}px;
+    max-width: ${({ theme }) => theme.maxContainerWidth.xl}px;
   }
 `;
 
