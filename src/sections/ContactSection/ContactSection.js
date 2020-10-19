@@ -1,43 +1,41 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import IconYT from "../../components/IconYT/IconYT"
-import IconFB from "../../components/IconFB/IconFB"
-import Form from "../../components/Form/Form"
-import Button from "../../components/Button/Button"
+import IconFB from '../../components/IconFB/IconFB';
+import Form from '../../components/Form/Form';
+import { BootsRow, BootsColumn } from '../../utils/BootsElements/BootsElements';
 
-import { StyledSectionLayout } from "./ContactSection.style"
+import { StyledSectionLayout } from './ContactSection.style';
 
 const ContactSection = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return (
     <StyledSectionLayout>
-      <div className="formWrapper">
-        <Form></Form>
-      </div>
-      <div className="txtWrapper">
-        <h2>Dane kontaktowe:</h2>
-        <div>
-          <p>Telefon: {data.datoCmsSiteSetup.phone}</p>
-        </div>
-        <div>
-          <p>Email: {data.datoCmsSiteSetup.email} </p>
-        </div>
-        <Button small href={data.datoCmsSiteSetup.youtubeChanelLink}>
-          {" "}
-          Mój vlog <IconYT small />
-        </Button>
-        <a
-          href={data.datoCmsSiteSetup.facebookLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IconFB />
-        </a>
-      </div>
+      <BootsRow>
+        <BootsColumn className="formWrap" md="7" lg="8">
+          <Form />
+        </BootsColumn>
+        <BootsColumn className="contactWrap" md="5" lg="4">
+          {' '}
+          <h2>Dane kontaktowe:</h2>
+          <div>
+            <p>Telefon: {data.datoCmsSiteSetup.phone}</p>
+          </div>
+          <div>
+            <p>Email: {data.datoCmsSiteSetup.email} </p>
+          </div>
+          <a
+            href={data.datoCmsSiteSetup.facebookLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconFB />
+          </a>
+        </BootsColumn>
+      </BootsRow>
     </StyledSectionLayout>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -48,6 +46,6 @@ const query = graphql`
       facebookLink
     }
   }
-`
+`;
 
-export default ContactSection
+export default ContactSection;

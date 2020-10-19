@@ -1,44 +1,40 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import IconYT from "../../components/YouTube/YouTube"
-import IconFB from "../../components/IconFB/IconFB"
-import Button from "../../components/Button/Button"
+import IconFB from '../../components/IconFB/IconFB';
+import { BootsRow, BootsColumn } from '../../utils/BootsElements/BootsElements';
 
-import { StyledSectionLayout } from "./ThanksSection.style"
+import { StyledSectionLayout } from './ThanksSection.style';
 
-const ContactSection = () => {
-  const data = useStaticQuery(query)
+const thanksSection = () => {
+  const data = useStaticQuery(query);
   return (
     <StyledSectionLayout>
-      <div className="formWrapper">
-        <p>
-          Dziękuję za przesłanie <br /> wiadomości
-        </p>
-      </div>
-      <div className="txtWrapper">
-        <h2>Dane kontaktowe:</h2>
-        <div>
-          <p>Telefon: {data.datoCmsSiteSetup.phone}</p>
-        </div>
-        <div>
-          <p>Email: {data.datoCmsSiteSetup.email} </p>
-        </div>
-        <Button small href={data.datoCmsSiteSetup.youtubeChanelLink}>
-          {" "}
-          Mój vlog <IconYT small />
-        </Button>
-        <a
-          href={data.datoCmsSiteSetup.facebookLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IconFB />
-        </a>
-      </div>
+      <BootsRow className="contactWrap">
+        <BootsColumn className="formWrap" md="7" lg="8">
+          <p>Dziękuję za wysłanie wiadomości</p>
+        </BootsColumn>
+        <BootsColumn className="sidebar" md="5" lg="4">
+          {' '}
+          <h2>Dane kontaktowe:</h2>
+          <div>
+            <p>Telefon: {data.datoCmsSiteSetup.phone}</p>
+          </div>
+          <div>
+            <p>Email: {data.datoCmsSiteSetup.email} </p>
+          </div>
+          <a
+            href={data.datoCmsSiteSetup.facebookLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconFB />
+          </a>
+        </BootsColumn>
+      </BootsRow>
     </StyledSectionLayout>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -49,6 +45,6 @@ const query = graphql`
       facebookLink
     }
   }
-`
+`;
 
-export default ContactSection
+export default thanksSection;

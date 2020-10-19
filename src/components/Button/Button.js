@@ -20,13 +20,18 @@ const Button = ({ children, className, href, to, diseabled, margin }) => (
         {children}
       </StyledLink>
     )}
-    {!to && !href && (
+    {!to && !href && diseabled && (
       <button
         className="inner"
         type="submit"
         diseabled=""
         style={{ backgroundColor: `gray`, cursor: 'default' }}
       >
+        {children}
+      </button>
+    )}
+    {!to && !href && !diseabled && (
+      <button className="inner" type="submit" diseabled="">
         {children}
       </button>
     )}

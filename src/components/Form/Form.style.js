@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StyledForm = styled.form`
   width: 100%;
@@ -62,4 +62,15 @@ export const StyledForm = styled.form`
   .textarea:focus ~ .formItemBar {
     background: #1e58ff;
   }
-`
+  .policy {
+    margin-bottom: 20px;
+    input {
+      margin-top: 10px;
+      margin-right: 15px;
+      width: 60px;
+      height: 60px;
+    }
+    display: flex;
+    align-items: flex-start;
+  }
+`;
