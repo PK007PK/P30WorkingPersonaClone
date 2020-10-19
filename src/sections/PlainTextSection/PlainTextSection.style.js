@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import SectionLayout from "../../utils/SectionLayout/SectionLayout"
+import styled from 'styled-components';
+import SectionLayout from'../../utils/SectionLayout/SectionLayout'';
 
 export const StyledSectionLayout = styled(SectionLayout)`
   padding-bottom: 200px;
@@ -42,5 +42,5 @@ export const StyledSectionLayout = styled(SectionLayout)`
     ${({ theme }) => theme.media.lgAbove} {
       height: 55vh;
     }
-  }
-`
+  };
+`;

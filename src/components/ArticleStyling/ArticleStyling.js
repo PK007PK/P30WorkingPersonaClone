@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import quotes from '../../assets/icons/quotes.svg';
 
 const ArticleStyling = styled.div`
   h2 {
@@ -9,22 +10,25 @@ const ArticleStyling = styled.div`
 
   p {
     margin-top: 20px;
-    /* text-align: justify; */
   }
 
   ul {
     margin-bottom: 40px;
   }
 
-  p:first-child {
-    margin-top: 0px;
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
-  }
-
   li {
     margin: 10px 0;
     list-style-type: disc;
     margin-left: 20px;
+  }
+
+  .lead {
+    margin-top: 40px;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+
+    ${({ theme }) => theme.media.mdAbove} {
+      margin-top: 0px;
+    }
   }
 
   .articleImg {
@@ -45,6 +49,7 @@ const ArticleStyling = styled.div`
     margin-bottom: 40px;
 
     p {
+      display: block;
       font-weight: ${({ theme }) => theme.fontWeight.regular} !important;
       font-style: italic;
       line-height: 2;

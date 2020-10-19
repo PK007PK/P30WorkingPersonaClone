@@ -153,6 +153,7 @@ const PostLayout = ({ data, pageContext }) => {
               <div className="buttons">
                 <Button to="/blog/1">Wszystkie artykuły</Button>
                 <Button
+                  margin
                   to={previousArticleLink}
                   className={!previousArticleLink && 'diseabled'}
                   diseabled={!previousArticleLink && ''}

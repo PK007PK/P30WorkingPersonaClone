@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { StyledWrapper, StyledA, StyledLink } from './Button.style';
 
-const Button = ({ children, className, href, to, diseabled }) => (
-  <StyledWrapper className={className}>
+const Button = ({ children, className, href, to, diseabled, margin }) => (
+  <StyledWrapper margin={margin} className={className}>
     {href && (
       <StyledA
         href={href}

@@ -102,4 +102,11 @@ export const StyledSectionLayout = styled(SectionLayout)`
       }
     }
   }
+
+  .buttons {
+    margin-top: 40px;
+    ${({ theme }) => theme.media.mdAbove} {
+      margin-top: 0px;
+    }
+  }
 `;

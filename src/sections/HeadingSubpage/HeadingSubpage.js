@@ -8,10 +8,10 @@ import {
   StyledDiv,
 } from './HeadingSubpage.style.js';
 
-import BootstrapContainer from '../../utils/BootstrapContainer/BootstrapContainer';
+import { BootsContainer } from '../../utils/BootsElements/BootsElements';
 
 const HeadingSubpage = ({ fluid, alt, title, slug, description }) => (
-  <BootstrapContainer>
+  <BootsContainer>
     <StyledSection>
       <StyledTxtWrapper>
         <span className="slug">{slug}</span>
@@ -24,7 +24,7 @@ const HeadingSubpage = ({ fluid, alt, title, slug, description }) => (
         <StyledDiv />
       </StyledImageWrapper>
     </StyledSection>
-  </BootstrapContainer>
+  </BootsContainer>
 );
 
 export default HeadingSubpage;

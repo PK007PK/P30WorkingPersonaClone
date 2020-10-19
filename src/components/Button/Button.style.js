@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const StyledWrapper = styled.div`
+  ${({ margin }) => margin && `margin-top: 15px; margin-bottom: 15px;`}
   .inner {
     background-color: ${({ theme }) => theme.color.mainButton};
     font-weight: ${({ theme }) => theme.fontWeight.medium};

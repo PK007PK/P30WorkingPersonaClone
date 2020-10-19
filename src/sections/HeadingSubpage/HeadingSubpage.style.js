@@ -1,13 +1,13 @@
-import styled from "styled-components"
-import Image from "gatsby-image"
+import styled from 'styled-components';
+import Image from 'gatsby-image';
 
 export const StyledSection = styled.section`
-  height: calc(70vh);
+  height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
 
   ${({ theme }) => theme.media.xsAbove} {
-    height: 50vh;
+    height: 40vh;
   }
 
   ${({ theme }) => theme.media.smAbove} {
@@ -15,15 +15,17 @@ export const StyledSection = styled.section`
   }
 
   ${({ theme }) => theme.media.mdAbove} {
-    height: 600px;
+    margin-top: 50px;
+    height: 400px;
     display: flex;
+    flex-direction: row;
     position: relative;
-
+    align-items: flex-end;
     @media (orientation: landscape) {
-      max-height: calc(80vh - 98px + 50px);
+      /* max-height: calc(80vh - 98px + 50px); */
     }
   }
-`
+`;
 
 export const StyledTxtWrapper = styled.div`
   height: 100%;
@@ -59,7 +61,7 @@ export const StyledTxtWrapper = styled.div`
     display: block;
     max-width: 95%;
   }
-`
+`;
 
 export const StyledImageWrapper = styled.div`
   display: none;
@@ -72,7 +74,7 @@ export const StyledImageWrapper = styled.div`
     align-items: center;
     position: relative;
   }
-`
+`;
 
 export const StyledImage = styled(Image)`
   display: none;
@@ -95,7 +97,7 @@ export const StyledImage = styled(Image)`
     width: 500px;
     height: 350px;
   }
-`
+`;
 export const StyledDiv = styled.div`
   display: none;
 
@@ -115,4 +117,4 @@ export const StyledDiv = styled.div`
     height: 350px;
     border: 16px solid rgba(15, 53, 83, 0.4);
   }
-`
+`;

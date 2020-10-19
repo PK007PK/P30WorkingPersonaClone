@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const BootstrapContainer = styled.div`
   padding: 0 10px;
@@ -23,6 +23,6 @@ const BootstrapContainer = styled.div`
   ${({ theme }) => theme.media.xlAbove} {
     max-width: 1400px;
   }
-`
+`;
 
-export default BootstrapContainer
+export default BootstrapContainer;
