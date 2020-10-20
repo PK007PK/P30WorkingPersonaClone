@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import quotes from '../../assets/icons/quotes.svg';
 
 const ArticleStyling = styled.div`
   h2 {
@@ -12,7 +11,8 @@ const ArticleStyling = styled.div`
     margin-top: 20px;
   }
 
-  ul {
+  ul,
+  ol {
     margin-bottom: 40px;
   }
 

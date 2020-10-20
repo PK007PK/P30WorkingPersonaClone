@@ -23,7 +23,6 @@ const CardFullWidthBlogEntry = ({
 }) => (
   <StyledLink to={`/blog/${slug}`}>
     <StyledImgWrapper className={className}>
-      <StyledImg fluid={background} />
       {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
       {youtube ? (
         <>
@@ -39,10 +38,11 @@ const CardFullWidthBlogEntry = ({
 );
 
 CardFullWidthBlogEntry.propTypes = {
-  background: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  background: PropTypes.object,
+  date: PropTypes.string,
+  title: PropTypes.string,
+  slug: PropTypes.string,
   youtube: PropTypes.string,
 };
 

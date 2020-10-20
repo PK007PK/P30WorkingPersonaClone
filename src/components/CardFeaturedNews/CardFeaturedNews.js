@@ -20,23 +20,20 @@ const CardFeaturedNews = ({
   youtube,
 }) => (
   <StyledWrapper className={className} to={`/blog/${slug}`}>
-    {youtube ? (
-      <>
-        <StyledYouTubeIcon />
-      </>
-    ) : null}
+    {youtube ? <StyledYouTubeIcon /> : null}
     {background ? <StyledImg fluid={background} /> : <ImgPlaceholder />}
     <StyledDate>{date}</StyledDate>
     <StyledTitle>{title}</StyledTitle>
   </StyledWrapper>
 );
 
-// CardFeaturedNews.propTypes = {
-//   background: PropTypes.object.isRequired,
-//   date: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   slug: PropTypes.string.isRequired,
-//   youtube: PropTypes.string,
-// };
+CardFeaturedNews.propTypes = {
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  background: PropTypes.object,
+  date: PropTypes.string,
+  title: PropTypes.string,
+  slug: PropTypes.string,
+  youtube: PropTypes.string,
+};
 
 export default CardFeaturedNews;

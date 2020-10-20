@@ -39,9 +39,19 @@ const Button = ({ children, className, href, to, diseabled, margin }) => (
 );
 
 Button.propTypes = {
-  // className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // href: PropTypes.string,
-  // to: PropTypes.string,
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.bool,
+  ]),
+  href: PropTypes.string,
+  to: PropTypes.string,
+  diseabled: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  margin: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Button;
