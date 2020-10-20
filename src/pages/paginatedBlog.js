@@ -37,9 +37,7 @@ export default function paginatedBlogPage({ data, pageContext }) {
               <StyledCardVerticalBlogEntry
                 date={item.date}
                 title={item.title}
-                text={
-                  item.articleContent[0].paragraphContentNode.childMdx.excerpt
-                }
+                text={item.leadText}
                 slug={slugify(item.title, { lower: true })}
                 key={item.id}
                 background={item.featuredImage && item.featuredImage.fluid}
@@ -112,7 +110,6 @@ export const query = graphql`
             paragraphContentNode {
               childMdx {
                 body
-                excerpt(pruneLength: 220)
               }
             }
           }
