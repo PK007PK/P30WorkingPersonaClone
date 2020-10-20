@@ -7,7 +7,7 @@ import {
   StyledWrapper,
   StyledBurgerMenu,
   StyledLink,
-} from './TopMenuBar.style';
+} from './MenuTopBar1.style';
 
 const TopMenuBar = ({ className }) => (
   <>

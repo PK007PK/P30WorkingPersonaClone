@@ -11,8 +11,8 @@ import Typography from 'src/styles/Typography';
 import TxtHoverFocusTab from 'src/styles/TxtHoverFocusTab';
 
 import BootstrapContainer from '../utils/BootstrapContainer/BootstrapContainer';
-import TopMenuBar from '../components/TopMenuBar/TopMenuBar';
-import Footer from '../components/Footer/Footer';
+import TopMenuBar from '../components/MenuTopBar1/MenuTopBar1';
+import Footer from '../sections/Footer1/Footer1';
 
 const StyledTopMenuBar = styled(TopMenuBar)`
   margin-top: 30px;

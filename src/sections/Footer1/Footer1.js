@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import React from 'react';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
-import { StyledSectionLayout, StyledWrapper } from './Footer.style'
+import { StyledSectionLayout, StyledWrapper } from './Footer1.style';
 
 const Footer = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return (
     <StyledSectionLayout padding="20px 0">
       <StyledWrapper>
@@ -15,8 +15,8 @@ const Footer = () => {
         </p>
       </StyledWrapper>
     </StyledSectionLayout>
-  )
-}
+  );
+};
 
 const query = graphql`
   {
@@ -24,6 +24,6 @@ const query = graphql`
       copyrightName
     }
   }
-`
+`;
 
-export default Footer
+export default Footer;

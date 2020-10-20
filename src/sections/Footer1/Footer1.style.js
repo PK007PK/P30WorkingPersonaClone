@@ -1,10 +1,10 @@
-import SectionLayout from "../../utils/SectionLayout/SectionLayout"
-import styled from "styled-components"
+import styled from 'styled-components';
+import SectionLayout from '../../utils/SectionLayout/SectionLayout';
 
 export const StyledSectionLayout = styled(SectionLayout)`
   color: ${({ theme }) => theme.color.white};
   background-color: ${({ theme }) => theme.color.color3};
-`
+`;
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -28,4 +28,4 @@ export const StyledWrapper = styled.div`
       margin-top: 15px;
     }
   }
-`
+`;

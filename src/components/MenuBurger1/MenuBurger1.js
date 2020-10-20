@@ -7,7 +7,7 @@ import {
   StyledSpan,
   StyledNavigation,
   StyledList,
-} from './BurgerMenu.style';
+} from './MenuBurger1.style';
 
 class BurgerMenu extends React.Component {
   state = {
