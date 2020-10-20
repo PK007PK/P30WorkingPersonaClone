@@ -1,9 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
-<<<<<<< HEAD
 import { Link } from 'gatsby';
-=======
->>>>>>> 96e0f42db96fcb9bc55ec610f4968bd937f74bb1
 
 import Button from '../Button/Button';
 
@@ -15,11 +12,7 @@ function encode(data) {
     .join('&');
 }
 
-<<<<<<< HEAD
 export default function Contact({ admin }) {
-=======
-export default function Contact() {
->>>>>>> 96e0f42db96fcb9bc55ec610f4968bd937f74bb1
   const [state, setState] = React.useState({});
 
   const handleChange = e => {
@@ -125,7 +118,6 @@ export default function Contact() {
         <div className="policy">
           <input type="checkbox" id="policy" name="policy" required />
           <p>
-<<<<<<< HEAD
             Wyrażam zgodę na przetwarzanie przez {admin} moich danych osobowych
             w celu odpowiedzi na zadane pytanie zgodnie z zasadami ochrony
             danych osobowych wyrażonymi w{' '}
@@ -134,15 +126,6 @@ export default function Contact() {
             </Link>
           </p>
         </div>
-=======
-            Wyrażam zgodę na przetwarzanie przez Michał Pankiewicz &
-            Współpracownicy Kancelaria Prawna moich danych osobowych w celu
-            odpowiedzi na zadane pytanie zgodnie z zasadami ochrony danych
-            osobowych wyrażonymi w Polityce Prywatności.
-          </p>
-        </div>
-
->>>>>>> 96e0f42db96fcb9bc55ec610f4968bd937f74bb1
         <Button type="submit">Wyślij</Button>
         {/* <button type="submit">Wyślij</button> */}
       </StyledForm>
