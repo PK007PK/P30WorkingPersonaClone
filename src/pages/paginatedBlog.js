@@ -53,7 +53,7 @@ export default function paginatedBlogPage({ data, pageContext }) {
                 <Button
                   to={previousArticlesCollection}
                   className={!previousArticlesCollection && 'diseabled'}
-                  diseabled={!previousArticlesCollection && ''}
+                  diseabled={!previousArticlesCollection && 'diseabled'}
                 >
                   Poprzednia strona
                 </Button>
@@ -65,7 +65,7 @@ export default function paginatedBlogPage({ data, pageContext }) {
                 <Button
                   to={nextArticlesCollection}
                   className={!nextArticlesCollection && 'diseabled'}
-                  diseabled={!nextArticlesCollection && ''}
+                  diseabled={!nextArticlesCollection && 'diseabled'}
                 >
                   Następna strona
                 </Button>
