@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
+import { Link } from 'gatsby';
 
 import Button from '../Button/Button';
 
@@ -11,7 +12,7 @@ function encode(data) {
     .join('&');
 }
 
-export default function Contact() {
+export default function Contact({ admin }) {
   const [state, setState] = React.useState({});
 
   const handleChange = e => {
@@ -117,10 +118,12 @@ export default function Contact() {
         <div className="policy">
           <input type="checkbox" id="policy" name="policy" required />
           <p>
-            Wyrażam zgodę na przetwarzanie przez Michał Pankiewicz &
-            Współpracownicy Kancelaria Prawna moich danych osobowych w celu
-            odpowiedzi na zadane pytanie zgodnie z zasadami ochrony danych
-            osobowych wyrażonymi w Polityce Prywatności.
+            Wyrażam zgodę na przetwarzanie przez {admin} moich danych osobowych
+            w celu odpowiedzi na zadane pytanie zgodnie z zasadami ochrony
+            danych osobowych wyrażonymi w{' '}
+            <Link className="decorated" to="/privacy/">
+              Polityce Prywatności.
+            </Link>
           </p>
         </div>
         <Button type="submit">Wyślij</Button>

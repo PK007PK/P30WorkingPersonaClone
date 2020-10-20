@@ -5,19 +5,6 @@ import SectionLayout from '../utils/SectionLayout/SectionLayout';
 export const StyledImgPlaceholder = styled(ImgPlaceholder)`
   width: 560px;
   height: 315px;
-  /* ${({ theme }) => theme.media.mdAbove} {
-    width: 50vw;
-  }
-
-  ${({ theme }) => theme.media.lgAbove} {
-    width: 560px;
-    height: 315px;
-  } */
-
-  /* ${({ theme }) => theme.media.xlAbove} {
-    width: 700px;
-    height: 400px;
-  } */
 `;
 
 export const StyledSectionLayout = styled(SectionLayout)`
@@ -41,11 +28,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
 
     ${({ theme }) => theme.media.mdAbove} {
       width: 45%;
-      /* padding: 60px 0; */
-    }
-
-    ${({ theme }) => theme.media.lgAbove} {
-      /* padding: 90px 0; */
     }
 
     h1 {
@@ -91,16 +73,6 @@ export const StyledSectionLayout = styled(SectionLayout)`
         width: 560px;
         height: 315px;
       }
-
-      /* ${({ theme }) => theme.media.lgAbove} {
-        width: 40vw;
-        height: 400px;
-      }
-
-      ${({ theme }) => theme.media.xlAbove} {
-        width: 700px;
-        height: 400px;
-      } */
     }
   }
 
@@ -115,6 +87,7 @@ export const StyledSectionLayout = styled(SectionLayout)`
     border: 1px solid black;
     margin-top: 40px;
     padding: 10px 20px;
+
     h3 {
       text-align: center;
       margin-bottom: 20px;

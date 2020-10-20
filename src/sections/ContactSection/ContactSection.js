@@ -13,7 +13,7 @@ const ContactSection = () => {
     <StyledSectionLayout>
       <BootsRow>
         <BootsColumn className="formWrap" md="7" lg="8">
-          <Form />
+          <Form admin={data.datoCmsSiteSetup.personalDataAdministrator} />
         </BootsColumn>
         <BootsColumn className="contactWrap" md="5" lg="4">
           {' '}
@@ -44,6 +44,7 @@ const query = graphql`
       email
       youtubeChanelLink
       facebookLink
+      personalDataAdministrator
     }
   }
 `;

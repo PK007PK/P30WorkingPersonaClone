@@ -37,6 +37,11 @@ const ArticleStyling = styled.div`
     }
   }
 
+  a {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.color.active};
+  }
+
   p,
   li,
   h1,

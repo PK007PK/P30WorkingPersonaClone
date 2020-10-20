@@ -6,6 +6,7 @@ import { theme } from 'src/assets/theme/theme';
 
 import 'normalize.css';
 import GlobalStyle from 'src/styles/GlobalStyle';
+import Links from 'src/styles/Links';
 import Typography from 'src/styles/Typography';
 import TxtHoverFocusTab from 'src/styles/TxtHoverFocusTab';
 
@@ -39,6 +40,7 @@ const MainLayout = ({ children }) => {
           <html lang="pl" />
         </Helmet>
         <GlobalStyle />
+        <Links />
         <Typography />
         <TxtHoverFocusTab />
         <BootstrapContainer>
