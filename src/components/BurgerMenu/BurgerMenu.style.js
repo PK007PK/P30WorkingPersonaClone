@@ -1,30 +1,30 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StyledBurgerMenu = styled.div`
   position: fixed;
   top: 30px;
   right: 0px;
   z-index: 1000;
-`
+`;
 
 export const StyledButton = styled.button`
   background-color: transparent;
   border: none;
   transition: transform 0.3s 0.1s ease-in-out;
-  transform: ${props => (props.isActive ? "translateX(-250px)" : null)};
+  transform: ${props => (props.isActive ? 'translateX(-250px)' : null)};
 
   div {
     width: 40px;
     height: 20px;
     position: relative;
   }
-`
+`;
 
 export const StyledSpan = styled.span`
   width: 40px;
   height: 4px;
   border-radius: 10px;
-  background-color: ${props => (props.isActive ? "transparent" : "black")};
+  background-color: ${props => (props.isActive ? 'transparent' : 'black')};
   display: block;
   position: absolute;
   top: 50%;
@@ -33,7 +33,7 @@ export const StyledSpan = styled.span`
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     width: 40px;
     position: absolute;
     height: 4px;
@@ -44,18 +44,18 @@ export const StyledSpan = styled.span`
 
   &::before {
     transform: ${props =>
-      props.isActive ? "translateY(10px) rotate(45deg)" : null};
+      props.isActive ? 'translateY(10px) rotate(45deg)' : null};
     top: -10px;
     left: 0;
   }
 
   &::after {
     transform: ${props =>
-      props.isActive ? "translateY(-10px) rotate(-45deg)" : null};
+      props.isActive ? 'translateY(-10px) rotate(-45deg)' : null};
     top: 10px;
     left: 0;
   }
-`
+`;
 
 export const StyledNavigation = styled.div`
   transition: transform 0.3s 0.1s ease-in-out;
@@ -64,11 +64,11 @@ export const StyledNavigation = styled.div`
   background-color: black;
   color: white;
   position: absolute;
-  top: -30px;
+  top: -40px;
   right: -10px;
   transform: translateX(250px);
-  transform: ${props => (props.isActive ? "translateX(0)" : null)};
-`
+  transform: ${props => (props.isActive ? 'translateX(0)' : null)};
+`;
 
 export const StyledList = styled.ul`
   list-style: none;
@@ -83,4 +83,4 @@ export const StyledList = styled.ul`
     margin: 20px;
     padding: 4px;
   }
-`
+`;
