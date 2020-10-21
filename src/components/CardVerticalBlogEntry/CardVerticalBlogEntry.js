@@ -16,25 +16,27 @@ const CardVerticalBlogEntry = ({
   slug,
   text,
   youtube,
-}) => (
-  <StyledContainer to={`/blog/${slug}`}>
-    {youtube ? (
-      <>
-        <StyledYouTubeIcon />
-      </>
-    ) : null}
-    <span className="date">{date}</span>
+}) => {
+  const leadTxt = text.substr(0, 200);
+  const cardTxt = leadTxt.substr(
+    0,
+    Math.min(leadTxt.length, leadTxt.lastIndexOf(' '))
+  );
+  return (
+    <StyledContainer to={`/blog/${slug}`}>
+      {youtube ? (
+        <>
+          <StyledYouTubeIcon />
+        </>
+      ) : null}
+      <span className="date">{date}</span>
 
-    {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
-    <h3>{title}</h3>
-    <p className="text">
-      {text
-        .substr(0, 250)
-        .substr(0, Math.min(text.length, text.lastIndexOf(' ')))}{' '}
-      ...
-    </p>
-  </StyledContainer>
-);
+      {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
+      <h3>{title}</h3>
+      <p className="text">{cardTxt} ...</p>
+    </StyledContainer>
+  );
+};
 
 CardVerticalBlogEntry.propTypes = {
   background: PropTypes.object,
