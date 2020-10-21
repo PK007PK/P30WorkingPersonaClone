@@ -27,7 +27,12 @@ const CardVerticalBlogEntry = ({
 
     {background ? <StyledImg fluid={background} /> : <ImgPlaceholder light />}
     <h3>{title}</h3>
-    <p className="text">{text}</p>
+    <p className="text">
+      {text
+        .substr(0, 250)
+        .substr(0, Math.min(text.length, text.lastIndexOf(' ')))}{' '}
+      ...
+    </p>
   </StyledContainer>
 );
 
