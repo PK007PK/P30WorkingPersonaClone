@@ -1,7 +1,12 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { StyledI } from "./IconFB.style.js"
+import { StyledI } from './IconFB.style.js';
 
-const IconFB = ({ className }) => <StyledI className={className}></StyledI>
+const IconFb = ({ className }) => <StyledI className={className} />;
 
-export default IconFB
+IconFb.propTypes = {
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+};
+
+export default IconFb;

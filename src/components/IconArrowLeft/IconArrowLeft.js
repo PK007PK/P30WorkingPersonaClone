@@ -1,11 +1,16 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { StyledI } from "./IconArrowLeft.style.js"
+import { StyledI } from './IconArrowLeft.style.js';
 
 const IconArrowLeft = ({ className }) => (
   <>
-    <StyledI className={className}></StyledI>
+    <StyledI className={className} />
   </>
-)
+);
 
-export default IconArrowLeft
+IconArrowLeft.propTypes = {
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+};
+
+export default IconArrowLeft;

@@ -37,7 +37,7 @@ const CardVerticalBlogEntry = ({
 );
 
 CardVerticalBlogEntry.propTypes = {
-  background: PropTypes.object.isRequired,
+  background: PropTypes.object,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,

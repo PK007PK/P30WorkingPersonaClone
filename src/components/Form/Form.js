@@ -1,6 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Button from '../Button/Button';
 
@@ -127,8 +128,11 @@ export default function Contact({ admin }) {
           </p>
         </div>
         <Button type="submit">Wyślij</Button>
-        {/* <button type="submit">Wyślij</button> */}
       </StyledForm>
     </>
   );
 }
+
+Contact.propTypes = {
+  admin: PropTypes.string.isRequired,
+};

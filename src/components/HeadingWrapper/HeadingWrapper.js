@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { StyledDiv } from "./HeadingWrapper.style"
+import { StyledDiv } from './HeadingWrapper.style';
 
 const HeadingWrapper = ({ title, txtColor, backgroundColor, className }) => (
   <>
@@ -13,13 +13,13 @@ const HeadingWrapper = ({ title, txtColor, backgroundColor, className }) => (
       <h2 tabIndex="0">{title}</h2>
     </StyledDiv>
   </>
-)
+);
 
 HeadingWrapper.propTypes = {
   title: PropTypes.string,
-  // txtColor: PropTypes.func,
+  txtColor: PropTypes.func,
   backgroundColor: PropTypes.func,
   className: PropTypes.string,
-}
+};
 
-export default HeadingWrapper
+export default HeadingWrapper;

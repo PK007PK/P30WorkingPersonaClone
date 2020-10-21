@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   FacebookShareButton,
@@ -58,5 +59,10 @@ const SocialShare = ({ title, excerpt, messengerId }) => (
     </LinkedinShareButton>
   </SocialShareStyle>
 );
+
+SocialShare.propTypes = {
+  title: PropTypes.string,
+  messengerId: PropTypes.string,
+};
 
 export default SocialShare;
