@@ -18,12 +18,7 @@ const paragraphValuesCustom = {
   fontWeight: null,
   letterSpacing: null,
 };
-<<<<<<< HEAD
 
 
 
-=======
-// 1
-// 2
->>>>>>> template
 export default paragraphValuesCustom;
