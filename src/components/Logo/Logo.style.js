@@ -1,28 +1,33 @@
 import styled from 'styled-components';
 
-export const StyledWrap = styled.div``;
-
-export const StyledP = styled.p`
-  font-family: 'Ubuntu', sans-serif;
+export const LogoStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 38px;
-  letter-spacing: -3px;
 
-  ${({ secondary }) =>
-    secondary &&
-    `
+  p {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 38px;
+    letter-spacing: -3px;
+
+    ${({ light }) =>
+      light &&
+      `
     color: white;
   `}
-`;
+  }
 
-export const StyledSpan = styled.span`
-  font-family: 'Covered By Your Grace', sans-serif;
-  font-size: 25px;
-  font-weight: 200;
-  margin-top: -8px;
-  color: ${({ theme }) => theme.color.active};
+  span {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 200;
+    margin-bottom: -8px;
+    margin-right: -2px;
+    color: ${({ theme }) => theme.color.active};
+  }
 `;

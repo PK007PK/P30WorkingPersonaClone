@@ -1,18 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LogoCustom from '../../customization/componentsCustom/CustomLogo/CustomLogo';
 
-import { StyledWrap, StyledP, StyledSpan } from './Logo.style';
+import { LogoStyle } from './Logo.style';
 
-const Logo = ({ className, secondary }) => (
-  <StyledP secondary={secondary} className={className}>
-    Obywatel
-    <StyledSpan className="logoTxtSec">kontra ZUS</StyledSpan>
-  </StyledP>
+const DefaultLogo = () => (
+  <LogoStyle>
+    <span className="logoTxtSec">modern</span>
+    <p>WebPersona</p>
+  </LogoStyle>
+);
+
+const Logo = ({ className, light }) => (
+  <>
+    {LogoCustom ? (
+      <LogoCustom className={className} light={light} />
+    ) : (
+      <DefaultLogo className={className} light={light} />
+    )}
+  </>
 );
 
 Logo.propTypes = {
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  secondary: PropTypes.bool,
+  light: PropTypes.bool,
 };
 
 export default Logo;
