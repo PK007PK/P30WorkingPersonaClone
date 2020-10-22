@@ -18,5 +18,5 @@ const paragraphValuesCustom = {
   fontWeight: null,
   letterSpacing: null,
 };
-
+// 1
 export default paragraphValuesCustom;
