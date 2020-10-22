@@ -1,22 +1,26 @@
+import h3ValuesCustom from '../../customization/themeCustom/h3ValuesCustom';
+
+const { fontSize, lineHeight, fontWeight, letterSpacing } = h3ValuesCustom;
+
 const h3Values = {
   fontSize: {
-    base: null,
-    xs: null,
-    sm: null,
-    md: null,
-    lg: null,
-    xxl: null,
+    base: fontSize.base || null,
+    xs: fontSize.xs || null,
+    sm: fontSize.sm || null,
+    md: fontSize.md || null,
+    lg: fontSize.lg || null,
+    xxl: fontSize.xxl || null,
   },
   lineHeight: {
-    base: '1.5em',
-    xs: null,
-    sm: null,
-    md: null,
-    lg: null,
-    xxl: null,
+    base: lineHeight.base || '1.5',
+    xs: lineHeight.xs || null,
+    sm: lineHeight.sm || null,
+    md: lineHeight.md || null,
+    lg: lineHeight.lg || null,
+    xl: lineHeight.xl || null,
   },
-  fontWeight: null,
-  letterSpacing: null,
+  fontWeight: fontWeight || null,
+  letterSpacing: letterSpacing || null,
 };
 
 export default h3Values;
