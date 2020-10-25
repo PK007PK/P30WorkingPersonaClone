@@ -113,7 +113,15 @@ export const StyledTxtWrapper = styled.div`
 
   .subtitle {
     font-weight: 200;
-    font-size: 30px;
+    font-size: 5rem;
+    line-height: 1.5;
+    text-align: right;
+    font-family: 'Lobster';
+  }
+
+  .subtitle2 {
+    font-weight: 200;
+    font-size: 4rem;
     line-height: 1.5;
     text-align: right;
   }
@@ -122,6 +130,7 @@ export const StyledTxtWrapper = styled.div`
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: right;
+    font-size: 4.5rem;
   }
 
   .buttonWrapper {

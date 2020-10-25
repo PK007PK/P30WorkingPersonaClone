@@ -55,7 +55,7 @@ module.exports = {
             variants: ['700'],
           },
           {
-            family: `Covered By Your Grace`,
+            family: `Lobster`,
           },
         ],
       },

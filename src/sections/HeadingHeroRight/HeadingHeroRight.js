@@ -20,8 +20,8 @@ const HeadingHeroRight = () => {
           <div />
           <div>
             <p className="subtitle">{data.datoCmsSiteSetup.mainPageMotto}</p>
-            <h1>{data.datoCmsSiteSetup.mainPageAdditionalText}</h1>
-            <p className="subtitle">
+            <h1>Prawo Ochrony Zdrowia</h1>
+            <p className="subtitle2">
               {data.datoCmsSiteSetup.mainPageDescription}
             </p>
             <div className="buttonWrapper">
