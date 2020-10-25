@@ -20,9 +20,10 @@ export const StyledP = styled.p`
 `;
 
 export const StyledSpan = styled.span`
-  font-family: 'Covered By Your Grace', sans-serif;
-  font-size: 25px;
-  font-weight: 200;
+  font-family: 'Montserat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0px;
+  font-weight: ${({ theme }) => theme.fontWeight.light} !important;
   margin-top: -8px;
   color: ${({ theme }) => theme.color.active};
 `;

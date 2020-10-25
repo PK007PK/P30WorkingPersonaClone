@@ -5,8 +5,8 @@ import { StyledWrap, StyledP, StyledSpan } from './CustomLogo.style';
 
 const Logo = ({ className, secondary }) => (
   <StyledP secondary={secondary} className={className}>
-    Obywatel
-    <StyledSpan className="logoTxtSec">kontra ZUS</StyledSpan>
+    Anna Pazdro
+    <StyledSpan className="logoTxtSec">#blog specjalistyczny</StyledSpan>
   </StyledP>
 );
 
