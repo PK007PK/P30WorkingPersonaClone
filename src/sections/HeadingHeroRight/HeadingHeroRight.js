@@ -22,9 +22,7 @@ const HeadingHeroRight = () => {
             <p className="subtitle">{data.datoCmsSiteSetup.mainPageMotto}</p>
             <h1>{data.datoCmsSiteSetup.mainPageAdditionalText}</h1>
             <p className="subtitle">
-              Przystępnie o emeryturach,
-              <br />
-              rentach i zasiłkach
+              {data.datoCmsSiteSetup.mainPageDescription}
             </p>
             <div className="buttonWrapper">
               <a
