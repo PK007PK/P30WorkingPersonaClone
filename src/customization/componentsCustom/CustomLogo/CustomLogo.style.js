@@ -26,5 +26,11 @@ export const StyledSpan = styled.span`
   font-weight: ${({ theme }) => theme.fontWeight.light} !important;
   margin-top: -4px;
   letter-spacing: -0.5px;
-  color: ${({ theme }) => theme.color.color3};
+  /* color: ${({ theme }) => theme.color.color3}; */
+
+  ${({ secondary }) =>
+    secondary &&
+    `
+    color: white;
+  `}
 `;

@@ -6,7 +6,9 @@ import { StyledWrap, StyledP, StyledSpan } from './CustomLogo.style';
 const Logo = ({ className, secondary }) => (
   <StyledP secondary={secondary} className={className}>
     Anna Pazdro
-    <StyledSpan className="logoTxtSec">prawo ochrony zdrowia</StyledSpan>
+    <StyledSpan secondary={secondary} className="logoTxtSec">
+      prawo ochrony zdrowia
+    </StyledSpan>
   </StyledP>
 );
 
