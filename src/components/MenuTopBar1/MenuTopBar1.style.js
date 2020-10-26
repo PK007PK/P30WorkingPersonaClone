@@ -25,10 +25,18 @@ export const StyledWrapper = styled.ul`
 
   ${({ theme }) => theme.media.smAbove} {
     display: flex;
+
+    li {
+      margin-left: 15px;
+    }
   }
 
-  li {
-    margin-left: 35px;
+  ${({ theme }) => theme.media.mdAbove} {
+    display: flex;
+
+    li {
+      margin-left: 35px;
+    }
   }
 `;
 
