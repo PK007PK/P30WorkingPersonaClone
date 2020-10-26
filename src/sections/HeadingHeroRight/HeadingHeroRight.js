@@ -24,7 +24,7 @@ const HeadingHeroRight = () => {
             <p className="subtitle2">
               {data.datoCmsSiteSetup.mainPageDescription}
             </p>
-            <div className="buttonWrapper">
+            {/* <div className="buttonWrapper">
               <a
                 href={data.datoCmsSiteSetup.facebookLink}
                 target="_blank"
@@ -40,7 +40,7 @@ const HeadingHeroRight = () => {
                 {' '}
                 Sprawdź mój vlog <IconYT small />
               </StyledButton>
-            </div>
+            </div> */}
           </div>
           <div />
         </StyledTxtWrapper>
