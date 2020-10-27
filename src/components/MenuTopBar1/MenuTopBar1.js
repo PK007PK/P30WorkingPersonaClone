@@ -57,7 +57,7 @@ const TopMenuBar = ({ className }) => (
               fontWeight: 'bold',
             }}
           >
-            uslugi
+            usługi
           </StyledLink>
         </li>
         <li>
