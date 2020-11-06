@@ -13,8 +13,8 @@ const UslugiPage = ({ data }) => {
       <article>
         <HeadingSubpage
           fluid={data.datoCmsSiteSetup.uslugiPageHeroImage.fluid}
-          title="uslugi"
-          slug="#uslugi"
+          title="usługi"
+          slug="#usługi"
           description={data.datoCmsSiteSetup.uslugiPageDescription}
           alt={data.datoCmsSiteSetup.uslugiPageHeroImage.alt}
         />
